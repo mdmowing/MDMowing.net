@@ -21,26 +21,32 @@ const nav = document.getElementById('top').querySelector('.nav-header') || docum
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Netlify form submission feedback
+// EmailJS
+emailjs.init('p7J8HXntEE-QVw-_u');
+
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
 if (form) {
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const data = new URLSearchParams(new FormData(form));
-    try {
-      const res = await fetch('/', { method: 'POST', body: data });
-      if (res.ok) {
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    emailjs.sendForm('service_obqb3f8', 'template_02argah', form)
+      .then(() => {
         status.textContent = "Thanks! We'll be in touch soon.";
         status.style.color = '#a8e6b4';
         form.reset();
-      } else {
-        throw new Error();
-      }
-    } catch {
-      status.textContent = 'Something went wrong. Please call or email us directly.';
-      status.style.color = '#ffb3b3';
-    }
+        btn.textContent = 'Send Request';
+        btn.disabled = false;
+      })
+      .catch(() => {
+        status.textContent = 'Something went wrong. Please call or email us directly.';
+        status.style.color = '#ffb3b3';
+        btn.textContent = 'Send Request';
+        btn.disabled = false;
+      });
   });
 }
