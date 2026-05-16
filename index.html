@@ -3,12 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3a7d44" />
   <meta name="description" content="MD Mowing — Professional lawn care and landscaping on the North Shore. Mowing, edging, mulching, leaf removal, snow removal, and more." />
-  <title>MD Mowing | North Shore Lawn Care</title>
+  <meta name="keywords" content="lawn care, landscaping, mowing, edging, mulching, leaf removal, snow removal, North Shore, Illinois, MD Mowing" />
+  <title>MD Mowing | North Shore Lawn Care &amp; Landscaping</title>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MD Mowing | North Shore Lawn Care" />
+  <meta property="og:description" content="Professional lawn care and landscaping on the North Shore. Maintenance, mulching, leaf removal, snow removal, and more." />
+  <meta property="og:url" content="https://mdmowing.net" />
+  <meta property="og:site_name" content="MD Mowing" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MD Mowing | North Shore Lawn Care" />
+  <meta name="twitter:description" content="Professional lawn care and landscaping on the North Shore." />
+
+  <!-- Favicon (inline SVG, no extra request) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233a7d44'/%3E%3Ctext x='50%25' y='50%25' dy='.35em' text-anchor='middle' font-family='Montserrat,Arial,sans-serif' font-weight='900' font-size='32' fill='white'%3EMD%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data for local business SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MD Mowing",
+    "image": "https://mdmowing.net/images/hero.jpg",
+    "url": "https://mdmowing.net",
+    "telephone": "+1-847-772-4803",
+    "email": "marcusdan@mdmowing.net",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "IL",
+      "addressLocality": "North Shore",
+      "addressCountry": "US"
+    },
+    "areaServed": "North Shore, IL",
+    "sameAs": [
+      "https://www.instagram.com/md.mowing",
+      "https://youtube.com/@mdmowng",
+      "https://www.tiktok.com/@md.mowing79"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -45,14 +87,48 @@
     </div>
   </section>
 
+  <!-- WHY CHOOSE US -->
+  <section class="why-strip">
+    <div class="container why-grid">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Local &amp; Trusted</h4>
+        <p>Born and raised on the North Shore</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>On-Time, Every Time</h4>
+        <p>Reliable scheduling you can plan around</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h4>Quality Work</h4>
+        <p>Pride in every cut, edge, and cleanup</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h4>Year-Round</h4>
+        <p>From spring green-up to winter snow</p>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section class="section" id="services">
     <div class="container">
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-sub">Full-service lawn care and landscaping for the North Shore</p>
+      <h2 class="section-title reveal">What We Do</h2>
+      <p class="section-sub reveal">Full-service lawn care and landscaping for the North Shore</p>
       <div class="services-grid">
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 48 Q20 20 32 32 Q44 44 56 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
@@ -63,7 +139,7 @@
           <p>Regular mowing, trimming, and cleanup to keep your lawn healthy and looking sharp all season long.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <line x1="12" y1="52" x2="52" y2="52" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -75,7 +151,7 @@
           <p>Crisp, clean edges along driveways, sidewalks, and beds that give your property that finished, polished look.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <ellipse cx="32" cy="44" rx="22" ry="8" stroke="currentColor" stroke-width="3"/>
@@ -86,7 +162,7 @@
           <p>Design and shaping of flower beds that add color, structure, and curb appeal to your landscape.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 44 Q32 36 54 44" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -98,7 +174,7 @@
           <p>Fresh mulch installation that retains moisture, suppresses weeds, and gives your beds a clean, rich look.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 40 Q20 28 32 32 Q44 36 52 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
@@ -112,7 +188,7 @@
           <p>Thorough fall and seasonal leaf cleanup to protect your lawn and keep your yard clear and tidy.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 32 Q20 18 32 24 Q44 30 56 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
@@ -156,32 +232,32 @@
   <!-- GALLERY -->
   <section class="section" id="gallery">
     <div class="container">
-      <h2 class="section-title">Our Work</h2>
+      <h2 class="section-title reveal">Our Work</h2>
       <p class="section-sub">A look at what we've been up to</p>
       <div class="gallery-grid">
         <!--
           To add your own photos, replace each img-placeholder div with:
-          <div class="gallery-item">
+          <div class="gallery-item reveal">
             <img src="images/gallery-1.jpg" alt="Lawn care work" />
           </div>
           Add images to the /images/ folder and update the src paths.
         -->
-        <div class="gallery-item">
+        <div class="gallery-item reveal">
           <div class="img-placeholder gal-ph"><span>images/gallery-1.jpg</span></div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item reveal">
           <div class="img-placeholder gal-ph"><span>images/gallery-2.jpg</span></div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item reveal">
           <div class="img-placeholder gal-ph"><span>images/gallery-3.jpg</span></div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item reveal">
           <div class="img-placeholder gal-ph"><span>images/gallery-4.jpg</span></div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item reveal">
           <div class="img-placeholder gal-ph"><span>images/gallery-5.jpg</span></div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item reveal">
           <div class="img-placeholder gal-ph"><span>images/gallery-6.jpg</span></div>
         </div>
       </div>
@@ -221,34 +297,37 @@
           </a>
         </div>
       </div>
-      <form class="contact-form" id="contactForm" netlify name="quote-request">
-        <input type="hidden" name="form-name" value="quote-request" />
+      <form class="contact-form" id="contactForm">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
           </div>
           <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required />
         </div>
         <div class="form-group">
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option value="">Select a service…</option>
-            <option>Lawn Maintenance</option>
-            <option>Edging</option>
-            <option>Flower Bed Forming</option>
-            <option>Mulching</option>
-            <option>Leaf Removal</option>
-            <option>Snow Removal</option>
-            <option>Multiple / Other</option>
-          </select>
+          <label for="address">Property Address</label>
+          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Start typing your address…" />
+        </div>
+        <div class="form-group">
+          <label>Services Needed</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Lawn Maintenance" /><span>Lawn Maintenance</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Edging" /><span>Edging</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Flower Bed Forming" /><span>Flower Bed Forming</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Mulching" /><span>Mulching</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Leaf Removal" /><span>Leaf Removal</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Snow Removal" /><span>Snow Removal</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Other" /><span>Other</span></label>
+          </div>
+          <input type="hidden" id="servicesHidden" name="services_selected" />
         </div>
         <div class="form-group">
           <label for="message">Message</label>
@@ -273,6 +352,13 @@
     </div>
   </footer>
 
+  <!-- Sticky mobile call button -->
+  <a href="tel:8477724803" class="mobile-cta" aria-label="Call MD Mowing">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.57a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Call Now</span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

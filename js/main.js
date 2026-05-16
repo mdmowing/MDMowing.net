@@ -21,26 +21,65 @@ const nav = document.getElementById('top').querySelector('.nav-header') || docum
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Netlify form submission feedback
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && revealEls.length) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in'));
+}
+
+// EmailJS
+emailjs.init('p7J8HXntEE-QVw-_u');
+
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
 if (form) {
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const data = new URLSearchParams(new FormData(form));
-    try {
-      const res = await fetch('/', { method: 'POST', body: data });
-      if (res.ok) {
+    const btn = form.querySelector('button[type="submit"]');
+
+    const services = [...form.querySelectorAll('input[name="services"]:checked')]
+      .map(c => c.value).join(', ') || 'None selected';
+
+    const params = {
+      name:       form.name.value,
+      from_name:  form.name.value,
+      from_email: form.email.value,
+      email:      form.email.value,
+      phone:      form.phone.value,
+      address:    form.address.value,
+      service:    services,
+      message:    form.message.value,
+      time:       new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }),
+    };
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    emailjs.send('service_obqb3f8', 'template_02argah', params)
+      .then(() => {
         status.textContent = "Thanks! We'll be in touch soon.";
         status.style.color = '#a8e6b4';
         form.reset();
-      } else {
-        throw new Error();
-      }
-    } catch {
-      status.textContent = 'Something went wrong. Please call or email us directly.';
-      status.style.color = '#ffb3b3';
-    }
+        btn.textContent = 'Send Request';
+        btn.disabled = false;
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        status.textContent = 'Something went wrong. Please call or email us directly.';
+        status.style.color = '#ffb3b3';
+        btn.textContent = 'Send Request';
+        btn.disabled = false;
+      });
   });
 }
