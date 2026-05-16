@@ -1,3 +1,19 @@
+// Parallax hero
+const heroBgImg = document.getElementById('heroBg');
+if (heroBgImg) {
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        heroBgImg.style.transform = `translateY(${window.scrollY * 0.35}px)`;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 // Mobile nav toggle
 const toggle = document.getElementById('navToggle');
 const menu = document.getElementById('navMenu');

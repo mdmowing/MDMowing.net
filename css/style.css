@@ -160,15 +160,18 @@ a { color: inherit; text-decoration: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  /* fallback gradient when no image is set */
+  overflow: hidden;
   background: linear-gradient(135deg, #1a3320 0%, #2c5f35 50%, #3a7d44 100%);
 }
 .hero-bg img {
   position: absolute;
-  inset: 0;
+  top: -20%;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 140%;
   object-fit: cover;
+  will-change: transform;
+  transform: translateY(0);
 }
 .hero-overlay {
   position: absolute;
