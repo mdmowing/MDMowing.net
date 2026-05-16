@@ -2,7 +2,7 @@
 const heroBgImg = document.getElementById('heroBg');
 if (heroBgImg) {
   let ticking = false;
-  const onScroll = () => {
+  window.addEventListener('scroll', () => {
     if (!ticking) {
       requestAnimationFrame(() => {
         heroBgImg.style.transform = `translateY(${window.scrollY * 0.35}px)`;
@@ -10,20 +10,16 @@ if (heroBgImg) {
       });
       ticking = true;
     }
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
+  }, { passive: true });
 }
 
 // Mobile nav toggle
 const toggle = document.getElementById('navToggle');
-const menu = document.getElementById('navMenu');
-
+const menu   = document.getElementById('navMenu');
 toggle.addEventListener('click', () => {
   toggle.classList.toggle('open');
   menu.classList.toggle('open');
 });
-
-// Close nav when a link is clicked
 menu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     toggle.classList.remove('open');
@@ -31,16 +27,29 @@ menu.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Sticky nav background strengthens on scroll
-const nav = document.getElementById('top').querySelector('.nav-header') || document.querySelector('.nav-header');
-
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && revealEls.length) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in'));
+}
 
 // EmailJS
 emailjs.init('p7J8HXntEE-QVw-_u');
 
-const form = document.getElementById('contactForm');
+const form   = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
 if (form) {
