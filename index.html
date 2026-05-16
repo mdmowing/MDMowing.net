@@ -225,29 +225,33 @@
         <div class="form-row">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
           </div>
           <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required />
         </div>
         <div class="form-group">
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option value="">Select a service…</option>
-            <option>Lawn Maintenance</option>
-            <option>Edging</option>
-            <option>Flower Bed Forming</option>
-            <option>Mulching</option>
-            <option>Leaf Removal</option>
-            <option>Snow Removal</option>
-            <option>Multiple / Other</option>
-          </select>
+          <label for="address">Property Address</label>
+          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Start typing your address…" />
+        </div>
+        <div class="form-group">
+          <label>Services Needed</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Lawn Maintenance" /><span>Lawn Maintenance</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Edging" /><span>Edging</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Flower Bed Forming" /><span>Flower Bed Forming</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Mulching" /><span>Mulching</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Leaf Removal" /><span>Leaf Removal</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Snow Removal" /><span>Snow Removal</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Other" /><span>Other</span></label>
+          </div>
+          <input type="hidden" id="servicesHidden" name="services_selected" />
         </div>
         <div class="form-group">
           <label for="message">Message</label>

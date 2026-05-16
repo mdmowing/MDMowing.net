@@ -31,6 +31,11 @@ if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
+
+    // Collect checked services into the hidden field
+    const checked = [...form.querySelectorAll('input[name="services"]:checked')].map(c => c.value);
+    document.getElementById('servicesHidden').value = checked.length ? checked.join(', ') : 'None selected';
+
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
