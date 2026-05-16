@@ -32,14 +32,22 @@ if (form) {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
 
-    // Collect checked services into the hidden field
-    const checked = [...form.querySelectorAll('input[name="services"]:checked')].map(c => c.value);
-    document.getElementById('servicesHidden').value = checked.length ? checked.join(', ') : 'None selected';
+    const services = [...form.querySelectorAll('input[name="services"]:checked')]
+      .map(c => c.value).join(', ') || 'None selected';
+
+    const params = {
+      name:              form.name.value,
+      phone:             form.phone.value,
+      email:             form.email.value,
+      address:           form.address.value,
+      services_selected: services,
+      message:           form.message.value,
+    };
 
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    emailjs.sendForm('service_obqb3f8', 'template_02argah', form)
+    emailjs.send('service_obqb3f8', 'template_02argah', params)
       .then(() => {
         status.textContent = "Thanks! We'll be in touch soon.";
         status.style.color = '#a8e6b4';
@@ -47,7 +55,8 @@ if (form) {
         btn.textContent = 'Send Request';
         btn.disabled = false;
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error('EmailJS error:', err);
         status.textContent = 'Something went wrong. Please call or email us directly.';
         status.style.color = '#ffb3b3';
         btn.textContent = 'Send Request';
