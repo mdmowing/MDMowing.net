@@ -52,12 +52,15 @@ if (form) {
       .map(c => c.value).join(', ') || 'None selected';
 
     const params = {
-      name:              form.name.value,
-      phone:             form.phone.value,
-      email:             form.email.value,
-      address:           form.address.value,
-      services_selected: services,
-      message:           form.message.value,
+      name:       form.name.value,
+      from_name:  form.name.value,
+      from_email: form.email.value,
+      email:      form.email.value,
+      phone:      form.phone.value,
+      address:    form.address.value,
+      service:    services,
+      message:    form.message.value,
+      time:       new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }),
     };
 
     btn.disabled = true;
