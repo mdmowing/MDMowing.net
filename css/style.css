@@ -258,7 +258,7 @@ a { color: inherit; text-decoration: none; }
 .service-card-photo {
   width: calc(100% + 4rem);
   margin: -2rem -2rem 1.25rem -2rem;
-  height: 180px;
+  aspect-ratio: 3/4;
   overflow: hidden;
   border-radius: var(--radius) var(--radius) 0 0;
 }
@@ -266,16 +266,15 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: rotate(-90deg) scale(1.75);
   transition: transform .4s ease;
 }
-.service-card:hover .service-card-photo img { transform: rotate(-90deg) scale(1.85); }
+.service-card:hover .service-card-photo img { transform: scale(1.05); }
 
 /* ===== SERVICE CARD CAROUSEL ===== */
 .service-card-carousel {
   width: calc(100% + 4rem);
   margin: -2rem -2rem 1.25rem -2rem;
-  height: 200px;
+  aspect-ratio: 3/4;
   overflow: hidden;
   border-radius: var(--radius) var(--radius) 0 0;
   position: relative;
@@ -295,9 +294,6 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.carousel-slide img.img-ccw {
-  transform: rotate(-90deg) scale(1.8);
 }
 .carousel-btn {
   position: absolute;
