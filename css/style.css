@@ -568,6 +568,26 @@ textarea { resize: vertical; }
 }
 .ba-label-before { left: .75rem; }
 .ba-label-after  { right: .75rem; }
+.ba-coming-soon {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius);
+  border: 2px dashed var(--gray-light);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ba-coming-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  color: var(--gray);
+  text-align: center;
+}
+.ba-coming-inner svg { opacity: .35; }
+.ba-coming-inner p { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; color: var(--dark); }
+.ba-coming-inner span { font-size: .85rem; color: var(--gray); letter-spacing: .06em; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 600; }
 
 /* ===== PAGE HERO (quote page) ===== */
 .page-hero {
