@@ -46,16 +46,15 @@ if ('IntersectionObserver' in window && revealEls.length) {
   revealEls.forEach(el => el.classList.add('in'));
 }
 
-// Mulch carousel
-(function () {
-  const wrap  = document.getElementById('mulchCarousel');
+// Carousel factory
+function initCarousel(carouselId, dotsId) {
+  const wrap  = document.getElementById(carouselId);
   if (!wrap) return;
   const track  = wrap.querySelector('.carousel-track');
   const slides = wrap.querySelectorAll('.carousel-slide');
-  const dotsEl = document.getElementById('mulchDots');
+  const dotsEl = document.getElementById(dotsId);
   let cur = 0, timer;
 
-  // Build dots
   slides.forEach((_, i) => {
     const d = document.createElement('button');
     d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -81,7 +80,6 @@ if ('IntersectionObserver' in window && revealEls.length) {
   wrap.querySelector('.carousel-prev').addEventListener('click', () => goTo(cur - 1));
   wrap.querySelector('.carousel-next').addEventListener('click', () => goTo(cur + 1));
 
-  // Swipe support
   let startX = 0;
   wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
   wrap.addEventListener('touchend', e => {
@@ -90,7 +88,10 @@ if ('IntersectionObserver' in window && revealEls.length) {
   });
 
   resetTimer();
-})();
+}
+
+initCarousel('grassCarousel', 'grassDots');
+initCarousel('mulchCarousel', 'mulchDots');
 
 // EmailJS
 emailjs.init('p7J8HXntEE-QVw-_u');

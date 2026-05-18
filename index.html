@@ -132,11 +132,17 @@
       <div class="services-grid">
 
         <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 48 Q20 20 32 32 Q44 44 56 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <line x1="8" y1="52" x2="56" y2="52" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            </svg>
+          <div class="service-card-carousel" id="grassCarousel">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/IMG_1197.jpeg" alt="Backyard lawn with mowing stripes" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1204.jpeg" alt="Front yard with fresh mowing stripes" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1205.jpeg" alt="Lush green backyard lawn" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1109.jpeg" alt="Clean cut backyard lawn" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1215.jpeg" alt="Front yard lawn maintenance" loading="lazy" /></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots" id="grassDots"></div>
           </div>
           <h3>Lawn Maintenance</h3>
           <p>Regular mowing, trimming, and cleanup to keep your lawn healthy and looking sharp all season long.</p>
