@@ -469,6 +469,22 @@ textarea { resize: vertical; }
 .mobile-cta:active { transform: scale(.97); }
 .mobile-cta svg { width: 18px; height: 18px; }
 
+/* ===== PAGE HERO (quote page) ===== */
+.page-hero {
+  background: var(--dark);
+  padding: 120px 0 60px;
+  text-align: center;
+}
+.page-hero-content { max-width: 600px; margin-inline: auto; }
+.page-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.page-hero p { color: rgba(255,255,255,.75); font-size: 1.05rem; }
+
 /* ===== HOW IT WORKS ===== */
 .how-section { background: var(--white); }
 .how-grid {
