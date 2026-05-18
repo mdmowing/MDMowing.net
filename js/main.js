@@ -98,8 +98,8 @@ initCarousel('mulchCarousel', 'mulchDots');
 //   1. Go to console.cloud.google.com → New Project → Enable "Places API (New)" → Credentials → Create API Key → restrict to mdmowing.net
 //   2. Find your Place ID: developers.google.com/maps/documentation/javascript/examples/places-placeid-finder → search "MD Mowing"
 //   3. Paste both values below and push.
-const GOOGLE_API_KEY  = 'YOUR_API_KEY_HERE';
-const GOOGLE_PLACE_ID = 'YOUR_PLACE_ID_HERE';
+const GOOGLE_API_KEY  = 'AIzaSyDaU4frp2CtzlMcGWU63M5nCauyCqzgSdg';
+const GOOGLE_PLACE_ID = 'ChIJyXBzI4z6AwoRfhawZ0mHP1A';
 
 function loadGoogleReviews() {
   if (!GOOGLE_API_KEY || GOOGLE_API_KEY === 'YOUR_API_KEY_HERE') return;
