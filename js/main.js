@@ -93,6 +93,34 @@ function initCarousel(carouselId, dotsId) {
 initCarousel('grassCarousel', 'grassDots');
 initCarousel('mulchCarousel', 'mulchDots');
 
+// Before/After sliders
+document.querySelectorAll('.ba-slider').forEach(slider => {
+  const before    = slider.querySelector('.ba-before');
+  const beforeImg = before.querySelector('img');
+  const handle    = slider.querySelector('.ba-handle');
+  let dragging = false;
+
+  function resize() {
+    beforeImg.style.width = slider.offsetWidth + 'px';
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function setPos(clientX) {
+    const rect = slider.getBoundingClientRect();
+    const pct  = Math.min(Math.max((clientX - rect.left) / rect.width, 0.05), 0.95);
+    before.style.width = (pct * 100) + '%';
+    handle.style.left  = (pct * 100) + '%';
+  }
+
+  slider.addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); e.preventDefault(); });
+  slider.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+  slider.addEventListener('touchmove',  e => { if (dragging) { e.preventDefault(); setPos(e.touches[0].clientX); } }, { passive: false });
+  window.addEventListener('mousemove',  e => { if (dragging) setPos(e.clientX); });
+  window.addEventListener('mouseup',  () => dragging = false);
+  window.addEventListener('touchend', () => dragging = false);
+});
+
 // Google Reviews
 // To activate:
 //   1. Go to console.cloud.google.com → New Project → Enable "Places API (New)" → Credentials → Create API Key → restrict to mdmowing.net
