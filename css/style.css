@@ -93,26 +93,6 @@ a { color: inherit; text-decoration: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
-/* ===== CONSTRUCTION BANNER ===== */
-.construction-banner {
-  background: #fffbea;
-  border-bottom: 2px solid #f0c040;
-  padding: .85rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .75rem;
-  text-align: center;
-  font-size: .92rem;
-  color: #5a4200;
-  position: relative;
-  z-index: 999;
-  margin-top: 68px;
-}
-.construction-banner .construction-icon { font-size: 1.1rem; flex-shrink: 0; }
-.construction-banner p { margin: 0; line-height: 1.5; }
-.construction-banner a { color: #2c5f35; font-weight: 700; text-decoration: underline; }
-.construction-banner a:hover { color: #3a7d44; }
 
 /* Gallery coming soon */
 .gallery-coming-soon {
@@ -464,21 +444,27 @@ textarea { resize: vertical; }
 .footer-social a { color: rgba(255,255,255,.4); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .8rem; letter-spacing: .05em; transition: color var(--transition); }
 .footer-social a:hover { color: var(--white); }
 
-/* ===== STICKY MOBILE CALL BUTTON ===== */
-.mobile-cta {
+/* ===== STICKY MOBILE BUTTONS ===== */
+.mobile-cta-group {
   display: none;
   position: fixed;
   bottom: 1rem; right: 1rem;
   z-index: 999;
+  flex-direction: column;
+  gap: .6rem;
+  align-items: flex-end;
+}
+.mobile-cta {
   background: var(--green);
   color: var(--white);
   padding: .85rem 1.4rem;
   border-radius: 50px;
   box-shadow: 0 8px 24px rgba(58,125,68,.4);
   font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .9rem;
-  align-items: center; gap: .5rem;
+  display: inline-flex; align-items: center; gap: .5rem;
   transition: transform var(--transition), box-shadow var(--transition);
 }
+.mobile-cta-quote { background: var(--green-dark); }
 .mobile-cta:hover  { transform: translateY(-2px); }
 .mobile-cta:active { transform: scale(.97); }
 .mobile-cta svg { width: 18px; height: 18px; }
@@ -649,7 +635,7 @@ textarea { resize: vertical; }
   .checkbox-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { flex-direction: column; text-align: center; }
-  .mobile-cta { display: inline-flex; }
+  .mobile-cta-group { display: flex; }
 }
 
 @media (max-width: 420px) {
