@@ -13,6 +13,17 @@ if (heroBgImg) {
   }, { passive: true });
 }
 
+// Urgency banner dismiss
+const urgencyBanner = document.getElementById('urgencyBanner');
+const urgencyClose  = document.getElementById('urgencyClose');
+if (urgencyBanner && urgencyClose) {
+  if (localStorage.getItem('urgencyDismissed')) urgencyBanner.classList.add('hidden');
+  urgencyClose.addEventListener('click', () => {
+    urgencyBanner.classList.add('hidden');
+    localStorage.setItem('urgencyDismissed', '1');
+  });
+}
+
 // Mobile nav toggle
 const toggle = document.getElementById('navToggle');
 const menu   = document.getElementById('navMenu');
@@ -207,11 +218,7 @@ if (form) {
 
     emailjs.send('service_obqb3f8', 'template_02argah', params)
       .then(() => {
-        status.textContent = "Thanks! We'll be in touch soon.";
-        status.style.color = '#a8e6b4';
-        form.reset();
-        btn.textContent = 'Send Request';
-        btn.disabled = false;
+        window.location.href = '/thank-you.html';
       })
       .catch((err) => {
         console.error('EmailJS error:', err);

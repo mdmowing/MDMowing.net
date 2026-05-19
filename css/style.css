@@ -468,6 +468,103 @@ textarea { resize: vertical; }
 .mobile-cta:active { transform: scale(.97); }
 .mobile-cta svg { width: 18px; height: 18px; }
 
+/* ===== URGENCY BANNER ===== */
+.urgency-banner {
+  background: var(--green-dark);
+  color: var(--white);
+  padding: .6rem 3rem .6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: .875rem;
+  position: relative;
+  margin-top: 68px;
+  flex-wrap: wrap;
+}
+.urgency-banner strong { font-weight: 700; }
+.urgency-banner-link {
+  color: #a8e6b4;
+  font-weight: 700;
+  text-decoration: underline;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+.urgency-banner-link:hover { color: var(--white); }
+.urgency-banner-close {
+  position: absolute;
+  right: 1rem; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none;
+  color: rgba(255,255,255,.6);
+  cursor: pointer; font-size: 1rem;
+  line-height: 1; padding: .35rem;
+  transition: color var(--transition);
+}
+.urgency-banner-close:hover { color: var(--white); }
+.urgency-banner.hidden { display: none; }
+
+/* ===== RECENT JOBS GRID ===== */
+.jobs-section { background: var(--off-white); }
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* ===== THANK YOU PAGE ===== */
+.thankyou-section {
+  min-height: calc(100svh - 140px);
+  display: flex;
+  align-items: center;
+  padding: 100px 0 60px;
+  background: var(--off-white);
+}
+.thankyou-inner {
+  text-align: center;
+  max-width: 560px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.thankyou-icon {
+  width: 80px; height: 80px;
+  background: var(--green-light);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--green);
+}
+.thankyou-icon svg { width: 40px; height: 40px; }
+.thankyou-inner h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--dark);
+}
+.thankyou-sub { font-size: 1.05rem; color: var(--gray); line-height: 1.7; }
+.thankyou-details {
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  width: 100%;
+  text-align: left;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--gray-light);
+}
+.thankyou-detail {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .95rem;
+  color: var(--dark);
+}
+.thankyou-detail svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--green); }
+.thankyou-detail a { color: var(--green); font-weight: 600; text-decoration: underline; }
+
 /* ===== WAVE DIVIDERS ===== */
 .wave-divider { line-height: 0; overflow: hidden; display: block; }
 .wave-divider svg { display: block; width: 100%; height: 70px; }
@@ -748,6 +845,8 @@ textarea { resize: vertical; }
   .cta-strip-inner { flex-direction: column; text-align: center; }
   .cta-strip-actions { justify-content: center; }
   .ba-grid { grid-template-columns: 1fr; }
+  .jobs-grid { grid-template-columns: 1fr 1fr; }
+  .urgency-banner { gap: .5rem; font-size: .82rem; }
 }
 
 @media (max-width: 680px) {
