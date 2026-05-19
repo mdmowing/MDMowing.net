@@ -405,3 +405,168 @@ textarea { resize: vertical; }
   .gallery-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ===== SCROLL PROGRESS ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--green);
+  z-index: 2000;
+  transition: width .1s linear;
+}
+
+/* ===== PRICING ===== */
+.pricing-section { background: var(--off-white); }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.pricing-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem 1.25rem 1.75rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.pricing-card-featured {
+  background: var(--green);
+  color: var(--white);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 32px rgba(58,125,68,.35);
+}
+.pricing-badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: #f59e0b;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .3rem .85rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.pricing-size {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.pricing-price {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1;
+}
+.pricing-price span {
+  font-size: .85rem;
+  font-weight: 600;
+  opacity: .75;
+}
+.pricing-card-featured .pricing-price span { opacity: .85; }
+.pricing-features {
+  list-style: none;
+  font-size: .875rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  flex: 1;
+}
+.pricing-features li::before {
+  content: '✓ ';
+  color: var(--green);
+  font-weight: 700;
+}
+.pricing-card-featured .pricing-features li::before { color: #a8e6b4; }
+.pricing-note {
+  text-align: center;
+  font-size: .875rem;
+  color: var(--gray);
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+@media (max-width: 1000px) {
+  .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+  .pricing-card-featured { transform: none; }
+}
+@media (max-width: 680px) {
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== FAQ ===== */
+.faq-section { background: var(--white); }
+.faq-list {
+  max-width: 760px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.faq-item {
+  background: var(--off-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem 1.35rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--dark);
+  text-align: left;
+  gap: 1rem;
+}
+.faq-q:hover { color: var(--green); }
+.faq-icon {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform var(--transition);
+  color: var(--green);
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+  padding: 0 1.35rem;
+}
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding: 0 1.35rem 1.15rem;
+}
+.faq-a p { font-size: .9rem; color: var(--gray); line-height: 1.7; }
+
+/* ===== SERVICE AREA MAP ===== */
+.map-section { background: var(--off-white); }
+.map-wrap {
+  height: 450px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* ===== SMS BUTTON ===== */
+.mobile-cta-sms { background: #007AFF; }

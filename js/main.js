@@ -1,3 +1,12 @@
+// Scroll progress bar
+const scrollProgressEl = document.getElementById('scrollProgress');
+if (scrollProgressEl) {
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+    scrollProgressEl.style.width = Math.min(pct, 100) + '%';
+  }, { passive: true });
+}
+
 // Parallax hero
 const heroBgImg = document.getElementById('heroBg');
 if (heroBgImg) {
@@ -13,6 +22,23 @@ if (heroBgImg) {
   }, { passive: true });
 }
 
+// Urgency popup
+const popupOverlay = document.getElementById('popupOverlay');
+const popupClose   = document.getElementById('popupClose');
+if (popupOverlay && popupClose) {
+  if (!localStorage.getItem('popupDismissed')) {
+    setTimeout(() => popupOverlay.classList.add('visible'), 2000);
+  }
+  function closePopup() {
+    popupOverlay.classList.remove('visible');
+    localStorage.setItem('popupDismissed', '1');
+  }
+  popupClose.addEventListener('click', closePopup);
+  popupOverlay.addEventListener('click', e => { if (e.target === popupOverlay) closePopup(); });
+  const popupCta = popupOverlay.querySelector('.popup-cta');
+  if (popupCta) popupCta.addEventListener('click', closePopup);
+}
+
 // Mobile nav toggle
 const toggle = document.getElementById('navToggle');
 const menu   = document.getElementById('navMenu');
@@ -24,6 +50,15 @@ menu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     toggle.classList.remove('open');
     menu.classList.remove('open');
+  });
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
   });
 });
 
@@ -45,6 +80,149 @@ if ('IntersectionObserver' in window && revealEls.length) {
 } else {
   revealEls.forEach(el => el.classList.add('in'));
 }
+
+// Carousel factory
+function initCarousel(carouselId, dotsId) {
+  const wrap  = document.getElementById(carouselId);
+  if (!wrap) return;
+  const track  = wrap.querySelector('.carousel-track');
+  const slides = wrap.querySelectorAll('.carousel-slide');
+  const dotsEl = document.getElementById(dotsId);
+  let cur = 0, timer;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', `Slide ${i + 1}`);
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    cur = (n + slides.length) % slides.length;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === cur)
+    );
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(cur + 1), 4500);
+  }
+
+  wrap.querySelector('.carousel-prev').addEventListener('click', () => goTo(cur - 1));
+  wrap.querySelector('.carousel-next').addEventListener('click', () => goTo(cur + 1));
+
+  let startX = 0;
+  wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  wrap.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(cur + (diff > 0 ? 1 : -1));
+  });
+
+  resetTimer();
+}
+
+initCarousel('grassCarousel', 'grassDots');
+initCarousel('mulchCarousel', 'mulchDots');
+
+// Google Maps (Reviews + Service Area)
+const GOOGLE_API_KEY  = 'AIzaSyDaU4frp2CtzlMcGWU63M5nCauyCqzgSdg';
+const GOOGLE_PLACE_ID = 'ChIJyXBzI4z6AwoRfhawZ0mHP1A';
+
+function loadGoogleMaps() {
+  if (!GOOGLE_API_KEY || GOOGLE_API_KEY === 'YOUR_API_KEY_HERE') return;
+  const s = document.createElement('script');
+  s.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=places&callback=onGoogleMapsLoaded`;
+  s.async = true;
+  document.head.appendChild(s);
+}
+
+window.onGoogleMapsLoaded = function () {
+  // Reviews
+  const container = document.getElementById('googleReviews');
+  if (container) {
+    const svc = new google.maps.places.PlacesService(document.createElement('div'));
+    svc.getDetails(
+      { placeId: GOOGLE_PLACE_ID, fields: ['reviews', 'rating', 'user_ratings_total'] },
+      (place, status) => {
+        if (status !== google.maps.places.PlacesServiceStatus.OK || !place.reviews?.length) return;
+        const reviews = place.reviews.filter(r => r.rating >= 4).slice(0, 6);
+        if (!reviews.length) return;
+        const sub = document.getElementById('reviewsSub');
+        if (sub && place.rating) {
+          sub.textContent = `${place.rating} ★ on Google · ${place.user_ratings_total}+ reviews`;
+        }
+        container.innerHTML = reviews.map(r => `
+          <div class="testimonial-card in">
+            <div class="review-header">
+              <img class="reviewer-avatar" src="${r.profile_photo_url}" alt="${r.author_name}" loading="lazy" onerror="this.style.display='none'" />
+              <div class="reviewer-info">
+                <div class="reviewer-name">${r.author_name}</div>
+                <div class="stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+              </div>
+              <svg class="google-icon" viewBox="0 0 24 24" aria-label="Google review" role="img">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
+            </div>
+            <p>"${r.text.length > 220 ? r.text.slice(0, 220).trimEnd() + '…' : r.text}"</p>
+            <div class="review-time">${r.relative_time_description}</div>
+          </div>
+        `).join('');
+      }
+    );
+  }
+
+  // Service area map
+  const mapEl = document.getElementById('serviceAreaMap');
+  if (mapEl) {
+    const map = new google.maps.Map(mapEl, {
+      center: { lat: 42.252, lng: -87.883 },
+      zoom: 11,
+      styles: [
+        { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+        { featureType: 'transit', stylers: [{ visibility: 'off' }] }
+      ],
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: false,
+    });
+    new google.maps.Polygon({
+      paths: [
+        { lat: 42.170, lng: -87.855 },
+        { lat: 42.172, lng: -87.810 },
+        { lat: 42.200, lng: -87.790 },
+        { lat: 42.210, lng: -87.798 },
+        { lat: 42.248, lng: -87.798 },
+        { lat: 42.290, lng: -87.820 },
+        { lat: 42.335, lng: -87.835 },
+        { lat: 42.340, lng: -87.860 },
+        { lat: 42.320, lng: -87.880 },
+        { lat: 42.295, lng: -87.870 },
+        { lat: 42.270, lng: -87.875 },
+        { lat: 42.285, lng: -87.960 },
+        { lat: 42.275, lng: -87.980 },
+        { lat: 42.255, lng: -87.960 },
+        { lat: 42.220, lng: -87.940 },
+        { lat: 42.180, lng: -87.900 },
+        { lat: 42.170, lng: -87.855 },
+      ],
+      strokeColor: '#3a7d44',
+      strokeOpacity: 0.9,
+      strokeWeight: 2,
+      fillColor: '#3a7d44',
+      fillOpacity: 0.18,
+      map,
+    });
+  }
+};
+
+loadGoogleMaps();
 
 // EmailJS
 emailjs.init('p7J8HXntEE-QVw-_u');
@@ -77,11 +255,7 @@ if (form) {
 
     emailjs.send('service_obqb3f8', 'template_02argah', params)
       .then(() => {
-        status.textContent = "Thanks! We'll be in touch soon.";
-        status.style.color = '#a8e6b4';
-        form.reset();
-        btn.textContent = 'Send Request';
-        btn.disabled = false;
+        window.location.href = '/thank-you.html';
       })
       .catch((err) => {
         console.error('EmailJS error:', err);
