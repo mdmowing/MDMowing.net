@@ -13,15 +13,21 @@ if (heroBgImg) {
   }, { passive: true });
 }
 
-// Urgency banner dismiss
-const urgencyBanner = document.getElementById('urgencyBanner');
-const urgencyClose  = document.getElementById('urgencyClose');
-if (urgencyBanner && urgencyClose) {
-  if (localStorage.getItem('urgencyDismissed')) urgencyBanner.classList.add('hidden');
-  urgencyClose.addEventListener('click', () => {
-    urgencyBanner.classList.add('hidden');
-    localStorage.setItem('urgencyDismissed', '1');
-  });
+// Urgency popup
+const popupOverlay = document.getElementById('popupOverlay');
+const popupClose   = document.getElementById('popupClose');
+if (popupOverlay && popupClose) {
+  if (!localStorage.getItem('popupDismissed')) {
+    setTimeout(() => popupOverlay.classList.add('visible'), 2000);
+  }
+  function closePopup() {
+    popupOverlay.classList.remove('visible');
+    localStorage.setItem('popupDismissed', '1');
+  }
+  popupClose.addEventListener('click', closePopup);
+  popupOverlay.addEventListener('click', e => { if (e.target === popupOverlay) closePopup(); });
+  const popupCta = popupOverlay.querySelector('.popup-cta');
+  if (popupCta) popupCta.addEventListener('click', closePopup);
 }
 
 // Mobile nav toggle

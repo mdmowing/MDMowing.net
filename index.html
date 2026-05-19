@@ -61,11 +61,19 @@
     </div>
   </header>
 
-  <!-- URGENCY BANNER -->
-  <div class="urgency-banner" id="urgencyBanner">
-    <span>&#127807; Now booking summer 2026 &mdash; <strong>limited spots available.</strong></span>
-    <a href="#contact" class="urgency-banner-link">Get a free quote &rarr;</a>
-    <button class="urgency-banner-close" id="urgencyClose" aria-label="Dismiss banner">&#10005;</button>
+  <!-- URGENCY POPUP -->
+  <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-label="Booking availability">
+    <div class="popup-card" id="popupCard">
+      <button class="popup-close" id="popupClose" aria-label="Close">&#10005;</button>
+      <div class="popup-accent"></div>
+      <div class="popup-body">
+        <p class="popup-eyebrow">&#127807; Summer 2026</p>
+        <h3 class="popup-title">Now Taking Bookings</h3>
+        <p class="popup-sub">Spots are filling up fast — lock in your lawn care before the season gets away from you.</p>
+        <a href="#contact" class="btn btn-primary popup-cta">Get a Free Quote</a>
+        <p class="popup-note">No obligation &middot; Response within 24 hrs</p>
+      </div>
+    </div>
   </div>
 
   <!-- HERO -->

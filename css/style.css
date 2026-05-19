@@ -468,41 +468,92 @@ textarea { resize: vertical; }
 .mobile-cta:active { transform: scale(.97); }
 .mobile-cta svg { width: 18px; height: 18px; }
 
-/* ===== URGENCY BANNER ===== */
-.urgency-banner {
-  background: var(--green-dark);
-  color: var(--white);
-  padding: .6rem 3rem .6rem 1.5rem;
+/* ===== URGENCY POPUP ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  font-size: .875rem;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+.popup-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.popup-card {
+  background: var(--white);
+  border-radius: 20px;
+  max-width: 420px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,.22);
   position: relative;
-  margin-top: 68px;
-  flex-wrap: wrap;
+  transform: translateY(24px) scale(.97);
+  transition: transform .35s ease;
 }
-.urgency-banner strong { font-weight: 700; }
-.urgency-banner-link {
-  color: #a8e6b4;
-  font-weight: 700;
-  text-decoration: underline;
-  white-space: nowrap;
-  transition: color var(--transition);
+.popup-overlay.visible .popup-card {
+  transform: translateY(0) scale(1);
 }
-.urgency-banner-link:hover { color: var(--white); }
-.urgency-banner-close {
+.popup-accent {
+  height: 6px;
+  background: linear-gradient(90deg, var(--green-dark), var(--green));
+}
+.popup-body {
+  padding: 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: .75rem;
+}
+.popup-close {
   position: absolute;
-  right: 1rem; top: 50%;
-  transform: translateY(-50%);
-  background: none; border: none;
-  color: rgba(255,255,255,.6);
-  cursor: pointer; font-size: 1rem;
-  line-height: 1; padding: .35rem;
-  transition: color var(--transition);
+  top: .85rem; right: .85rem;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--off-white);
+  border: none;
+  cursor: pointer;
+  font-size: .9rem;
+  color: var(--gray);
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition), color var(--transition);
+  z-index: 1;
 }
-.urgency-banner-close:hover { color: var(--white); }
-.urgency-banner.hidden { display: none; }
+.popup-close:hover { background: var(--gray-light); color: var(--dark); }
+.popup-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.popup-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--dark);
+  line-height: 1.2;
+}
+.popup-sub {
+  color: var(--gray);
+  font-size: .95rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+.popup-cta { width: 100%; margin-top: .5rem; }
+.popup-note {
+  font-size: .78rem;
+  color: var(--gray);
+  letter-spacing: .03em;
+}
 
 /* ===== RECENT JOBS GRID ===== */
 .jobs-section { background: var(--off-white); }
@@ -846,7 +897,6 @@ textarea { resize: vertical; }
   .cta-strip-actions { justify-content: center; }
   .ba-grid { grid-template-columns: 1fr; }
   .jobs-grid { grid-template-columns: 1fr 1fr; }
-  .urgency-banner { gap: .5rem; font-size: .82rem; }
 }
 
 @media (max-width: 680px) {
