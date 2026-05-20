@@ -17,16 +17,15 @@
     : '🌱 Now booking spring cleanups — spots filling fast. <a href="#contact">Get your free quote today!</a>';
 
   const seasons = [
-    { months: [2,3,4],  bg: '#2c5f35', msg: springMsg },
-    { months: [5,6,7],  bg: '#2c5f35', msg: '☀️ Summer season is here — lock in your weekly mowing schedule before we fill up! <a href="#contact">Book now →</a>' },
-    { months: [8,9,10], bg: '#2c5f35', msg: '🍂 Fall cleanup season is open — leaf removal &amp; winterization booking now! <a href="#contact">Schedule →</a>' },
-    { months: [11,0,1], bg: '#2c5f35', msg: '❄️ Snow removal is available — get on the list before the first storm hits! <a href="#contact">Get on the list →</a>' },
+    { months: [2,3,4],  msg: springMsg },
+    { months: [5,6,7],  msg: '☀️ Summer season is here — lock in your weekly mowing schedule before we fill up! <a href="#contact">Book now →</a>' },
+    { months: [8,9,10], msg: '🍂 Fall cleanup season is open — leaf removal &amp; winterization booking now! <a href="#contact">Schedule →</a>' },
+    { months: [11,0,1], msg: '❄️ Snow removal is available — get on the list before the first storm hits! <a href="#contact">Get on the list →</a>' },
   ];
 
   const season = seasons.find(s => s.months.includes(month));
   if (!season) return;
 
-  banner.style.background = season.bg;
   msgEl.innerHTML = season.msg;
   document.body.classList.add('banner-active');
   setTimeout(() => banner.classList.add('visible'), 300);
