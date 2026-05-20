@@ -70,29 +70,20 @@ if (heroBgImg) {
   const base = 163 + Math.max(0, weeks) * 7;
   let current = 0;
 
-  function animateCount(from, to, duration, onDone) {
+  function animateCount(from, to, duration) {
     const start = performance.now();
     function step(ts) {
       const progress = Math.min((ts - start) / duration, 1);
       const ease = 1 - Math.pow(1 - progress, 3);
-      current = Math.floor(from + (to - from) * ease);
-      el.textContent = current;
+      el.textContent = Math.floor(from + (to - from) * ease);
       if (progress < 1) requestAnimationFrame(step);
-      else if (onDone) onDone();
     }
     requestAnimationFrame(step);
   }
 
-  function startSlowTick() {
-    setInterval(() => {
-      current += 1;
-      el.textContent = current;
-    }, 28000); // ticks up every 28 seconds — visibly alive without feeling fake
-  }
-
   const io = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
-      animateCount(0, base, 1800, startSlowTick);
+      animateCount(0, base, 1800);
       io.disconnect();
     }
   }, { threshold: 0.5 });
