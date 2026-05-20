@@ -48,6 +48,15 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
+// Shrink nav on scroll
+(function () {
+  const wrapper = document.getElementById('navWrapper');
+  if (!wrapper) return;
+  window.addEventListener('scroll', () => {
+    wrapper.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+})();
+
 // Parallax hero
 const heroBgImg = document.getElementById('heroBg');
 if (heroBgImg) {

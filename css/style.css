@@ -156,7 +156,9 @@ body.banner-active .top-banner { display: flex; }
   align-items: center;
   justify-content: space-between;
   height: 68px;
+  transition: height .25s ease;
 }
+.nav-wrapper.scrolled .nav-inner { height: 50px; }
 .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--dark); letter-spacing: -.01em; }
 .logo span { color: var(--green); }
 .nav-menu { display: flex; align-items: center; gap: 2rem; }
@@ -899,7 +901,7 @@ textarea { resize: vertical; }
   .nav-toggle { display: flex; }
   .nav-menu {
     display: none;
-    position: absolute; top: 68px; left: 0; right: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
     background: rgba(21,31,23,.97);
     flex-direction: column; align-items: stretch;
     padding: 1.5rem 1.25rem; gap: 0;
