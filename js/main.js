@@ -22,22 +22,42 @@ if (heroBgImg) {
   }, { passive: true });
 }
 
-// Urgency popup
-const popupOverlay = document.getElementById('popupOverlay');
-const popupClose   = document.getElementById('popupClose');
-if (popupOverlay && popupClose) {
-  if (!localStorage.getItem('popupDismissed')) {
-    setTimeout(() => popupOverlay.classList.add('visible'), 2000);
+// Season banner
+(function () {
+  const banner = document.getElementById('seasonBanner');
+  if (!banner) return;
+
+  // Chicago time
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }));
+  const month = now.getMonth(); // 0=Jan … 11=Dec
+
+  // Lawn counter: 163 as of May 20 2026, +7 per week
+  const ref = new Date('2026-05-20T00:00:00-05:00');
+  const weeksElapsed = Math.floor((now - ref) / (7 * 24 * 60 * 60 * 1000));
+  const count = 163 + Math.max(0, weeksElapsed) * 7;
+
+  let bg, msg;
+  if (month >= 2 && month <= 4) {
+    // Spring: Mar–May
+    bg = 'linear-gradient(90deg,#2c5f35,#3a7d44)';
+    msg = `🌿 ${count} lawns cut this season &mdash; spots filling fast. <a href="#contact">Lock yours in →</a>`;
+  } else if (month >= 5 && month <= 7) {
+    // Summer: Jun–Aug
+    bg = 'linear-gradient(90deg,#1a6b2e,#3a7d44)';
+    msg = `☀️ ${count} lawns looking great this summer. <a href="#contact">Get your free quote →</a>`;
+  } else if (month >= 8 && month <= 10) {
+    // Fall: Sep–Nov
+    bg = 'linear-gradient(90deg,#7d5a2c,#b07d3a)';
+    msg = `🍂 Fall cleanup season — leaf removal booking up fast. <a href="#contact">Schedule now →</a>`;
+  } else {
+    // Winter: Dec–Feb
+    bg = 'linear-gradient(90deg,#1a3a5c,#2a5a8c)';
+    msg = `❄️ Snow removal available. <a href="#contact">Get on the schedule →</a>`;
   }
-  function closePopup() {
-    popupOverlay.classList.remove('visible');
-    localStorage.setItem('popupDismissed', '1');
-  }
-  popupClose.addEventListener('click', closePopup);
-  popupOverlay.addEventListener('click', e => { if (e.target === popupOverlay) closePopup(); });
-  const popupCta = popupOverlay.querySelector('.popup-cta');
-  if (popupCta) popupCta.addEventListener('click', closePopup);
-}
+
+  banner.style.background = bg;
+  banner.innerHTML = msg;
+})();
 
 // Mobile nav toggle
 const toggle = document.getElementById('navToggle');

@@ -447,7 +447,7 @@ textarea { resize: vertical; }
 .mobile-cta-group {
   display: none;
   position: fixed;
-  bottom: 1rem; right: 1rem;
+  bottom: 3.5rem; right: 1rem;
   z-index: 999;
   flex-direction: column;
   gap: .6rem;
@@ -468,91 +468,31 @@ textarea { resize: vertical; }
 .mobile-cta:active { transform: scale(.97); }
 .mobile-cta svg { width: 18px; height: 18px; }
 
-/* ===== URGENCY POPUP ===== */
-.popup-overlay {
+/* ===== SEASON BANNER ===== */
+.season-banner {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 2000;
+  bottom: 0; left: 0; right: 0;
+  z-index: 998;
+  padding: .6rem 1.5rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .04em;
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .35s ease;
+  gap: .6rem;
 }
-.popup-overlay.visible {
-  opacity: 1;
-  pointer-events: all;
+.season-banner a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
 }
-.popup-card {
-  background: var(--white);
-  border-radius: 20px;
-  max-width: 420px;
-  width: 100%;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,.22);
-  position: relative;
-  transform: translateY(24px) scale(.97);
-  transition: transform .35s ease;
-}
-.popup-overlay.visible .popup-card {
-  transform: translateY(0) scale(1);
-}
-.popup-accent {
-  height: 6px;
-  background: linear-gradient(90deg, var(--green-dark), var(--green));
-}
-.popup-body {
-  padding: 2rem 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: .75rem;
-}
-.popup-close {
-  position: absolute;
-  top: .85rem; right: .85rem;
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  background: var(--off-white);
-  border: none;
-  cursor: pointer;
-  font-size: .9rem;
-  color: var(--gray);
-  display: flex; align-items: center; justify-content: center;
-  transition: background var(--transition), color var(--transition);
-  z-index: 1;
-}
-.popup-close:hover { background: var(--gray-light); color: var(--dark); }
-.popup-eyebrow {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: .78rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--green);
-}
-.popup-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 1.6rem;
-  color: var(--dark);
-  line-height: 1.2;
-}
-.popup-sub {
-  color: var(--gray);
-  font-size: .95rem;
-  line-height: 1.6;
-  max-width: 320px;
-}
-.popup-cta { width: 100%; margin-top: .5rem; }
-.popup-note {
-  font-size: .78rem;
-  color: var(--gray);
-  letter-spacing: .03em;
+@media (max-width: 480px) {
+  .season-banner { font-size: .76rem; padding: .55rem 1rem; }
 }
 
 /* ===== RECENT JOBS GRID ===== */
