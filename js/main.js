@@ -64,10 +64,14 @@ if (heroBgImg) {
   const el = document.getElementById('lawnCounter');
   if (!el) return;
 
-  const ref = new Date('2026-05-20T00:00:00-05:00');
   const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }));
-  const weeks = Math.floor((now - ref) / (7 * 24 * 60 * 60 * 1000));
-  const base = 163 + Math.max(0, weeks) * 7;
+  // 163 cuts as of May 20 2026; increments by 7 each Saturday at noon Chicago time
+  // May 20 2026 is a Wednesday, so first Saturday is May 23
+  const firstSatNoon = new Date('2026-05-23T12:00:00-05:00');
+  const sats = now >= firstSatNoon
+    ? Math.floor((now - firstSatNoon) / (7 * 24 * 60 * 60 * 1000)) + 1
+    : 0;
+  const base = 163 + sats * 7;
   let current = 0;
 
   function animateCount(from, to, duration) {
