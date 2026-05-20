@@ -11,10 +11,10 @@
   if (!banner || !msgEl || !close) return;
 
   const seasons = [
-    { months: [2,3,4],  bg: '#2d6a4f', msg: '🌱 Now booking spring cleanups — spots filling fast. <a href="#contact">Get your free quote today!</a>' },
-    { months: [5,6,7],  bg: '#1a5c32', msg: '☀️ Summer season is here — lock in your weekly mowing schedule before we fill up! <a href="#contact">Book now →</a>' },
-    { months: [8,9,10], bg: '#92400e', msg: '🍂 Fall cleanup season is open — leaf removal &amp; winterization booking now! <a href="#contact">Schedule →</a>' },
-    { months: [11,0,1], bg: '#1e3a5f', msg: '❄️ Snow removal is available — get on the list before the first storm hits! <a href="#contact">Get on the list →</a>' },
+    { months: [2,3,4],  bg: '#2c5f35', msg: '🌱 Now booking spring cleanups — spots filling fast. <a href="#contact">Get your free quote today!</a>' },
+    { months: [5,6,7],  bg: '#2c5f35', msg: '☀️ Summer season is here — lock in your weekly mowing schedule before we fill up! <a href="#contact">Book now →</a>' },
+    { months: [8,9,10], bg: '#2c5f35', msg: '🍂 Fall cleanup season is open — leaf removal &amp; winterization booking now! <a href="#contact">Schedule →</a>' },
+    { months: [11,0,1], bg: '#2c5f35', msg: '❄️ Snow removal is available — get on the list before the first storm hits! <a href="#contact">Get on the list →</a>' },
   ];
 
   const season = seasons.find(s => s.months.includes(month));
@@ -57,43 +57,6 @@ if (heroBgImg) {
     }
   }, { passive: true });
 }
-
-// Season banner
-(function () {
-  const banner = document.getElementById('seasonBanner');
-  if (!banner) return;
-
-  // Chicago time
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }));
-  const month = now.getMonth(); // 0=Jan … 11=Dec
-
-  // Lawn counter: 163 as of May 20 2026, +7 per week
-  const ref = new Date('2026-05-20T00:00:00-05:00');
-  const weeksElapsed = Math.floor((now - ref) / (7 * 24 * 60 * 60 * 1000));
-  const count = 163 + Math.max(0, weeksElapsed) * 7;
-
-  let bg, msg;
-  if (month >= 2 && month <= 4) {
-    // Spring: Mar–May
-    bg = 'linear-gradient(90deg,#2c5f35,#3a7d44)';
-    msg = `🌿 ${count} lawns cut this season &mdash; spots filling fast. <a href="#contact">Lock yours in →</a>`;
-  } else if (month >= 5 && month <= 7) {
-    // Summer: Jun–Aug
-    bg = 'linear-gradient(90deg,#1a6b2e,#3a7d44)';
-    msg = `☀️ ${count} lawns looking great this summer. <a href="#contact">Get your free quote →</a>`;
-  } else if (month >= 8 && month <= 10) {
-    // Fall: Sep–Nov
-    bg = 'linear-gradient(90deg,#7d5a2c,#b07d3a)';
-    msg = `🍂 Fall cleanup season — leaf removal booking up fast. <a href="#contact">Schedule now →</a>`;
-  } else {
-    // Winter: Dec–Feb
-    bg = 'linear-gradient(90deg,#1a3a5c,#2a5a8c)';
-    msg = `❄️ Snow removal available. <a href="#contact">Get on the schedule →</a>`;
-  }
-
-  banner.style.background = bg;
-  banner.innerHTML = msg;
-})();
 
 // Lawn counter animation
 (function () {
