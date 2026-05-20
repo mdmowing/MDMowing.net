@@ -1,3 +1,39 @@
+// Top seasonal banner
+(function () {
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }));
+  const month = now.getMonth();
+  const key = `topBanner_${now.getFullYear()}_${month}`;
+  if (localStorage.getItem(key)) return;
+
+  const banner = document.getElementById('topBanner');
+  const msgEl  = document.getElementById('topBannerMsg');
+  const close  = document.getElementById('topBannerClose');
+  if (!banner || !msgEl || !close) return;
+
+  const seasons = [
+    { months: [2,3,4],  bg: '#2d6a4f', msg: '🌱 Now booking spring cleanups — spots filling fast. <a href="#contact">Get your free quote today!</a>' },
+    { months: [5,6,7],  bg: '#1a5c32', msg: '☀️ Summer season is here — lock in your weekly mowing schedule before we fill up! <a href="#contact">Book now →</a>' },
+    { months: [8,9,10], bg: '#92400e', msg: '🍂 Fall cleanup season is open — leaf removal &amp; winterization booking now! <a href="#contact">Schedule →</a>' },
+    { months: [11,0,1], bg: '#1e3a5f', msg: '❄️ Snow removal is available — get on the list before the first storm hits! <a href="#contact">Get on the list →</a>' },
+  ];
+
+  const season = seasons.find(s => s.months.includes(month));
+  if (!season) return;
+
+  banner.style.background = season.bg;
+  msgEl.innerHTML = season.msg;
+  document.body.classList.add('banner-active');
+  setTimeout(() => banner.classList.add('visible'), 300);
+
+  close.addEventListener('click', () => {
+    banner.classList.remove('visible');
+    setTimeout(() => {
+      document.body.classList.remove('banner-active');
+      localStorage.setItem(key, '1');
+    }, 500);
+  });
+})();
+
 // FAQ accordion
 document.querySelectorAll('.faq-item').forEach(item => {
   item.querySelector('.faq-q').addEventListener('click', () => {
