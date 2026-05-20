@@ -59,6 +59,36 @@ if (heroBgImg) {
   banner.innerHTML = msg;
 })();
 
+// Lawn counter animation
+(function () {
+  const el = document.getElementById('lawnCounter');
+  if (!el) return;
+
+  const ref = new Date('2026-05-20T00:00:00-05:00');
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }));
+  const weeks = Math.floor((now - ref) / (7 * 24 * 60 * 60 * 1000));
+  const target = 163 + Math.max(0, weeks) * 7;
+
+  function animateCount(from, to, duration) {
+    const start = performance.now();
+    function step(ts) {
+      const progress = Math.min((ts - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(from + (to - from) * ease);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const io = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCount(0, target, 1800);
+      io.disconnect();
+    }
+  }, { threshold: 0.5 });
+  io.observe(el);
+})();
+
 // Mobile nav toggle
 const toggle = document.getElementById('navToggle');
 const menu   = document.getElementById('navMenu');
