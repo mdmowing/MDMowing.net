@@ -927,43 +927,6 @@ textarea { resize: vertical; }
   .why-grid { grid-template-columns: 1fr 1fr; }
 }
 
-/* ===== TIKTOK SECTION ===== */
-.tiktok-section { background: var(--white); }
-.tiktok-grid {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-.tiktok-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  background: var(--off-white);
-  border: 1px solid var(--gray-light);
-  border-radius: var(--radius);
-  padding: 2.5rem 3rem;
-  text-decoration: none;
-  transition: transform var(--transition), box-shadow var(--transition);
-  color: var(--dark);
-}
-.tiktok-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.tiktok-thumb {
-  width: 72px; height: 72px;
-  background: #010101;
-  border-radius: 16px;
-  display: flex; align-items: center; justify-content: center;
-  color: #fff;
-}
-.tiktok-thumb svg { width: 38px; height: 38px; }
-.tiktok-card-label {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: .9rem;
-  color: var(--dark);
-}
-
 /* ===== FAQ ===== */
 .faq-section { background: var(--off-white); }
 .faq-list {
