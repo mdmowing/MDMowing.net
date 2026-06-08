@@ -671,6 +671,7 @@ textarea { resize: vertical; }
 .wave-from-white     { background: var(--white); }
 .wave-from-offwhite  { background: var(--off-white); }
 .wave-from-dark      { background: var(--dark); }
+.wave-from-green     { background: var(--green); }
 .wave-from-green-dark { background: var(--green-dark); }
 .hero-wave {
   position: absolute;
