@@ -1,0 +1,15 @@
+:root {
+  /* MDMowing brand — green + black */
+  --brand-bg: #080d08;
+  --brand-surface: #111a11;
+  --brand-surface-2: #1a2a1a;
+  --brand-border: #2a3f2a;
+  --brand-accent: #22c55e;
+  --brand-accent-glow: rgba(34, 197, 94, 0.35);
+  --brand-warn: #facc15;
+  --brand-text: #f0faf0;
+  --brand-text-dim: #6b9f6b;
+
+  --font-mono: ui-monospace, Menlo, monospace;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+}

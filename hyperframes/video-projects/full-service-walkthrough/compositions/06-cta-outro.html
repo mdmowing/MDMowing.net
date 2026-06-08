@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap">
+</head>
+<body>
+<template id="cta-template">
+<div data-composition-id="cta-outro" data-width="1080" data-height="1920">
+
+  <!-- Canvas -->
+  <div class="canvas-bg"></div>
+  <!-- Faint grid -->
+  <div class="grid-floor"></div>
+  <!-- Vignette -->
+  <div class="vignette"></div>
+
+  <!-- CTA content -->
+  <div class="cta-wrap">
+    <div class="brand-name" id="cta-brand">MDMowing</div>
+    <div class="url-wrap">
+      <div class="url-text" id="cta-url">mdmowing.net</div>
+      <div class="url-underline" id="cta-underline"></div>
+    </div>
+  </div>
+
+  <style>
+    [data-composition-id="cta-outro"] {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #080d08;
+      overflow: hidden;
+    }
+    [data-composition-id="cta-outro"] .canvas-bg {
+      position: absolute;
+      inset: 0;
+      background: #080d08;
+    }
+    [data-composition-id="cta-outro"] .grid-floor {
+      position: absolute;
+      inset: 0;
+      transform: perspective(900px) rotateX(60deg) translateY(30%);
+      background:
+        repeating-linear-gradient(0deg,  rgba(34,197,94,0.03) 0 1px, rgba(0,0,0,0) 1px 90px),
+        repeating-linear-gradient(90deg, rgba(34,197,94,0.03) 0 1px, rgba(0,0,0,0) 1px 90px);
+      pointer-events: none;
+    }
+    [data-composition-id="cta-outro"] .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 20%, #080d08 85%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    [data-composition-id="cta-outro"] .cta-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      z-index: 5;
+    }
+    [data-composition-id="cta-outro"] .brand-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 110px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #22c55e;
+      text-shadow:
+        0 0 60px rgba(34,197,94,0.5),
+        0 0 120px rgba(34,197,94,0.2);
+      will-change: transform, opacity;
+    }
+    [data-composition-id="cta-outro"] .url-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    [data-composition-id="cta-outro"] .url-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 52px;
+      letter-spacing: 0.12em;
+      color: #f0faf0;
+      will-change: transform, opacity;
+    }
+    [data-composition-id="cta-outro"] .url-underline {
+      width: 360px;
+      height: 3px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.8);
+      transform-origin: left center;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      const SLOT = 4.0;
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Brand name rises up
+      tl.from('#cta-brand', { y: 40, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.2);
+      // URL fades in below
+      tl.from('#cta-url', { y: 24, opacity: 0, duration: 0.5, ease: 'power2.out' }, 0.6);
+      // Green underline slides in
+      tl.from('#cta-underline', { scaleX: 0, opacity: 0, duration: 0.4, ease: 'power2.out' }, 1.0);
+
+      // Final fade to black at t=3.7s
+      tl.to('#cta-brand',     { opacity: 0, duration: 0.3, ease: 'power2.in' }, 3.7);
+      tl.to('#cta-url',       { opacity: 0, duration: 0.3, ease: 'power2.in' }, 3.75);
+      tl.to('#cta-underline', { opacity: 0, duration: 0.3, ease: 'power2.in' }, 3.8);
+
+      tl.to({}, { duration: SLOT }, 0);
+      window.__timelines['cta-outro'] = tl;
+    })();
+  </script>
+</div>
+</template>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap">
+</head>
+<body>
+<template id="reveal-template">
+<div data-composition-id="reveal" data-width="1080" data-height="1920">
+
+  <!-- Footage placeholder (lighter overlay — let the reveal breathe) -->
+  <div class="footage-placeholder"></div>
+  <!-- TO ADD FOOTAGE: remove .footage-placeholder div, add: video#clip-reveal src="../assets/clip-reveal.mp4" data-start="0" data-duration="2.0" data-track-index="0" muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" -->
+
+  <!-- Lighter overlay — let the reveal breathe -->
+  <div class="footage-overlay"></div>
+  <div class="vignette"></div>
+
+  <div class="brand-wrap">
+    <div class="brand-word" id="reveal-brand">MDMowing.</div>
+    <div class="brand-glow"></div>
+  </div>
+
+  <style>
+    [data-composition-id="reveal"] {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #080d08;
+      overflow: hidden;
+    }
+    [data-composition-id="reveal"] .footage-placeholder {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(170deg, #182018 0%, #0a120a 40%, #1a2a1a 100%);
+    }
+    [data-composition-id="reveal"] .footage-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    [data-composition-id="reveal"] .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 25%, #000 90%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    [data-composition-id="reveal"] .brand-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+    [data-composition-id="reveal"] .brand-word {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 140px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #22c55e;
+      text-shadow:
+        0 0 80px rgba(34,197,94,0.7),
+        0 0 160px rgba(34,197,94,0.35);
+      will-change: transform, opacity;
+    }
+    [data-composition-id="reveal"] .brand-glow {
+      position: absolute;
+      width: 600px;
+      height: 200px;
+      background: radial-gradient(ellipse at center, rgba(34,197,94,0.18) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      const SLOT = 2.0;
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Brand crystallizes from small — earned reveal
+      tl.from('#reveal-brand', { scale: 0.3, opacity: 0, duration: 0.6, ease: 'back.out(1.4)' }, 0.3);
+
+      tl.to({}, { duration: SLOT }, 0);
+      window.__timelines['reveal'] = tl;
+    })();
+  </script>
+</div>
+</template>
+</body>
+</html>

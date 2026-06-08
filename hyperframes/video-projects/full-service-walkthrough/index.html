@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>MDMowing — Full Service Walkthrough</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #080d08;
+    }
+
+    /* Whip streak: horizontal light bar that zips across frame */
+    .whip-streak {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 50%;
+      height: 10px;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+      filter: blur(5px);
+      transform: translateY(-50%);
+      z-index: 50;
+      pointer-events: none;
+    }
+
+    /* Blur crossfade overlay */
+    .crossfade-overlay {
+      position: absolute;
+      inset: 0;
+      background: #080d08;
+      z-index: 49;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ROOT COMPOSITION — full-service-walkthrough | 1080×1920 | 30fps | 19s -->
+<div
+  id="root"
+  data-composition-id="full-service-walkthrough"
+  data-start="0"
+  data-duration="19"
+  data-width="1080"
+  data-height="1920"
+>
+
+  <!-- ── SUB-COMPOSITIONS ──────────────────────────────────── -->
+
+  <!-- Beat 1: Hook (0.0 – 2.5s) -->
+  <div id="comp-hook"
+       data-composition-src="compositions/01-hook.html"
+       data-composition-id="hook"
+       data-start="0" data-duration="2.5" data-track-index="1">
+  </div>
+
+  <!-- Beat 2: Mow (2.5 – 6.0s) -->
+  <div id="comp-mow"
+       data-composition-src="compositions/02-mow.html"
+       data-composition-id="mow"
+       data-start="2.5" data-duration="3.5" data-track-index="2">
+  </div>
+
+  <!-- Beat 3: Edge (6.0 – 9.5s) -->
+  <div id="comp-edge"
+       data-composition-src="compositions/03-edge.html"
+       data-composition-id="edge"
+       data-start="6.0" data-duration="3.5" data-track-index="3">
+  </div>
+
+  <!-- Beat 4: Blow (9.5 – 13.0s) -->
+  <div id="comp-blow"
+       data-composition-src="compositions/04-blow.html"
+       data-composition-id="blow"
+       data-start="9.5" data-duration="3.5" data-track-index="4">
+  </div>
+
+  <!-- Beat 5: Reveal (13.0 – 15.0s) -->
+  <div id="comp-reveal"
+       data-composition-src="compositions/05-reveal.html"
+       data-composition-id="reveal"
+       data-start="13.0" data-duration="2.0" data-track-index="5">
+  </div>
+
+  <!-- Beat 6: CTA Outro (15.0 – 19.0s) -->
+  <div id="comp-cta"
+       data-composition-src="compositions/06-cta-outro.html"
+       data-composition-id="cta-outro"
+       data-start="15.0" data-duration="4.0" data-track-index="6">
+  </div>
+
+  <!-- ── WHIP-STREAK TRANSITIONS ───────────────────────────── -->
+
+  <!-- Whip 1: Hook → Mow -->
+  <div class="clip whip-streak" id="whip-1"
+       data-start="2.2" data-duration="0.4" data-track-index="20">
+  </div>
+
+  <!-- Whip 2: Mow → Edge -->
+  <div class="clip whip-streak" id="whip-2"
+       data-start="5.7" data-duration="0.4" data-track-index="21">
+  </div>
+
+  <!-- Whip 3: Edge → Blow -->
+  <div class="clip whip-streak" id="whip-3"
+       data-start="9.2" data-duration="0.4" data-track-index="22">
+  </div>
+
+  <!-- Whip 4: Blow → Reveal -->
+  <div class="clip whip-streak" id="whip-4"
+       data-start="12.7" data-duration="0.4" data-track-index="23">
+  </div>
+
+  <!-- Blur crossfade: Reveal → CTA -->
+  <div class="clip crossfade-overlay" id="xfade-cta"
+       data-start="14.7" data-duration="0.6" data-track-index="24">
+  </div>
+
+  <!-- ── SFX (whoosh at each whip cut) ─────────────────────── -->
+  <audio id="sfx-1" data-start="2.2"  data-track-index="30" data-volume="0.25"
+         src="assets/whoosh.mp3"></audio>
+  <audio id="sfx-2" data-start="5.7"  data-track-index="31" data-volume="0.25"
+         src="assets/whoosh.mp3"></audio>
+  <audio id="sfx-3" data-start="9.2"  data-track-index="32" data-volume="0.25"
+         src="assets/whoosh.mp3"></audio>
+  <audio id="sfx-4" data-start="12.7" data-track-index="33" data-volume="0.25"
+         src="assets/whoosh.mp3"></audio>
+
+  <!-- ── MUSIC BED ─────────────────────────────────────────── -->
+  <audio id="music"
+         data-start="0" data-duration="19" data-track-index="40" data-volume="0.4"
+         src="assets/music-bed-cinematic-tech.mp3"></audio>
+
+</div>
+
+<!-- ROOT TIMELINE -->
+<script>
+(function () {
+  window.__timelines = window.__timelines || {};
+  const TOTAL = 19;
+  const tl = gsap.timeline({ paused: true });
+
+  // Whip streaks — each zips left→right in 0.4s
+  var whips      = ['#whip-1', '#whip-2', '#whip-3', '#whip-4'];
+  var whipStarts = [2.2, 5.7, 9.2, 12.7];
+  for (var i = 0; i < whips.length; i++) {
+    tl.fromTo(whips[i],
+      { xPercent: -110, scaleX: 0.6 },
+      { xPercent: 220,  scaleX: 1.6, duration: 0.4, ease: 'power3.in' },
+      whipStarts[i]
+    );
+  }
+
+  // Blur crossfade overlay: fade in then out around the Reveal→CTA cut
+  tl.fromTo('#xfade-cta',
+    { opacity: 0 },
+    { opacity: 1, duration: 0.3, ease: 'power2.in' },
+    14.7
+  );
+  tl.to('#xfade-cta',
+    { opacity: 0, duration: 0.3, ease: 'power2.out' },
+    15.0
+  );
+
+  // Anchor — keeps root composition alive for full duration
+  tl.to({}, { duration: TOTAL }, 0);
+
+  window.__timelines['full-service-walkthrough'] = tl;
+})();
+</script>
+
+</body>
+</html>

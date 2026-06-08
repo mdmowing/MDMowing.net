@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap">
+</head>
+<body>
+<template id="edge-template">
+<div data-composition-id="edge" data-width="1080" data-height="1920">
+
+  <video id="clip-edge" src="../assets/clip-edge.mp4"
+    data-start="0" data-duration="3.5" data-track-index="0"
+    muted playsinline
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+
+  <div class="footage-overlay"></div>
+  <div class="vignette"></div>
+
+  <div class="impact-wrap">
+    <div class="impact-word" id="edge-word">EDGE.</div>
+    <!-- Accent bar — visual callback to brand green -->
+    <div class="accent-bar"></div>
+  </div>
+
+  <style>
+    [data-composition-id="edge"] {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #080d08;
+      overflow: hidden;
+    }
+    [data-composition-id="edge"] .footage-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 1;
+    }
+    [data-composition-id="edge"] .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%, #000 95%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    [data-composition-id="edge"] .impact-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+    [data-composition-id="edge"] .impact-word {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 280px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      background: linear-gradient(180deg, #ffffff 0%, #aaaaaa 60%, #cccccc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(0,0,0,0);
+      color: transparent;
+      will-change: transform, opacity;
+    }
+    [data-composition-id="edge"] .accent-bar {
+      width: 280px;
+      height: 5px;
+      background: #22c55e;
+      box-shadow: 0 0 20px rgba(34,197,94,0.8);
+      margin-top: 24px;
+      transform-origin: left center;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      const SLOT = 3.5;
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Word slams in from RIGHT (mirror of mow) with blur
+      tl.from('#edge-word', { x: 320, opacity: 0, filter: 'blur(12px)', duration: 0.25, ease: 'expo.out' }, 0.15);
+      // Accent bar slides in from left
+      tl.from('.accent-bar', { scaleX: 0, opacity: 0, duration: 0.4, ease: 'power2.out' }, 0.45);
+      // Breathing pulse
+      tl.to('#edge-word', { scale: 1.03, duration: 1.0, ease: 'sine.inOut', yoyo: true, repeat: 2 }, 0.8);
+
+      tl.to({}, { duration: SLOT }, 0);
+      window.__timelines['edge'] = tl;
+    })();
+  </script>
+</div>
+</template>
+</body>
+</html>
