@@ -8,9 +8,10 @@
 <template id="blow-template">
 <div data-composition-id="blow" data-width="1080" data-height="1920">
 
-  <!-- Footage placeholder -->
-  <div class="footage-placeholder"></div>
-  <!-- TO ADD FOOTAGE: remove .footage-placeholder div, add: video#clip-blow src="../assets/clip-blow.mp4" data-start="0" data-duration="3.5" data-track-index="0" muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" -->
+  <video id="clip-blow" src="../assets/clip-blow.mp4"
+    data-start="0" data-duration="3.5" data-track-index="0"
+    muted playsinline
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
 
   <div class="footage-overlay"></div>
   <div class="vignette"></div>
@@ -32,11 +33,6 @@
       height: 100%;
       background: #080d08;
       overflow: hidden;
-    }
-    [data-composition-id="blow"] .footage-placeholder {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(140deg, #0a180a 0%, #060d06 50%, #101d10 100%);
     }
     [data-composition-id="blow"] .footage-overlay {
       position: absolute;

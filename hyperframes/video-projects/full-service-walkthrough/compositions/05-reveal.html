@@ -8,9 +8,10 @@
 <template id="reveal-template">
 <div data-composition-id="reveal" data-width="1080" data-height="1920">
 
-  <!-- Footage placeholder (lighter overlay — let the reveal breathe) -->
-  <div class="footage-placeholder"></div>
-  <!-- TO ADD FOOTAGE: remove .footage-placeholder div, add: video#clip-reveal src="../assets/clip-reveal.mp4" data-start="0" data-duration="2.0" data-track-index="0" muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" -->
+  <video id="clip-reveal" src="../assets/clip-reveal.mp4"
+    data-start="0" data-duration="2.0" data-track-index="0"
+    muted playsinline
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
 
   <!-- Lighter overlay — let the reveal breathe -->
   <div class="footage-overlay"></div>
@@ -28,11 +29,6 @@
       height: 100%;
       background: #080d08;
       overflow: hidden;
-    }
-    [data-composition-id="reveal"] .footage-placeholder {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(170deg, #182018 0%, #0a120a 40%, #1a2a1a 100%);
     }
     [data-composition-id="reveal"] .footage-overlay {
       position: absolute;
