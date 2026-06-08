@@ -208,13 +208,13 @@ body.banner-active .top-banner { display: flex; }
   position: fixed;
   bottom: 0; left: 0; right: 0;
   z-index: 997;
-  height: 52px;
+  height: 28px;
   background: #1a3a20;
   opacity: 0;
   transform: translateY(100%);
   transition: opacity .5s ease, transform .5s ease;
   pointer-events: none;
-  overflow: hidden;
+  overflow: visible;
 }
 .mower-rail.visible {
   opacity: 1;
@@ -232,17 +232,17 @@ body.banner-active .top-banner { display: flex; }
 }
 .mower-icon {
   position: absolute;
-  top: 50%;
+  bottom: 4px;
   left: 2%;
-  transform: translate(-50%, -50%);
-  width: 52px;
-  height: 40px;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,.5));
+  transform: translateX(-50%);
+  width: 44px;
+  height: 34px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,.6));
 }
 @media (max-width: 680px) {
-  .mower-rail { height: 40px; }
-  .mower-icon { width: 42px; height: 32px; }
-  .mobile-cta-group { bottom: calc(1rem + 40px); }
+  .mower-rail { height: 22px; }
+  .mower-icon { width: 36px; height: 28px; bottom: 2px; }
+  .mobile-cta-group { bottom: calc(1rem + 22px); }
 }
 .hero-overlay {
   position: absolute;
