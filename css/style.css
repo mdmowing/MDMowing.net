@@ -193,6 +193,57 @@ body.banner-active .top-banner { display: flex; }
   object-position: 65% center;
   will-change: transform;
 }
+.hero-depth {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(58,125,68,.35) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(26,51,32,.4) 0%, transparent 65%);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* ===== MOWER RAIL ===== */
+.mower-rail {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 997;
+  height: 52px;
+  background: #1a3a20;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity .5s ease, transform .5s ease;
+  pointer-events: none;
+  overflow: hidden;
+}
+.mower-rail.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mower-cut {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 0%;
+  background: repeating-linear-gradient(
+    90deg,
+    #3a7d44 0px, #3a7d44 18px,
+    #4a9155 18px, #4a9155 36px
+  );
+}
+.mower-icon {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 40px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.5));
+}
+@media (max-width: 680px) {
+  .mower-rail { height: 40px; }
+  .mower-icon { width: 42px; height: 32px; }
+  .mobile-cta-group { bottom: calc(1rem + 40px); }
+}
 .hero-overlay {
   position: absolute;
   inset: 0;

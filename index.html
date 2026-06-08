@@ -77,13 +77,13 @@
   <section class="hero" id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-bg">
-      <!-- To use your own photo: swap the src to images/hero.jpg after uploading it -->
       <img
         id="heroBg"
         src="images/IMG_1204.jpeg"
         alt="Manicured front yard with fresh mowing stripes"
         fetchpriority="high"
       />
+      <div class="hero-depth" id="heroDepth"></div>
     </div>
     <div class="container hero-content">
       <p class="hero-eyebrow">Lake Forest &amp; Highland Park's Trusted Crew</p>
@@ -517,6 +517,31 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
       <span>Free Quote</span>
     </a>
+  </div>
+
+  <!-- MOWER RAIL -->
+  <div class="mower-rail" id="mowerRail" aria-hidden="true">
+    <div class="mower-cut" id="mowerCut"></div>
+    <div class="mower-icon" id="mowerIcon">
+      <svg viewBox="0 0 72 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- handle -->
+        <line x1="46" y1="18" x2="64" y2="4" stroke="#a8e6b4" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- engine housing -->
+        <rect x="30" y="10" width="16" height="13" rx="3" fill="#3a7d44"/>
+        <!-- deck -->
+        <rect x="8" y="18" width="42" height="16" rx="4" fill="#2c5f35"/>
+        <!-- discharge chute -->
+        <path d="M8 24 L1 31 L6 33 L10 28Z" fill="#3a7d44"/>
+        <!-- back wheel -->
+        <circle cx="17" cy="38" r="10" fill="#151f17" stroke="#4a8f56" stroke-width="2.5"/>
+        <circle cx="17" cy="38" r="5" fill="#2c5f35"/>
+        <circle cx="17" cy="38" r="2" fill="#a8e6b4"/>
+        <!-- front wheel -->
+        <circle cx="42" cy="38" r="8" fill="#151f17" stroke="#4a8f56" stroke-width="2.5"/>
+        <circle cx="42" cy="38" r="4" fill="#2c5f35"/>
+        <circle cx="42" cy="38" r="1.5" fill="#a8e6b4"/>
+      </svg>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

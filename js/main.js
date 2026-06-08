@@ -57,20 +57,45 @@ document.querySelectorAll('.faq-item').forEach(item => {
   }, { passive: true });
 })();
 
-// Parallax hero
-const heroBgImg = document.getElementById('heroBg');
-if (heroBgImg) {
+// Parallax hero + depth layer + mower rail — unified scroll driver
+(function () {
+  const heroBgImg  = document.getElementById('heroBg');
+  const heroDepth  = document.getElementById('heroDepth');
+  const mowerRail  = document.getElementById('mowerRail');
+  const mowerIcon  = document.getElementById('mowerIcon');
+  const mowerCut   = document.getElementById('mowerCut');
+
   let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        heroBgImg.style.transform = `translateY(${window.scrollY * 0.35}px)`;
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }, { passive: true });
-}
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const scrollY   = window.scrollY;
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const progress  = Math.min(scrollY / maxScroll, 1);
+
+      // Hero image parallax
+      if (heroBgImg) heroBgImg.style.transform = `translateY(${scrollY * 0.35}px)`;
+
+      // Depth overlay parallax (opposite direction, slower — creates depth)
+      if (heroDepth) heroDepth.style.transform = `translateY(${scrollY * -0.12}px)`;
+
+      // Mower rail
+      if (mowerRail) {
+        mowerRail.classList.toggle('visible', scrollY > 80);
+        const pct = 2 + progress * 94; // 2% → 96%
+        if (mowerIcon) mowerIcon.style.left = pct + '%';
+        if (mowerCut)  mowerCut.style.width  = pct + '%';
+      }
+
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
 
 // Lawn counter animation
 (function () {
