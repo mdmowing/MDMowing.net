@@ -211,6 +211,7 @@ function initCarousel(carouselId, dotsId) {
 
 initCarousel('grassCarousel', 'grassDots');
 initCarousel('mulchCarousel', 'mulchDots');
+initCarousel('wallCarousel',  'wallDots');
 
 // Before/After sliders
 document.querySelectorAll('.ba-slider').forEach(slider => {
