@@ -626,14 +626,33 @@ textarea { resize: vertical; }
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+.featured-side figure {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
 .featured-side img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: var(--radius);
   transition: transform .35s ease;
+  display: block;
 }
-.featured-side img:hover { transform: scale(1.04); }
+.featured-side figure:hover img { transform: scale(1.06); }
+.featured-side figcaption {
+  position: absolute;
+  bottom: .5rem;
+  left: .5rem;
+  background: rgba(21,31,23,.85);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .25rem .6rem;
+  border-radius: 4px;
+}
 @media (max-width: 780px) {
   .featured-grid { grid-template-columns: 1fr; }
   .featured-side { grid-template-columns: 1fr 1fr; }
