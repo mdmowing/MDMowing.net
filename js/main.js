@@ -213,6 +213,7 @@ initCarousel('grassCarousel', 'grassDots');
 initCarousel('mulchCarousel', 'mulchDots');
 initCarousel('wallCarousel',  'wallDots');
 initCarousel('bedCarousel',   'bedDots');
+initCarousel('leafCarousel',  'leafDots');
 
 // Before/After sliders
 document.querySelectorAll('.ba-slider').forEach(slider => {
