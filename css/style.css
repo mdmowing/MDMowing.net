@@ -739,6 +739,8 @@ textarea { resize: vertical; }
 /* ===== BEFORE & AFTER SLIDER ===== */
 .ba-section { background: var(--off-white); }
 .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.ba-grid-single { grid-template-columns: 1fr; max-width: 920px; margin-inline: auto; }
+.ba-slider.ba-slider-wide { aspect-ratio: 16/9; }
 .ba-slider {
   position: relative;
   overflow: hidden;
