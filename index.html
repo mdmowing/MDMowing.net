@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1f2d1f" />
+  <meta name="theme-color" content="#1A1F1A" />
   <meta name="description" content="MD Mowing — Lake Forest landscape care and hardscape work. Weekly mowing, seasonal cleanups, and custom retaining walls across the North Shore since 2023." />
-  <meta name="keywords" content="lawn care, landscaping, mowing, mulching, leaf removal, snow removal, retaining walls, hardscape, Lake Forest, Highland Park, Lake Bluff, Libertyville, Knollwood, North Chicago, Deerfield, Illinois, MD Mowing, Marcus Dan" />
+  <meta name="keywords" content="lawn care, landscaping, mowing, mulching, leaf removal, snow removal, retaining walls, hardscape, Lake Forest, Highland Park, Lake Bluff, Libertyville, Illinois, MD Mowing, Marcus Dan" />
   <link rel="canonical" href="https://mdmowing.net/" />
   <title>MD Mowing — Landscape Care &amp; Hardscape · Lake Forest, IL</title>
 
@@ -19,10 +19,12 @@
   <meta name="twitter:title" content="MD Mowing — North Shore Landscape Care" />
   <meta name="twitter:description" content="Weekly mowing, seasonal cleanups, and custom hardscape work across the North Shore." />
   <meta name="twitter:image" content="https://mdmowing.net/images/IMG_1688.jpeg" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%231f2d1f'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-size='32' font-style='italic' fill='%23efe8db'%3Em%3C/text%3E%3C/svg%3E" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23243A28'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-size='32' font-style='italic' fill='%23FBF9F5'%3Em%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -43,21 +45,20 @@
   <style>
     /* ========== TOKENS ========== */
     :root {
-      --forest:     #1f2d1f;
-      --moss:       #3a4a33;
-      --sage:       #6b7a5e;
-      --cedar:      #8f5d2e;
-      --cedar-dk:   #7a4e26;
-      --stone:      #8a847a;
-      --stone-soft: #d9d4cc;
-      --sand:       #efe8db;
-      --sand-dp:    #e4dbc9;
-      --ivory:      #faf6ee;
-      --ink:        #171a15;
-      --ff-serif:   'Fraunces', Georgia, serif;
-      --ff-sans:    'Albert Sans', system-ui, -apple-system, sans-serif;
-      --gut:        clamp(1.5rem, 5vw, 4rem);
-      --hairline:   1px solid var(--stone-soft);
+      --bg:        #FBF9F5;
+      --bg-deep:   #F3EFE6;
+      --ink:       #1A1F1A;
+      --forest:    #243A28;
+      --moss:      #3A4A33;
+      --sage:      #6B7A5E;
+      --stone:     #8A847A;
+      --hairline:  #DAD4C8;
+      --cedar:     #8F5D2E;
+      --cedar-dk:  #7A4E26;
+      --ff-serif:  'Playfair Display', Georgia, serif;
+      --ff-sans:   'Inter', system-ui, -apple-system, sans-serif;
+      --gut:       clamp(1.5rem, 5vw, 5rem);
+      --section-v: clamp(5rem, 10vw, 9rem);
     }
 
     /* ========== RESET ========== */
@@ -66,44 +67,32 @@
     body {
       font-family: var(--ff-sans);
       color: var(--ink);
-      background: var(--ivory);
-      line-height: 1.6;
+      background: var(--bg);
+      line-height: 1.7;
       font-size: 1.0625rem;
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
-    button { font: inherit; cursor: pointer; }
+    button { font: inherit; cursor: pointer; background: none; border: 0; }
     input, textarea, select { font: inherit; color: inherit; }
 
+    ::selection { background: var(--forest); color: var(--bg); }
+
     /* ========== UTILITY ========== */
-    .wrap { max-width: 1400px; margin-inline: auto; padding-inline: var(--gut); }
-    .serif { font-family: var(--ff-serif); }
-    .italic { font-style: italic; }
+    .wrap { max-width: 1440px; margin-inline: auto; padding-inline: var(--gut); }
+    .wrap-narrow { max-width: 1100px; margin-inline: auto; padding-inline: var(--gut); }
     .eyebrow {
+      font-family: var(--ff-sans);
       font-size: 0.72rem;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--sage);
       font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
+      color: var(--stone);
     }
-    .eyebrow::before {
-      content: "";
-      display: inline-block;
-      width: 24px;
-      height: 1px;
-      background: currentColor;
-    }
-    .rule {
-      border: 0;
-      border-top: 1px solid var(--stone-soft);
-      margin: 0;
-    }
-    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
     .reveal.in { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
@@ -113,43 +102,36 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      padding: 1.05rem 2rem;
+      gap: 0.7rem;
+      padding: 1.05rem 2.1rem;
       background: var(--cedar);
-      color: var(--ivory);
+      color: var(--bg);
       font-family: var(--ff-sans);
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       border: 1px solid var(--cedar);
-      border-radius: 2px;
-      transition: background .2s ease, border-color .2s ease;
+      transition: background .25s ease, border-color .25s ease;
     }
     .btn:hover { background: var(--cedar-dk); border-color: var(--cedar-dk); }
-    .btn-ghost {
-      background: transparent;
-      color: var(--forest);
-      border-color: var(--forest);
-    }
-    .btn-ghost:hover { background: var(--forest); color: var(--ivory); }
     .btn-full { width: 100%; justify-content: center; }
     .link {
       font-family: var(--ff-sans);
-      font-size: 0.8125rem;
+      font-size: 0.78rem;
       font-weight: 500;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--forest);
-      border-bottom: 1px solid var(--stone-soft);
-      padding-bottom: 0.25rem;
-      transition: border-color .2s ease;
       display: inline-flex;
-      gap: 0.5rem;
       align-items: baseline;
+      gap: 0.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--hairline);
+      transition: border-color .25s ease;
     }
-    .link:hover { border-color: var(--forest); }
-    .link .arrow { transition: transform .2s ease; }
+    .link:hover { border-bottom-color: var(--forest); }
+    .link .arrow { transition: transform .25s ease; }
     .link:hover .arrow { transform: translateX(3px); }
 
     /* ========== NAV ========== */
@@ -157,34 +139,31 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(250, 246, 238, 0.92);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: var(--hairline);
+      background: var(--bg);
+      border-bottom: 1px solid var(--hairline);
     }
     .nav-inner {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
-      padding: 1.25rem var(--gut);
+      padding: 1.5rem var(--gut);
     }
     .brand {
       font-family: var(--ff-serif);
       font-weight: 500;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       letter-spacing: -0.01em;
-      font-variation-settings: "opsz" 24;
       color: var(--forest);
     }
     .brand em { font-style: italic; color: var(--sage); font-weight: 400; }
     .nav-menu {
       display: flex;
-      gap: 2.25rem;
-      align-items: baseline;
+      gap: 2.5rem;
+      align-items: center;
     }
     .nav-menu a {
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       font-weight: 500;
       color: var(--moss);
@@ -200,386 +179,263 @@
       display: none;
       flex-direction: column;
       gap: 5px;
-      background: none;
-      border: 0;
       padding: 4px;
     }
-    .nav-toggle span {
-      display: block; width: 24px; height: 1px;
-      background: var(--forest);
-    }
+    .nav-toggle span { display: block; width: 24px; height: 1px; background: var(--forest); }
 
-    /* ========== HERO ========== */
+    /* ========== HERO — magazine cover ========== */
     .hero {
-      display: grid;
-      grid-template-columns: 7fr 5fr;
-      gap: clamp(2rem, 6vw, 5rem);
-      padding: clamp(3rem, 8vw, 6.5rem) var(--gut) clamp(4rem, 8vw, 7rem);
-      max-width: 1400px;
-      margin-inline: auto;
-      align-items: start;
+      padding: clamp(5rem, 10vw, 9rem) 0 clamp(3rem, 6vw, 5rem);
     }
-    .hero-left { padding-top: clamp(1rem, 4vw, 3rem); padding-right: clamp(0rem, 3vw, 2rem); }
+    .hero-text {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 var(--gut);
+    }
+    .hero .eyebrow { margin-bottom: 2.5rem; display: block; }
     .hero h1 {
       font-family: var(--ff-serif);
-      font-size: clamp(2.75rem, 7vw, 5.75rem);
+      font-weight: 400;
+      font-size: clamp(3rem, 8.5vw, 7rem);
       line-height: 0.98;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      color: var(--forest);
-      font-variation-settings: "opsz" 144;
-      margin: 1.75rem 0 1.75rem;
-    }
-    .hero h1 em { font-style: italic; font-weight: 400; color: var(--moss); }
-    .hero .lede {
-      font-size: 1.125rem;
-      line-height: 1.55;
-      color: var(--moss);
-      max-width: 38ch;
-      margin-bottom: 2.5rem;
-    }
-    .hero-actions {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.25rem;
-    }
-    .hero-right {
-      position: relative;
-      aspect-ratio: 3/4;
-      margin-top: clamp(0rem, 3vw, 2rem);
-    }
-    .hero-right img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      border: 1px solid var(--stone-soft);
-      filter: saturate(0.92);
-    }
-    .hero-right .caption {
-      position: absolute;
-      bottom: -2rem;
-      right: 0;
-      font-family: var(--ff-serif);
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--stone);
-    }
-
-    /* ========== CREDENTIAL STRIP ========== */
-    .credit {
-      background: var(--forest);
-      color: var(--sand);
-      padding: 1.25rem var(--gut);
-      font-family: var(--ff-serif);
-      font-style: italic;
-      font-size: 1.025rem;
-      text-align: center;
-      letter-spacing: 0.01em;
-    }
-    .credit span { color: var(--sand-dp); }
-
-    /* ========== TWO-BUSINESS SPLIT ========== */
-    .split {
-      display: grid;
-      grid-template-columns: 5fr 7fr;
-      gap: 0;
-      border-top: var(--hairline);
-      border-bottom: var(--hairline);
-    }
-    .split-left {
-      background: var(--sand);
-      padding: clamp(3rem, 6vw, 5.5rem) clamp(2rem, 5vw, 4rem);
-      border-right: var(--hairline);
-    }
-    .split-right {
-      background: var(--ivory);
-      padding: clamp(3rem, 6vw, 5.5rem) clamp(2rem, 5vw, 4rem);
-    }
-    .split h2 {
-      font-family: var(--ff-serif);
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      font-weight: 400;
-      line-height: 1.05;
       letter-spacing: -0.015em;
       color: var(--forest);
-      margin: 1.25rem 0 1.5rem;
+      max-width: 14ch;
+      margin-bottom: 2.5rem;
     }
-    .split h2 em { font-style: italic; color: var(--moss); }
-    .split p.intro {
-      color: var(--moss);
-      font-size: 1rem;
-      line-height: 1.55;
-      max-width: 42ch;
-      margin-bottom: 2rem;
-    }
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .chip {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--moss);
-      padding: 0.4rem 0.9rem;
-      border: 1px solid var(--stone-soft);
-      background: var(--ivory);
-    }
-
-    /* Inline quote form */
-    .quote-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-    .quote-form label {
-      font-size: 0.68rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--stone);
-      margin-bottom: 0.3rem;
-      display: block;
-    }
-    .quote-form .field { display: flex; flex-direction: column; }
-    .quote-form input,
-    .quote-form textarea,
-    .quote-form select {
-      background: var(--ivory);
-      border: 1px solid var(--stone-soft);
-      border-radius: 2px;
-      padding: 0.85rem 1rem;
-      font-family: var(--ff-sans);
-      font-size: 0.95rem;
-      color: var(--ink);
-      outline: none;
-      transition: border-color .2s ease;
-      width: 100%;
-    }
-    .quote-form input:focus,
-    .quote-form textarea:focus,
-    .quote-form select:focus {
-      border-color: var(--forest);
-    }
-    .quote-form .row {
+    .hero h1 em { font-style: italic; color: var(--moss); font-weight: 400; }
+    .hero-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.85rem;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: end;
+      margin-top: 3rem;
     }
-    .quote-form .btn { margin-top: 0.75rem; }
-    .quote-form .note {
-      font-size: 0.78rem;
-      color: var(--stone);
-      margin-top: 0.5rem;
-      font-family: var(--ff-serif);
-      font-style: italic;
+    .hero-lede {
+      font-size: 1.075rem;
+      line-height: 1.7;
+      color: var(--moss);
+      max-width: 36ch;
     }
+    .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
 
-    /* Portfolio grid - masonry-style asymmetric */
-    .portfolio {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 1.25rem;
-    }
-    .portfolio-item {
-      position: relative;
+    /* Hero image: full-bleed below headline */
+    .hero-image {
+      width: 100%;
+      aspect-ratio: 16/9;
       overflow: hidden;
-      border: 1px solid var(--stone-soft);
+      margin-top: clamp(3rem, 6vw, 5rem);
     }
-    .portfolio-item img {
+    .hero-image img {
       width: 100%; height: 100%; object-fit: cover;
-      transition: transform .5s ease;
-      filter: saturate(0.92);
+      filter: saturate(0.95);
     }
-    .portfolio-item:hover img { transform: scale(1.03); }
-    .portfolio-big   { grid-row: span 2; aspect-ratio: 4/5; }
-    .portfolio-small { aspect-ratio: 4/3; }
-    .portfolio-wide  { grid-column: 1 / -1; aspect-ratio: 16/6; }
-    .portfolio-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0.85rem 0 0;
-      border-top: var(--hairline);
-      margin-top: 1rem;
-    }
-    .portfolio-caption {
+    .hero-caption {
+      max-width: 1440px;
+      margin: 0.75rem auto 0;
+      padding: 0 var(--gut);
       font-family: var(--ff-serif);
       font-style: italic;
       font-size: 0.9rem;
-      color: var(--moss);
-    }
-    .portfolio-year {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--stone);
-    }
-
-    /* ========== SERVICES — editorial list ========== */
-    .services {
-      padding: clamp(4rem, 8vw, 7rem) 0;
-    }
-    .services-head {
-      display: grid;
-      grid-template-columns: 4fr 8fr;
-      gap: 3rem;
-      padding: 0 var(--gut);
-      margin-bottom: 3.5rem;
-      align-items: end;
-    }
-    .services-head h2 {
-      font-family: var(--ff-serif);
-      font-size: clamp(2.25rem, 5vw, 3.5rem);
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      line-height: 1.02;
-      color: var(--forest);
-      margin-top: 1rem;
-    }
-    .services-head h2 em { font-style: italic; color: var(--moss); }
-    .services-head .desc {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--moss);
-      max-width: 50ch;
-    }
-    .services-list {
-      max-width: 1400px;
-      margin-inline: auto;
-      padding: 0 var(--gut);
-    }
-    .svc-row {
-      display: grid;
-      grid-template-columns: 1fr 3fr 6fr 2fr;
-      gap: 2.5rem;
-      padding: 2rem 0;
-      border-top: var(--hairline);
-      align-items: baseline;
-    }
-    .svc-row:last-child { border-bottom: var(--hairline); }
-    .svc-num {
-      font-family: var(--ff-serif);
-      font-style: italic;
-      font-size: 1rem;
-      color: var(--stone);
-    }
-    .svc-name {
-      font-family: var(--ff-serif);
-      font-size: 1.75rem;
-      font-weight: 400;
-      color: var(--forest);
-      letter-spacing: -0.015em;
-    }
-    .svc-desc {
-      color: var(--moss);
-      line-height: 1.55;
-      font-size: 0.975rem;
-    }
-    .svc-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
       color: var(--stone);
       text-align: right;
     }
 
-    /* ========== FEATURED PROJECT ========== */
-    .feature {
-      background: var(--sand);
-      padding: clamp(4rem, 8vw, 7rem) 0;
-      border-top: var(--hairline);
-      border-bottom: var(--hairline);
+    /* ========== STATEMENT — single big paragraph ========== */
+    .statement {
+      padding: var(--section-v) 0;
+      border-top: 1px solid var(--hairline);
     }
-    .feature-wrap {
-      max-width: 1400px; margin-inline: auto; padding: 0 var(--gut);
+    .statement-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--gut);
     }
-    .feature-head {
-      display: grid;
-      grid-template-columns: 4fr 8fr;
-      gap: 3rem;
-      align-items: end;
-      margin-bottom: 3rem;
-    }
-    .feature-head h2 {
+    .statement .eyebrow { display: block; margin-bottom: 2.5rem; }
+    .statement p {
       font-family: var(--ff-serif);
-      font-size: clamp(2.25rem, 5vw, 3.5rem);
       font-weight: 400;
-      line-height: 1.02;
-      letter-spacing: -0.02em;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      line-height: 1.35;
+      letter-spacing: -0.005em;
       color: var(--forest);
-      margin-top: 1rem;
     }
-    .feature-head h2 em { font-style: italic; color: var(--moss); }
-    .feature-head .desc {
+    .statement p em { font-style: italic; color: var(--moss); }
+
+    /* ========== SERVICES — editorial list, no numbers, no cards ========== */
+    .services {
+      padding: var(--section-v) 0;
+      background: var(--bg-deep);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .services-head {
+      max-width: 1100px;
+      margin: 0 auto 4rem;
+      padding: 0 var(--gut);
+    }
+    .services-head .eyebrow { display: block; margin-bottom: 1.5rem; }
+    .services-head h2 {
+      font-family: var(--ff-serif);
+      font-weight: 400;
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--forest);
+      max-width: 16ch;
+    }
+    .services-head h2 em { font-style: italic; color: var(--moss); }
+    .services-list {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--gut);
+    }
+    .svc {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      padding: 2.75rem 0;
+      border-top: 1px solid var(--hairline);
+      align-items: baseline;
+    }
+    .svc:last-child { border-bottom: 1px solid var(--hairline); }
+    .svc-name {
+      font-family: var(--ff-serif);
+      font-weight: 400;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--forest);
+    }
+    .svc-name em { font-style: italic; color: var(--moss); }
+    .svc-desc {
       color: var(--moss);
-      font-size: 1.025rem;
-      line-height: 1.6;
-      max-width: 54ch;
-    }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: 7fr 5fr;
-      gap: 1.5rem;
-    }
-    .feature-hero {
-      border: 1px solid var(--stone-soft);
-      overflow: hidden;
-      aspect-ratio: 4/3;
-    }
-    .feature-hero img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
-    .feature-strip {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    .feature-tile {
-      border: 1px solid var(--stone-soft);
-      overflow: hidden;
-      aspect-ratio: 1;
-      position: relative;
-    }
-    .feature-tile img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
-    .feature-tile::after {
-      content: attr(data-stage);
-      position: absolute;
-      bottom: 0.5rem; left: 0.6rem;
-      background: rgba(31,45,31,0.9);
-      color: var(--sand);
-      font-size: 0.65rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.55rem;
-      font-weight: 500;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 48ch;
     }
 
-    /* ========== FALL CLEANUP SLIDER ========== */
-    .cleanup {
-      padding: clamp(4rem, 8vw, 7rem) 0;
+    /* ========== FEATURED WORK — full-width photography ========== */
+    .project {
+      padding: var(--section-v) 0;
     }
-    .cleanup-wrap {
+    .project-head {
       max-width: 1100px;
-      margin-inline: auto;
+      margin: 0 auto 4rem;
       padding: 0 var(--gut);
-      text-align: center;
     }
-    .cleanup h2 {
+    .project-head .eyebrow { display: block; margin-bottom: 1.5rem; }
+    .project-head h2 {
       font-family: var(--ff-serif);
-      font-size: clamp(2.25rem, 5vw, 3.25rem);
       font-weight: 400;
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
       line-height: 1.05;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.015em;
       color: var(--forest);
-      margin: 1rem 0 1rem;
+      margin-bottom: 1.75rem;
+      max-width: 18ch;
     }
-    .cleanup h2 em { font-style: italic; color: var(--moss); }
-    .cleanup .desc {
+    .project-head h2 em { font-style: italic; color: var(--moss); }
+    .project-head .desc {
+      color: var(--moss);
+      font-size: 1.075rem;
+      line-height: 1.7;
+      max-width: 52ch;
+    }
+    .project-hero {
+      width: 100%;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .project-hero img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
+    .project-caption {
+      max-width: 1440px;
+      margin: 0 auto 4rem;
+      padding: 0 var(--gut);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--stone);
+    }
+    .project-caption .label {
+      font-family: var(--ff-sans);
+      font-style: normal;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .project-stages {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 var(--gut);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .stage {
+      display: flex;
+      flex-direction: column;
+    }
+    .stage-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+    }
+    .stage-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
+    .stage-label {
+      margin-top: 0.85rem;
+      font-family: var(--ff-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--hairline);
+    }
+
+    /* ========== FULL-BLEED PHOTO ========== */
+    .bleed {
+      width: 100%;
+      height: clamp(55vh, 80vw, 85vh);
+      overflow: hidden;
+    }
+    .bleed img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
+
+    /* ========== CLEANUP — before/after slider ========== */
+    .cleanup {
+      padding: var(--section-v) 0;
+      background: var(--bg-deep);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .cleanup-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--gut);
+    }
+    .cleanup-head { margin-bottom: 3rem; }
+    .cleanup-head .eyebrow { display: block; margin-bottom: 1.5rem; }
+    .cleanup-head h2 {
+      font-family: var(--ff-serif);
+      font-weight: 400;
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--forest);
+      max-width: 18ch;
+      margin-bottom: 1.5rem;
+    }
+    .cleanup-head h2 em { font-style: italic; color: var(--moss); }
+    .cleanup-head .desc {
       color: var(--moss);
       max-width: 50ch;
-      margin: 0 auto 2.5rem;
-      font-size: 1.025rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
     .ba-slider {
       position: relative;
@@ -587,7 +443,7 @@
       aspect-ratio: 16/9;
       cursor: ew-resize;
       user-select: none;
-      border: 1px solid var(--stone-soft);
+      border: 1px solid var(--hairline);
       touch-action: pan-y;
     }
     .ba-after, .ba-before img {
@@ -621,124 +477,120 @@
       position: absolute;
       top: 0; bottom: 0;
       left: 50%;
-      width: 2px;
-      background: var(--ivory);
+      width: 1px;
+      background: var(--bg);
       transform: translateX(-50%);
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
     .ba-btn {
       position: relative;
       z-index: 4;
-      background: var(--ivory);
+      background: var(--bg);
       width: 44px; height: 44px;
-      border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-family: var(--ff-serif);
       font-style: italic;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--forest);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
-      border: 1px solid var(--stone-soft);
+      border: 1px solid var(--hairline);
     }
     .ba-label {
       position: absolute;
       top: 0.9rem;
       font-family: var(--ff-sans);
-      font-size: 0.65rem;
-      letter-spacing: 0.14em;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      padding: 0.3rem 0.7rem;
-      background: rgba(31,45,31,0.85);
-      color: var(--sand);
+      padding: 0.35rem 0.75rem;
+      background: var(--bg);
+      color: var(--forest);
       font-weight: 500;
       z-index: 2;
+      border: 1px solid var(--hairline);
     }
     .ba-label-before { left: 0.9rem; }
     .ba-label-after  { right: 0.9rem; }
 
-    /* ========== ABOUT ========== */
+    /* ========== ABOUT — asymmetric, generous ========== */
     .about {
-      background: var(--forest);
-      color: var(--sand);
-      padding: clamp(4rem, 8vw, 7rem) 0;
+      padding: var(--section-v) 0;
     }
-    .about-wrap {
-      max-width: 1400px;
-      margin-inline: auto;
+    .about-inner {
+      max-width: 1440px;
+      margin: 0 auto;
       padding: 0 var(--gut);
       display: grid;
       grid-template-columns: 5fr 7fr;
       gap: clamp(2rem, 6vw, 5rem);
       align-items: center;
     }
-    .about-img {
+    .about-photo {
       aspect-ratio: 4/5;
       overflow: hidden;
-      border: 1px solid rgba(239, 232, 219, 0.2);
     }
-    .about-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); }
-    .about-text .eyebrow { color: var(--cedar); }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
+    .about-text .eyebrow { display: block; margin-bottom: 1.5rem; }
     .about-text h2 {
       font-family: var(--ff-serif);
-      font-size: clamp(2.25rem, 4.5vw, 3.25rem);
       font-weight: 400;
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
       line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--sand);
-      margin: 1rem 0 1.75rem;
+      letter-spacing: -0.015em;
+      color: var(--forest);
+      margin-bottom: 2rem;
     }
-    .about-text h2 em { font-style: italic; color: #c9d5ba; }
+    .about-text h2 em { font-style: italic; color: var(--moss); }
     .about-text p {
-      color: rgba(239, 232, 219, 0.82);
+      color: var(--moss);
       font-size: 1.075rem;
-      line-height: 1.65;
+      line-height: 1.7;
       margin-bottom: 1.25rem;
       max-width: 54ch;
     }
     .about-sig {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       font-family: var(--ff-serif);
       font-style: italic;
-      font-size: 1.025rem;
-      color: var(--sand-dp);
+      font-size: 1.05rem;
+      color: var(--sage);
     }
 
-    /* ========== TESTIMONIALS — pulled quotes ========== */
+    /* ========== TESTIMONIALS — pulled quotes, no cards ========== */
     .quotes {
-      padding: clamp(4rem, 8vw, 7rem) 0;
-      background: var(--ivory);
+      padding: var(--section-v) 0;
+      background: var(--forest);
+      color: var(--bg);
     }
-    .quotes-wrap {
+    .quotes-inner {
       max-width: 1100px;
-      margin-inline: auto;
+      margin: 0 auto;
       padding: 0 var(--gut);
     }
-    .quotes-head {
-      margin-bottom: 3rem;
-    }
+    .quotes-head { margin-bottom: 4rem; }
+    .quotes-head .eyebrow { display: block; margin-bottom: 1.5rem; color: #B5C2A6; }
     .quotes-head h2 {
       font-family: var(--ff-serif);
-      font-size: clamp(2rem, 4vw, 2.75rem);
       font-weight: 400;
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
       line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--forest);
-      margin-top: 1rem;
+      letter-spacing: -0.015em;
+      color: var(--bg);
+      max-width: 20ch;
     }
+    .quotes-head h2 em { font-style: italic; color: #B5C2A6; }
     .quote {
-      padding: 2.25rem 0;
-      border-top: var(--hairline);
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
+      border-top: 1px solid rgba(251, 249, 245, 0.15);
       display: grid;
       grid-template-columns: 2fr 10fr;
-      gap: 2rem;
+      gap: clamp(1.5rem, 4vw, 3.5rem);
     }
-    .quote:last-of-type { border-bottom: var(--hairline); }
+    .quote:last-child { border-bottom: 1px solid rgba(251, 249, 245, 0.15); }
     .quote .attr {
       font-size: 0.72rem;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--stone);
-      padding-top: 0.5rem;
+      color: #B5C2A6;
+      padding-top: 0.75rem;
     }
     .quote .attr em {
       font-family: var(--ff-serif);
@@ -746,49 +598,178 @@
       text-transform: none;
       letter-spacing: 0;
       display: block;
-      margin-top: 0.3rem;
-      font-size: 0.85rem;
-      color: var(--sage);
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+      color: #B5C2A6;
+      opacity: 0.8;
     }
     .quote p {
       font-family: var(--ff-serif);
-      font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
       font-weight: 400;
-      line-height: 1.4;
-      color: var(--forest);
       font-style: italic;
+      line-height: 1.45;
+      color: var(--bg);
+    }
+
+    /* ========== FAQ — 2-column text, minimalist ========== */
+    .faq {
+      padding: var(--section-v) 0;
+    }
+    .faq-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 var(--gut);
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: start;
+    }
+    .faq-head .eyebrow { display: block; margin-bottom: 1.5rem; }
+    .faq-head h2 {
+      font-family: var(--ff-serif);
+      font-weight: 400;
+      font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--forest);
+    }
+    .faq-head h2 em { font-style: italic; color: var(--moss); }
+    .faq-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 4vw, 3.5rem) clamp(2rem, 4vw, 3rem);
+    }
+    .faq-item h3 {
+      font-family: var(--ff-serif);
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: var(--forest);
+      margin-bottom: 0.85rem;
+    }
+    .faq-item p {
+      color: var(--moss);
+      font-size: 0.975rem;
+      line-height: 1.7;
+    }
+
+    /* ========== CONTACT — simple inline form ========== */
+    .contact {
+      padding: var(--section-v) 0;
+      background: var(--bg-deep);
+      border-top: 1px solid var(--hairline);
+    }
+    .contact-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--gut);
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+    .contact-text .eyebrow { display: block; margin-bottom: 1.5rem; }
+    .contact-text h2 {
+      font-family: var(--ff-serif);
+      font-weight: 400;
+      font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--forest);
+      margin-bottom: 2rem;
+    }
+    .contact-text h2 em { font-style: italic; color: var(--moss); }
+    .contact-text p {
+      color: var(--moss);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      max-width: 36ch;
+    }
+    .contact-text .meta {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .contact-text .meta a { color: var(--forest); border-bottom: 1px solid var(--hairline); padding-bottom: 2px; }
+    .contact-text .meta a:hover { border-bottom-color: var(--forest); }
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .quote-form label {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+    .quote-form .field { display: flex; flex-direction: column; }
+    .quote-form input,
+    .quote-form textarea {
+      background: var(--bg);
+      border: 1px solid var(--hairline);
+      padding: 0.95rem 1.1rem;
+      font-family: var(--ff-sans);
+      font-size: 0.975rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color .2s ease;
+      width: 100%;
+    }
+    .quote-form input:focus,
+    .quote-form textarea:focus {
+      border-color: var(--forest);
+    }
+    .quote-form .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .quote-form textarea { resize: vertical; }
+    .quote-form .btn { margin-top: 0.75rem; }
+    .quote-form .note {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--stone);
+      margin-top: 0.75rem;
     }
 
     /* ========== FOOTER ========== */
     .foot {
-      background: var(--sand);
+      background: var(--bg);
       padding: clamp(3rem, 6vw, 5rem) 0 2rem;
-      border-top: var(--hairline);
+      border-top: 1px solid var(--hairline);
     }
-    .foot-wrap {
-      max-width: 1400px; margin-inline: auto; padding: 0 var(--gut);
-    }
+    .foot-inner { max-width: 1440px; margin: 0 auto; padding: 0 var(--gut); }
     .foot-top {
       display: grid;
-      grid-template-columns: 5fr 7fr;
+      grid-template-columns: 6fr 6fr;
       gap: clamp(2rem, 5vw, 4rem);
       margin-bottom: 3.5rem;
     }
     .foot-brand h3 {
       font-family: var(--ff-serif);
+      font-weight: 500;
       font-size: clamp(2.5rem, 5vw, 3.75rem);
-      font-weight: 400;
-      letter-spacing: -0.02em;
       line-height: 1;
+      letter-spacing: -0.02em;
       color: var(--forest);
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
-    .foot-brand h3 em { font-style: italic; color: var(--moss); }
+    .foot-brand h3 em { font-style: italic; color: var(--moss); font-weight: 400; }
     .foot-brand p {
       font-family: var(--ff-serif);
       font-style: italic;
       color: var(--moss);
       font-size: 1.05rem;
+      line-height: 1.5;
     }
     .foot-links {
       display: grid;
@@ -796,23 +777,23 @@
       gap: 2rem;
     }
     .foot-col h4 {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--stone);
-      margin-bottom: 1rem;
-      font-weight: 600;
+      margin-bottom: 1.25rem;
+      font-weight: 500;
     }
     .foot-col a, .foot-col p {
       display: block;
       font-size: 0.95rem;
       color: var(--moss);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       transition: color .2s ease;
     }
     .foot-col a:hover { color: var(--forest); }
     .foot-bot {
-      border-top: var(--hairline);
+      border-top: 1px solid var(--hairline);
       padding-top: 2rem;
       display: flex;
       justify-content: space-between;
@@ -822,33 +803,47 @@
       color: var(--stone);
       align-items: baseline;
     }
-    .foot-bot em { font-family: var(--ff-serif); font-style: italic; font-size: 0.88rem; }
+    .foot-bot em { font-family: var(--ff-serif); font-style: italic; font-size: 0.9rem; }
 
     /* ========== RESPONSIVE ========== */
     @media (max-width: 960px) {
-      .hero { grid-template-columns: 1fr; gap: 3rem; }
-      .hero-right { max-width: 480px; }
-      .split { grid-template-columns: 1fr; }
-      .split-left { border-right: 0; border-bottom: var(--hairline); }
-      .services-head, .feature-head { grid-template-columns: 1fr; gap: 1.5rem; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .portfolio { grid-template-columns: 1fr; }
-      .portfolio-big, .portfolio-small, .portfolio-wide { grid-row: auto; grid-column: auto; aspect-ratio: 4/3; }
-      .about-wrap { grid-template-columns: 1fr; }
-      .foot-top { grid-template-columns: 1fr; }
-      .svc-row { grid-template-columns: auto 1fr; gap: 1rem; row-gap: 0.75rem; }
-      .svc-num { grid-row: 1; grid-column: 1; }
-      .svc-name { grid-row: 1; grid-column: 2; }
-      .svc-desc { grid-row: 2; grid-column: 1 / -1; }
-      .svc-label { grid-row: 3; grid-column: 1 / -1; text-align: left; }
-      .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--ivory); flex-direction: column; padding: 1.5rem var(--gut); border-bottom: var(--hairline); gap: 1rem; }
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--bg);
+        flex-direction: column;
+        padding: 1.5rem var(--gut);
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--hairline);
+        align-items: flex-start;
+      }
       .nav-menu.open { display: flex; }
       .nav-toggle { display: flex; }
+
+      .hero-row { grid-template-columns: 1fr; gap: 2rem; }
+
+      .svc { grid-template-columns: 1fr; gap: 0.75rem; padding: 2rem 0; }
+
+      .project-stages { grid-template-columns: 1fr 1fr; }
+
+      .about-inner { grid-template-columns: 1fr; }
+      .about-photo { max-width: 480px; }
+
+      .faq-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .faq-list { grid-template-columns: 1fr; gap: 2rem; }
+
+      .contact-inner { grid-template-columns: 1fr; }
+
+      .foot-top { grid-template-columns: 1fr; }
+
+      .quote { grid-template-columns: 1fr; gap: 1rem; }
     }
+
     @media (max-width: 560px) {
       .quote-form .row { grid-template-columns: 1fr; }
+      .project-stages { grid-template-columns: 1fr; }
       .foot-links { grid-template-columns: 1fr 1fr; }
-      .quote { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -863,9 +858,10 @@
       </button>
       <nav class="nav-menu" id="navMenu">
         <a href="#services">Services</a>
-        <a href="#feature">Work</a>
+        <a href="#work">Work</a>
         <a href="#about">About</a>
-        <a href="#quote">Quote</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
         <a href="tel:8477724803" class="nav-call">(847) 772-4803</a>
       </nav>
     </div>
@@ -873,39 +869,210 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="hero-left">
-      <p class="eyebrow">Lake Forest · Est. 2023</p>
-      <h1>Your lawn.<br><em>Done right.</em></h1>
-      <p class="lede">Weekly mowing, seasonal cleanups, and custom hardscape work across Lake Forest, Highland Park, and the North Shore — built with care that outlasts the season.</p>
-      <div class="hero-actions">
-        <a href="#quote" class="btn">Request a lawn quote <span aria-hidden="true">→</span></a>
-        <a href="#feature" class="link">View hardscape work <span class="arrow" aria-hidden="true">→</span></a>
+    <div class="hero-text">
+      <span class="eyebrow">Lake Forest · Est. 2023</span>
+      <h1>Landscape care, <em>held to standard.</em></h1>
+      <div class="hero-row">
+        <p class="hero-lede">Weekly mowing, seasonal cleanups, and custom hardscape work across Lake Forest, Highland Park, and the North Shore. One crew. No shortcuts.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Request a quote</a>
+          <a href="#work" class="link">See our work <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </div>
-    <div class="hero-right">
-      <img src="images/IMG_1688.jpeg" alt="A manicured front yard of a Lake Forest colonial home" />
-      <div class="caption">Lake Forest, IL</div>
+    <div class="hero-image">
+      <img src="images/IMG_1688.jpeg" alt="A manicured front yard of a brick colonial home in Lake Forest" />
+    </div>
+    <div class="hero-caption">A home in Lake Forest · maintained by MD Mowing</div>
+  </section>
+
+  <!-- ================= STATEMENT ================= -->
+  <section class="statement">
+    <div class="statement-inner">
+      <span class="eyebrow">The practice</span>
+      <p>Three seasons in, and the standard hasn't moved. We show up when we say we will, we finish what we start, and we take <em>as much care with the weekly cut</em> as we do with a custom stone wall that's meant to last decades.</p>
     </div>
   </section>
 
-  <!-- ================= CREDENTIAL STRIP ================= -->
-  <div class="credit">
-    Serving the North Shore since 2023 · <span>Lake Forest · Highland Park · Lake Bluff · Libertyville</span>
+  <!-- ================= SERVICES ================= -->
+  <section class="services" id="services">
+    <div class="services-head">
+      <span class="eyebrow">Services</span>
+      <h2>Full-service landscape care, <em>one crew.</em></h2>
+    </div>
+    <div class="services-list">
+      <div class="svc">
+        <div class="svc-name">Lawn <em>maintenance</em></div>
+        <div class="svc-desc">Weekly or biweekly mowing, trimming, and cleanup. Flat pricing, dependable scheduling, no contracts.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-name">Mulch <em>&amp; beds</em></div>
+        <div class="svc-desc">Fresh mulch installation that holds moisture, suppresses weeds, and gives beds a clean, grounded finish.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-name">Edging <em>&amp; bed forming</em></div>
+        <div class="svc-desc">Crisp edges along drives, walks, and flower beds — the detail that separates a maintained yard from a cared-for one.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-name">Seasonal <em>cleanup</em></div>
+        <div class="svc-desc">Thorough spring and fall cleanups that protect the lawn and ready it for the next season.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-name">Retaining walls <em>&amp; hardscape</em></div>
+        <div class="svc-desc">Custom stone walls, garden walls, and hardscape features built to last. Priced per project after a site visit.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-name">Snow <em>removal</em></div>
+        <div class="svc-desc">Reliable driveway and walkway clearing through the Illinois winter. On the list before the first storm.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED WORK ================= -->
+  <section class="project" id="work">
+    <div class="project-head">
+      <span class="eyebrow">Selected project · 2026</span>
+      <h2>A retaining wall, <em>rebuilt from footing to finish.</em></h2>
+      <p class="desc">A failing wall came down, the slope was cleared and re-graded, and a new wall went in with proper drainage and course-by-course leveling. The kind of work that quietly holds a yard together for decades.</p>
+    </div>
+    <div class="project-hero">
+      <img src="images/IMG_5442.jpeg" alt="Completed custom retaining wall — the final result" />
+    </div>
+    <div class="project-caption">
+      <span class="label">The finished wall</span>
+      <span>Lake Forest · Summer 2026</span>
+    </div>
+    <div class="project-stages">
+      <div class="stage">
+        <div class="stage-img"><img src="images/IMG_1090.jpeg" alt="Old failing wall before removal" /></div>
+        <span class="stage-label">Before</span>
+      </div>
+      <div class="stage">
+        <div class="stage-img"><img src="images/IMG_1093.jpeg" alt="Site cleared and prepped" /></div>
+        <span class="stage-label">Cleared</span>
+      </div>
+      <div class="stage">
+        <div class="stage-img"><img src="images/IMG_1096.jpeg" alt="New wall going up course by course" /></div>
+        <span class="stage-label">Building</span>
+      </div>
+      <div class="stage">
+        <div class="stage-img"><img src="images/IMG_5440.jpeg" alt="Finished stonework detail" /></div>
+        <span class="stage-label">Finished</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FULL-BLEED PHOTO ================= -->
+  <div class="bleed">
+    <img src="images/IMG_1612.jpeg" alt="Fresh mowing stripes across two Lake Forest front lawns" />
   </div>
 
-  <!-- ================= TWO-BUSINESS SPLIT ================= -->
-  <section class="split" id="quote">
-    <!-- LEFT: Recurring quote form -->
-    <div class="split-left">
-      <p class="eyebrow">Recurring Work</p>
-      <h2>Weekly mowing.<br><em>Mulch. Cleanups.</em></h2>
-      <p class="intro">The reliable season-long work that keeps your property looking sharp. Flat weekly pricing, dependable scheduling, no contracts.</p>
-      <div class="chips">
-        <span class="chip">Mowing</span>
-        <span class="chip">Mulching</span>
-        <span class="chip">Edging</span>
-        <span class="chip">Leaf Removal</span>
-        <span class="chip">Snow Removal</span>
+  <!-- ================= FALL CLEANUP SLIDER ================= -->
+  <section class="cleanup">
+    <div class="cleanup-inner">
+      <div class="cleanup-head">
+        <span class="eyebrow">Fall cleanup</span>
+        <h2>See the <em>difference.</em></h2>
+        <p class="desc">Drag the handle to reveal before and after our fall leaf removal work.</p>
+      </div>
+      <div class="ba-slider" id="baSlider">
+        <img class="ba-after" src="images/IMG_fall2_after.jpeg" alt="Parkway after fall leaf cleanup" />
+        <div class="ba-before">
+          <img src="images/IMG_fall2_before.jpeg" alt="Parkway covered in fallen leaves" />
+        </div>
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"><div class="ba-line"></div><div class="ba-btn">⇆</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-photo">
+        <img src="images/IMG_1208.jpeg" alt="A landscape maintained by MD Mowing" />
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">About</span>
+        <h2>Founded by <em>Marcus Dan</em> in 2023.</h2>
+        <p>MD Mowing began with a few neighbors' lawns and the same mindset Marcus brings to athletics at Lake Forest High School — show up early, put in the work, and don't cut corners.</p>
+        <p>Three seasons in, the business has grown across the North Shore and expanded into custom hardscape work, but the standard hasn't moved. Every property gets the same attention — from the weekly cut to a full retaining wall build.</p>
+        <div class="about-sig">— Marcus Dan, Founder</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="quotes">
+    <div class="quotes-inner">
+      <div class="quotes-head">
+        <span class="eyebrow">What neighbors say</span>
+        <h2>From homeowners <em>across the North Shore.</em></h2>
+      </div>
+      <div class="quote">
+        <div class="attr">Sarah M.<em>Lake Forest</em></div>
+        <p>“Reliable, affordable, and they genuinely care about the quality of their work. Our neighbors keep asking who does our lawn.”</p>
+      </div>
+      <div class="quote">
+        <div class="attr">James K.<em>Highland Park</em></div>
+        <p>“They showed up on time every week, kept the yard looking sharp, and did a beautiful job on our mulch beds in the spring.”</p>
+      </div>
+      <div class="quote">
+        <div class="attr">Linda T.<em>Lake Bluff</em></div>
+        <p>“Marcus and his team built our retaining wall last summer and it's held up perfectly. Easy to work with and thorough from start to finish.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="faq-inner">
+      <div class="faq-head">
+        <span class="eyebrow">Frequently asked</span>
+        <h2>Answers before <em>you ask.</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What areas do you serve?</h3>
+          <p>Lake Forest, Highland Park, Lake Bluff, Knollwood, North Chicago, Libertyville, and select parts of Deerfield.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How often do you mow?</h3>
+          <p>Weekly from spring through fall is standard, with biweekly available for lighter properties. We'll recommend what fits your yard on the first visit.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you offer one-time cleanups?</h3>
+          <p>Yes. Spring cleanups, mid-season refreshes, and fall leaf removal can all be booked without a recurring plan.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you take on hardscape projects?</h3>
+          <p>Yes. Retaining walls, garden walls, and bed restorations are priced individually after a brief site visit to understand the scope.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I get a quote?</h3>
+          <p>Fill out the form below or call us directly. For recurring work we'll quote within 24 hours; hardscape projects require a short site visit first.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do recurring customers get better pricing?</h3>
+          <p>Yes — weekly and biweekly clients get flat seasonal rates and priority scheduling over one-off visits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Request a <em>free quote.</em></h2>
+        <p>Tell us a bit about your property and we'll get back to you within 24 hours — usually much faster.</p>
+        <div class="meta">
+          <span><a href="tel:8477724803">(847) 772-4803</a></span>
+          <span><a href="mailto:marcusdan@mdmowing.net">marcusdan@mdmowing.net</a></span>
+          <span style="color:var(--stone);">Lake Forest, IL &amp; surrounding areas</span>
+        </div>
       </div>
       <form class="quote-form" id="contactForm">
         <div class="row">
@@ -924,175 +1091,25 @@
         </div>
         <div class="field">
           <label for="address">Property address</label>
-          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Street, City" />
+          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Street, city" />
         </div>
         <div class="field">
           <label for="message">Project notes</label>
-          <textarea id="message" name="message" rows="3" placeholder="Tell us a bit about your property or what you need…"></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your property or what you need…"></textarea>
         </div>
-        <button type="submit" class="btn btn-full">Request a quote <span aria-hidden="true">→</span></button>
+        <button type="submit" class="btn btn-full">Request a quote</button>
         <p class="note" id="formStatus">We respond within 24 hours — usually much faster.</p>
       </form>
-    </div>
-    <!-- RIGHT: Hardscape portfolio -->
-    <div class="split-right">
-      <p class="eyebrow">Selected Work</p>
-      <h2>Hardscape<br><em>& landscape design.</em></h2>
-      <p class="intro">Custom retaining walls, garden walls, and bed restorations built to shape your property for decades. Each project priced individually.</p>
-      <div class="portfolio">
-        <a href="#feature" class="portfolio-item portfolio-big">
-          <img src="images/IMG_5442.jpeg" alt="Completed custom retaining wall" />
-        </a>
-        <a href="#feature" class="portfolio-item portfolio-small">
-          <img src="images/IMG_1487.jpeg" alt="Finished flower bed refresh" />
-        </a>
-        <a href="#feature" class="portfolio-item portfolio-small">
-          <img src="images/IMG_5440.jpeg" alt="Retaining wall stonework detail" />
-        </a>
-      </div>
-      <div class="portfolio-meta">
-        <div class="portfolio-caption">A selection from the 2024–26 seasons.</div>
-        <a href="#feature" class="link">See all <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SERVICES — editorial list ================= -->
-  <section class="services" id="services">
-    <div class="services-head wrap">
-      <div>
-        <p class="eyebrow">What we do</p>
-        <h2>Full service,<br><em>one crew.</em></h2>
-      </div>
-      <p class="desc">From weekly maintenance to full-season cleanups and custom hardscape builds — the same crew, start to finish, no subcontractors.</p>
-    </div>
-    <div class="services-list">
-      <div class="svc-row">
-        <div class="svc-num">01</div>
-        <div class="svc-name">Lawn Maintenance</div>
-        <div class="svc-desc">Regular mowing, trimming, and cleanup to keep your lawn healthy and sharp all season.</div>
-        <div class="svc-label">Weekly · Biweekly</div>
-      </div>
-      <div class="svc-row">
-        <div class="svc-num">02</div>
-        <div class="svc-name">Mulch &amp; Beds</div>
-        <div class="svc-desc">Fresh mulch installation that retains moisture, suppresses weeds, and gives your beds a clean, rich look.</div>
-        <div class="svc-label">Spring · Fall</div>
-      </div>
-      <div class="svc-row">
-        <div class="svc-num">03</div>
-        <div class="svc-name">Edging &amp; Bed Forming</div>
-        <div class="svc-desc">Crisp edges along drives, walks, and flower beds — the finishing detail that sets a property apart.</div>
-        <div class="svc-label">Seasonal</div>
-      </div>
-      <div class="svc-row">
-        <div class="svc-num">04</div>
-        <div class="svc-name">Leaf &amp; Seasonal Cleanup</div>
-        <div class="svc-desc">Thorough fall leaf removal and spring cleanups that protect the lawn and ready it for the next season.</div>
-        <div class="svc-label">Spring · Fall</div>
-      </div>
-      <div class="svc-row">
-        <div class="svc-num">05</div>
-        <div class="svc-name">Retaining Walls &amp; Hardscape</div>
-        <div class="svc-desc">Custom stone walls, garden walls, and hardscape features built to last — structure, function, and lasting value.</div>
-        <div class="svc-label">Project-based</div>
-      </div>
-      <div class="svc-row">
-        <div class="svc-num">06</div>
-        <div class="svc-name">Snow Removal</div>
-        <div class="svc-desc">Reliable driveway and walkway clearing through the Illinois winter — on the list before the first storm.</div>
-        <div class="svc-label">Nov – Mar</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FEATURED PROJECT ================= -->
-  <section class="feature" id="feature">
-    <div class="feature-wrap">
-      <div class="feature-head">
-        <div>
-          <p class="eyebrow">Selected Project · 2026</p>
-          <h2>A retaining wall,<br><em>rebuilt from footing to finish.</em></h2>
-        </div>
-        <p class="desc">A failing wall came down, the slope was cleared and re-graded, and a new wall went in with proper drainage and course-by-course leveling. The kind of project that quietly holds a yard together for decades.</p>
-      </div>
-      <div class="feature-grid">
-        <div class="feature-hero">
-          <img src="images/IMG_5442.jpeg" alt="Completed retaining wall — final result" />
-        </div>
-        <div class="feature-strip">
-          <div class="feature-tile" data-stage="Before"><img src="images/IMG_1090.jpeg" alt="Old failing wall before removal" /></div>
-          <div class="feature-tile" data-stage="Cleared"><img src="images/IMG_1093.jpeg" alt="Site cleared after old wall removed" /></div>
-          <div class="feature-tile" data-stage="Building"><img src="images/IMG_1096.jpeg" alt="New wall being built" /></div>
-          <div class="feature-tile" data-stage="Finished"><img src="images/IMG_5440.jpeg" alt="Finished retaining wall stonework" /></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FALL CLEANUP SLIDER ================= -->
-  <section class="cleanup">
-    <div class="cleanup-wrap">
-      <p class="eyebrow" style="justify-content:center;">Fall Cleanup</p>
-      <h2>See the <em>difference.</em></h2>
-      <p class="desc">Drag the handle to reveal before and after our fall leaf removal work.</p>
-      <div class="ba-slider" id="baSlider">
-        <img class="ba-after" src="images/IMG_fall2_after.jpeg" alt="Parkway after fall leaf cleanup" />
-        <div class="ba-before">
-          <img src="images/IMG_fall2_before.jpeg" alt="Parkway covered in fallen leaves" />
-        </div>
-        <span class="ba-label ba-label-before">Before</span>
-        <span class="ba-label ba-label-after">After</span>
-        <div class="ba-handle"><div class="ba-line"></div><div class="ba-btn">⇆</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section class="about" id="about">
-    <div class="about-wrap">
-      <div class="about-img">
-        <img src="images/IMG_1208.jpeg" alt="A landscaped yard maintained by MD Mowing" />
-      </div>
-      <div class="about-text">
-        <p class="eyebrow">About</p>
-        <h2>Founded by <em>Marcus Dan</em> in 2023.</h2>
-        <p>MD Mowing began with a few neighbors' lawns and the same mindset Marcus brings to athletics at Lake Forest High School — show up early, put in the work, and don't cut corners.</p>
-        <p>Three seasons in, the business has grown across the North Shore and expanded into custom hardscape work, but the standard hasn't moved. Every property gets the same attention, from the weekly cut to a full retaining wall build.</p>
-        <div class="about-sig">— Marcus Dan, Founder</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= TESTIMONIALS — pulled quotes ================= -->
-  <section class="quotes">
-    <div class="quotes-wrap">
-      <div class="quotes-head">
-        <p class="eyebrow">What neighbors say</p>
-        <h2>From homeowners<br><em>across the North Shore.</em></h2>
-      </div>
-      <div class="quote">
-        <div class="attr">Sarah M.<em>Lake Forest</em></div>
-        <p>“Reliable, affordable, and they genuinely care about the quality of their work. Our neighbors keep asking who does our lawn.”</p>
-      </div>
-      <div class="quote">
-        <div class="attr">James K.<em>Highland Park</em></div>
-        <p>“They showed up on time every week, kept the yard looking sharp, and did a beautiful job on our mulch beds in the spring.”</p>
-      </div>
-      <div class="quote">
-        <div class="attr">Linda T.<em>Lake Bluff</em></div>
-        <p>“Marcus and his team built our retaining wall last summer and it's held up perfectly. Easy to work with and thorough from start to finish.”</p>
-      </div>
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="foot">
-    <div class="foot-wrap">
+    <div class="foot-inner">
       <div class="foot-top">
         <div class="foot-brand">
           <h3>MD <em>Mowing</em></h3>
-          <p>Landscape care & hardscape<br>Lake Forest, IL · Since 2023</p>
+          <p>Landscape care &amp; hardscape<br>Lake Forest, IL · Since 2023</p>
         </div>
         <div class="foot-links">
           <div class="foot-col">
@@ -1118,7 +1135,7 @@
       </div>
       <div class="foot-bot">
         <div>© <span id="year"></span> MD Mowing. All rights reserved.</div>
-        <div><em>Built in the North Shore.</em></div>
+        <div><em>Lake Forest, Illinois.</em></div>
       </div>
     </div>
   </footer>
@@ -1134,19 +1151,6 @@
     const nm = document.getElementById('navMenu');
     nt.addEventListener('click', () => nm.classList.toggle('open'));
     nm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nm.classList.remove('open')));
-
-    // Scroll reveal
-    const revEls = document.querySelectorAll('.reveal, .hero, .split, .services, .feature, .cleanup, .about, .quotes');
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-      revEls.forEach(el => { el.classList.add('reveal'); io.observe(el); });
-    } else {
-      revEls.forEach(el => el.classList.add('in'));
-    }
 
     // Before/after slider
     (function () {
@@ -1189,7 +1193,7 @@
           from_email: form.email.value,
           phone:      form.phone.value,
           address:    form.address.value,
-          service:    'Lawn Care (v2 inline form)',
+          service:    'Lawn Care',
           message:    form.message.value,
           time:       new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }),
         };
@@ -1201,7 +1205,7 @@
           .catch((err) => {
             console.error('EmailJS error:', err);
             status.textContent = 'Something went wrong. Please call or email us directly.';
-            status.style.color = '#b8593a';
+            status.style.color = '#8F5D2E';
             btn.innerHTML = original;
             btn.disabled = false;
           });
