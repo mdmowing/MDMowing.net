@@ -13,8 +13,10 @@
       --v2-forest:      #1f2d1f;
       --v2-moss:        #3a4a33;
       --v2-sage:        #6b7a5e;
-      --v2-terracotta:  #b8593a;
-      --v2-clay:        #d99b7f;
+      --v2-accent:      #1f2d1f;   /* primary CTA — deep forest */
+      --v2-accent-hover:#2e4028;
+      --v2-cedar:       #8f5d2e;   /* alternative: weathered cedar */
+      --v2-ochre:       #a97c2e;   /* alternative: harvest gold */
       --v2-stone:       #8a847a;
       --v2-stone-soft:  #d9d4cc;
       --v2-sand:        #efe8db;
@@ -80,7 +82,7 @@
       font-size: 0.75rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--v2-terracotta);
+      color: var(--v2-moss);
       font-weight: 500;
       margin-bottom: 2rem;
       display: inline-flex;
@@ -127,7 +129,7 @@
       align-items: center;
       gap: 0.75rem;
       padding: 1.1rem 2rem;
-      background: var(--v2-terracotta);
+      background: var(--v2-accent);
       color: var(--v2-ivory);
       font-family: var(--v2-sans);
       font-size: 0.8125rem;
@@ -139,7 +141,11 @@
       cursor: pointer;
       transition: background 0.2s ease;
     }
-    .btn-v2:hover { background: #a24d32; }
+    .btn-v2:hover { background: var(--v2-accent-hover); }
+    .btn-v2.v-cedar  { background: var(--v2-cedar); }
+    .btn-v2.v-cedar:hover  { background: #7a4e26; }
+    .btn-v2.v-ochre  { background: var(--v2-ochre); }
+    .btn-v2.v-ochre:hover  { background: #8f6823; }
     .link-v2 {
       font-size: 0.875rem;
       letter-spacing: 0.08em;
@@ -188,7 +194,7 @@
       text-align: center;
       letter-spacing: 0.01em;
     }
-    .strip span { color: var(--v2-clay); }
+    .strip span { color: var(--v2-sand-deep); }
 
     /* ===== SPECIMEN BLOCK ===== */
     .specimen {
@@ -365,8 +371,8 @@
       <div class="swatch"><div class="swatch-chip" style="background:#1f2d1f"></div><div class="swatch-meta"><div class="swatch-name">Forest</div><div class="swatch-hex">#1f2d1f</div></div></div>
       <div class="swatch"><div class="swatch-chip" style="background:#3a4a33"></div><div class="swatch-meta"><div class="swatch-name">Moss</div><div class="swatch-hex">#3a4a33</div></div></div>
       <div class="swatch"><div class="swatch-chip" style="background:#6b7a5e"></div><div class="swatch-meta"><div class="swatch-name">Sage</div><div class="swatch-hex">#6b7a5e</div></div></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#b8593a"></div><div class="swatch-meta"><div class="swatch-name">Terracotta</div><div class="swatch-hex">#b8593a</div></div></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#d99b7f"></div><div class="swatch-meta"><div class="swatch-name">Clay</div><div class="swatch-hex">#d99b7f</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#8f5d2e"></div><div class="swatch-meta"><div class="swatch-name">Cedar <em style="color:#6b7a5e;font-style:italic;font-family:'Fraunces',serif;">alt</em></div><div class="swatch-hex">#8f5d2e</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#a97c2e"></div><div class="swatch-meta"><div class="swatch-name">Ochre <em style="color:#6b7a5e;font-style:italic;font-family:'Fraunces',serif;">alt</em></div><div class="swatch-hex">#a97c2e</div></div></div>
       <div class="swatch"><div class="swatch-chip" style="background:#8a847a"></div><div class="swatch-meta"><div class="swatch-name">Stone</div><div class="swatch-hex">#8a847a</div></div></div>
       <div class="swatch"><div class="swatch-chip" style="background:#d9d4cc"></div><div class="swatch-meta"><div class="swatch-name">Stone soft</div><div class="swatch-hex">#d9d4cc</div></div></div>
       <div class="swatch"><div class="swatch-chip" style="background:#efe8db"></div><div class="swatch-meta"><div class="swatch-name">Sand</div><div class="swatch-hex">#efe8db</div></div></div>
@@ -376,9 +382,23 @@
   </section>
 
   <section class="specimen">
-    <div class="specimen-title">Buttons</div>
+    <div class="specimen-title">CTA — pick one</div>
+    <div class="btn-row" style="margin-bottom:2rem;">
+      <div style="display:flex;flex-direction:column;gap:.6rem;align-items:flex-start;">
+        <a href="#" class="btn-v2">Request a lawn quote <span>→</span></a>
+        <span style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#6b7a5e;">A · Forest green <em style="font-family:'Fraunces',serif;font-style:italic;text-transform:none;letter-spacing:0;">(recommended)</em></span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.6rem;align-items:flex-start;">
+        <a href="#" class="btn-v2 v-cedar">Request a lawn quote <span>→</span></a>
+        <span style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#6b7a5e;">B · Weathered cedar</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.6rem;align-items:flex-start;">
+        <a href="#" class="btn-v2 v-ochre">Request a lawn quote <span>→</span></a>
+        <span style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#6b7a5e;">C · Harvest ochre</span>
+      </div>
+    </div>
+    <div class="specimen-title" style="margin-top:3rem;">Supporting</div>
     <div class="btn-row">
-      <a href="#" class="btn-v2">Request a lawn quote <span>→</span></a>
       <a href="#" class="btn-ghost">View portfolio</a>
       <a href="#" class="link-v2">Learn more <span class="arrow">→</span></a>
     </div>
