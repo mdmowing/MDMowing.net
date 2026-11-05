@@ -165,20 +165,34 @@ if ('IntersectionObserver' in window && revealEls.length) {
   revealEls.forEach(el => el.classList.add('in'));
 }
 
-// Carousel factory
+// Carousel factory — all carousels share a single global tick so they rotate
+// in sync. Any user action (prev/next/dot/swipe) resets the global timer,
+// pausing the other carousels until the next tick timed off that action.
+const carouselRegistry = [];
+let globalCarouselTimer = null;
+const CAROUSEL_INTERVAL_MS = 8000;
+
+function tickAllCarousels() {
+  carouselRegistry.forEach(c => c.advance());
+}
+function resetCarouselTimer() {
+  clearInterval(globalCarouselTimer);
+  globalCarouselTimer = setInterval(tickAllCarousels, CAROUSEL_INTERVAL_MS);
+}
+
 function initCarousel(carouselId, dotsId) {
   const wrap  = document.getElementById(carouselId);
   if (!wrap) return;
   const track  = wrap.querySelector('.carousel-track');
   const slides = wrap.querySelectorAll('.carousel-slide');
   const dotsEl = document.getElementById(dotsId);
-  let cur = 0, timer;
+  let cur = 0;
 
   slides.forEach((_, i) => {
     const d = document.createElement('button');
     d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
     d.setAttribute('aria-label', `Slide ${i + 1}`);
-    d.addEventListener('click', () => goTo(i));
+    d.addEventListener('click', () => userGoTo(i));
     dotsEl.appendChild(d);
   });
 
@@ -188,25 +202,21 @@ function initCarousel(carouselId, dotsId) {
     dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) =>
       d.classList.toggle('active', i === cur)
     );
-    resetTimer();
   }
+  function userGoTo(n) { goTo(n); resetCarouselTimer(); }
+  function advance()   { goTo(cur + 1); }
 
-  function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(() => goTo(cur + 1), 4500);
-  }
-
-  wrap.querySelector('.carousel-prev').addEventListener('click', () => goTo(cur - 1));
-  wrap.querySelector('.carousel-next').addEventListener('click', () => goTo(cur + 1));
+  wrap.querySelector('.carousel-prev').addEventListener('click', () => userGoTo(cur - 1));
+  wrap.querySelector('.carousel-next').addEventListener('click', () => userGoTo(cur + 1));
 
   let startX = 0;
   wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
   wrap.addEventListener('touchend', e => {
     const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(cur + (diff > 0 ? 1 : -1));
+    if (Math.abs(diff) > 40) userGoTo(cur + (diff > 0 ? 1 : -1));
   });
 
-  resetTimer();
+  carouselRegistry.push({ advance });
 }
 
 initCarousel('grassCarousel', 'grassDots');
@@ -214,6 +224,7 @@ initCarousel('mulchCarousel', 'mulchDots');
 initCarousel('wallCarousel',  'wallDots');
 initCarousel('bedCarousel',   'bedDots');
 initCarousel('leafCarousel',  'leafDots');
+resetCarouselTimer();
 
 // Before/After sliders
 document.querySelectorAll('.ba-slider').forEach(slider => {
