@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3a7d44" />
+  <meta name="description" content="MD Mowing — Professional lawn care and landscaping serving Lake Forest, Highland Park, Lake Bluff, Libertyville, and surrounding communities. Mowing, edging, mulching, leaf removal, snow removal, and more." />
+  <meta name="keywords" content="lawn care, landscaping, mowing, edging, mulching, leaf removal, snow removal, Lake Forest, Highland Park, Lake Bluff, Libertyville, Knollwood, North Chicago, Deerfield, Illinois, MD Mowing" />
+  <title>MD Mowing | Lawn Care in Lake Forest, Highland Park &amp; Beyond</title>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MD Mowing | Lake Forest &amp; Highland Park Lawn Care" />
+  <meta property="og:description" content="Professional lawn care and landscaping in Lake Forest, Highland Park, Lake Bluff, Libertyville, and surrounding North Shore communities." />
+  <meta property="og:url" content="https://mdmowing.net" />
+  <meta property="og:site_name" content="MD Mowing" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MD Mowing | North Shore Lawn Care" />
+  <meta name="twitter:description" content="Professional lawn care and landscaping on the North Shore." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233a7d44'/%3E%3Cline x1='10' y1='37' x2='3' y2='10' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Crect x='6' y='36' width='52' height='13' rx='3' fill='white'/%3E%3Crect x='22' y='24' width='20' height='14' rx='2' fill='white'/%3E%3Ccircle cx='15' cy='49' r='10' fill='white'/%3E%3Ccircle cx='15' cy='49' r='4' fill='%233a7d44'/%3E%3Ccircle cx='49' cy='49' r='8' fill='white'/%3E%3Ccircle cx='49' cy='49' r='3' fill='%233a7d44'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Local business structured data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MD Mowing",
+    "founder": { "@type": "Person", "name": "Marcus Dan" },
+    "url": "https://mdmowing.net",
+    "telephone": "+1-847-772-4803",
+    "email": "marcusdan@mdmowing.net",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressRegion": "IL", "addressLocality": "Lake Forest", "addressCountry": "US" },
+    "areaServed": ["Lake Forest, IL", "Highland Park, IL", "Lake Bluff, IL", "Knollwood, IL", "North Chicago, IL", "Libertyville, IL", "Deerfield, IL"],
+    "sameAs": ["https://www.instagram.com/md.mowing","https://youtube.com/@mdmowng","https://www.tiktok.com/@md.mowing79"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV WRAPPER (single blur layer for banner + nav) -->
+  <div class="nav-wrapper" id="navWrapper">
+    <!-- TOP SEASONAL BANNER -->
+    <div class="top-banner" id="topBanner">
+      <span id="topBannerMsg"></span>
+      <button class="top-banner-close" id="topBannerClose" aria-label="Dismiss">&#10005;</button>
+    </div>
+    <!-- NAV -->
+    <header class="nav-header" id="top">
+      <div class="container nav-inner">
+        <a href="#top" class="logo">MD <span>Mowing</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-menu" id="navMenu">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:8477724803" class="btn btn-sm">Call Now</a>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+
+
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg">
+      <img
+        id="heroBg"
+        src="images/IMG_1688.jpeg"
+        alt="Beautifully maintained front yard of a Lake Forest home"
+        fetchpriority="high"
+      />
+      <div class="hero-depth" id="heroDepth"></div>
+    </div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Lake Forest &amp; Highland Park's Trusted Crew</p>
+      <h1>Your Lawn.<br />Done Right.</h1>
+      <p class="hero-sub">Professional lawn care and landscaping services — done right, every time.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70Z" fill="#f7f9f7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-strip">
+    <div class="container why-grid">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Local &amp; Trusted</h4>
+        <p>Local to Lake Forest &amp; Highland Park</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>On-Time, Every Time</h4>
+        <p>Reliable scheduling you can plan around</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h4>Quality Work</h4>
+        <p>Pride in every cut, edge, and cleanup</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h4>Year-Round</h4>
+        <p>From spring green-up to winter snow</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTER STRIP -->
+  <div class="counter-strip">
+    <div class="counter-block">
+      <div class="counter-number" id="lawnCounter">0</div>
+      <div class="counter-label">🌿 Total Cuts</div>
+    </div>
+    <div class="counter-divider"></div>
+    <div class="counter-block">
+      <div class="counter-number">24h</div>
+      <div class="counter-label">Quote Response Time</div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how-section">
+    <div class="container">
+      <h2 class="section-title reveal">How It Works</h2>
+      <p class="section-sub reveal">Getting started is easy — we handle everything else</p>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <div class="how-num">1</div>
+          <h3>Request a Quote</h3>
+          <p>Fill out the form or give us a call. Tell us what you need and where you're located — takes 2 minutes.</p>
+        </div>
+        <div class="how-arrow" aria-hidden="true">&#8594;</div>
+        <div class="how-step reveal">
+          <div class="how-num">2</div>
+          <h3>We Assess Your Property</h3>
+          <p>We'll come take a look at no cost, no obligation. You'll get a clear, honest quote with no surprises.</p>
+        </div>
+        <div class="how-arrow" aria-hidden="true">&#8594;</div>
+        <div class="how-step reveal">
+          <div class="how-num">3</div>
+          <h3>Sit Back &amp; Enjoy</h3>
+          <p>We show up on schedule and get the job done right. Come home to a yard you're proud of.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title reveal">What We Do</h2>
+      <p class="section-sub reveal">Full-service lawn care and landscaping for Lake Forest, Highland Park, and surrounding communities</p>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-card-carousel" id="grassCarousel">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/IMG_1612.jpeg" alt="Striped mowing across two front lawns" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1949.jpeg" alt="Thick green lawn freshly mowed with Toro mower" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1204.jpeg" alt="Front yard with fresh mowing stripes" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1197.jpeg" alt="Backyard lawn with mowing stripes" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1205.jpeg" alt="Lush green backyard lawn" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1215.jpeg" alt="Front yard lawn maintenance" loading="lazy" /></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots" id="grassDots"></div>
+          </div>
+          <h3>Lawn Maintenance</h3>
+          <p>Regular mowing, trimming, and cleanup to keep your lawn healthy and looking sharp all season long.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card-carousel" id="bedCarousel">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/IMG_1487.jpeg" alt="Newly planted flower bed with fresh hydrangeas" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1485.jpeg" alt="Refreshed pebble flower bed with new plantings" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1217.jpeg" alt="Clean edging along a garden bed" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1324.jpeg" alt="Flower bed prep work in progress" loading="lazy" /></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots" id="bedDots"></div>
+          </div>
+          <h3>Flower Bed Forming</h3>
+          <p>Design and shaping of flower beds that add color, structure, and curb appeal to your landscape.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="32" cy="44" rx="22" ry="8" stroke="currentColor" stroke-width="3"/>
+              <path d="M32 44 Q24 28 20 18 Q28 22 32 32 Q36 22 44 18 Q40 28 32 44Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <h3>Edging</h3>
+          <p>Crisp, clean edges along driveways, sidewalks, and beds that give your property that finished, polished look.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card-carousel" id="mulchCarousel">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/IMG_0976.jpeg" alt="Mulch bed with garden shrubs" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_0977.jpeg" alt="Mulch bed near walkway" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_0984.jpeg" alt="Mulch ring around tree" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_0986.jpeg" alt="Mulch along foundation" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_0994.jpeg" alt="Mulch bed near stone wall" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1001.jpeg" alt="Mulch with shrubs and plants" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1013.jpeg" alt="Fresh mulch near stone edging" loading="lazy" /></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots" id="mulchDots"></div>
+          </div>
+          <h3>Mulching</h3>
+          <p>Fresh mulch installation that retains moisture, suppresses weeds, and gives your beds a clean, rich look.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card-carousel" id="wallCarousel">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/IMG_1090.jpeg" alt="Old failing retaining wall before removal" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1093.jpeg" alt="Site cleared after old wall removed" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_1096.jpeg" alt="New retaining wall being built" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_5440.jpeg" alt="Completed retaining wall" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_5442.jpeg" alt="Finished retaining wall project" loading="lazy" /></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots" id="wallDots"></div>
+          </div>
+          <h3>Retaining Walls &amp; Hardscaping</h3>
+          <p>Custom stone retaining walls, garden walls, and hardscape features built to last — adding structure, function, and lasting value to your property.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card-carousel" id="leafCarousel">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/IMG_fall1_before.jpeg" alt="Front yard parkway covered in fallen leaves" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_fall1_after.jpeg" alt="Same parkway after a thorough fall leaf cleanup" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_fall3_before.jpeg" alt="Lawn parkway buried in fallen leaves" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="images/IMG_fall3_after.jpeg" alt="Same lawn parkway cleaned and clear" loading="lazy" /></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots" id="leafDots"></div>
+          </div>
+          <h3>Leaf Removal</h3>
+          <p>Thorough fall and seasonal leaf cleanup to protect your lawn and keep your yard clear and tidy.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 32 Q20 18 32 24 Q44 30 56 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M10 40 L16 28 L22 40Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+              <line x1="8" y1="52" x2="56" y2="52" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M32 20 L32 14 M26 22 L22 18 M38 22 L42 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Snow Removal</h3>
+          <p>Reliable snow and ice removal so your driveways and walkways stay safe and clear all winter long.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider wave-from-white">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C360,70 1080,0 1440,70 L1440,70 L0,70Z" fill="#3a7d44"/>
+    </svg>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section section-green" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <p class="section-eyebrow light">Get In Touch</p>
+        <h2>Request a Free Quote</h2>
+        <p>Ready to get your lawn looking great? Give us a call, send an email, or fill out the form and we'll get back to you fast.</p>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.57a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:8477724803">(847) 772-4803</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:marcusdan@mdmowing.net">marcusdan@mdmowing.net</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>Lake Forest, IL &amp; Surrounding Areas</span>
+          </li>
+        </ul>
+        <div class="social-links">
+          <a href="https://www.instagram.com/md.mowing" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://youtube.com/@mdmowng" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="none" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@md.mowing79" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+        <div class="area-tags">
+          <span class="area-tag">Lake Forest</span>
+          <span class="area-tag">Highland Park</span>
+          <span class="area-tag">Lake Bluff</span>
+          <span class="area-tag">Knollwood</span>
+          <span class="area-tag">North Chicago</span>
+          <span class="area-tag">Libertyville</span>
+          <span class="area-tag">Deerfield</span>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Property Address</label>
+          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Start typing your address…" />
+        </div>
+        <div class="form-group">
+          <label>Services Needed</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Lawn Maintenance" /><span>Lawn Maintenance</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Edging" /><span>Edging</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Flower Bed Forming" /><span>Flower Bed Forming</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Mulching" /><span>Mulching</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Leaf Removal" /><span>Leaf Removal</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Snow Removal" /><span>Snow Removal</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Retaining Walls" /><span>Retaining Walls</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="services" value="Other" /><span>Other</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your property or any questions you have…"></textarea>
+        </div>
+        <p class="urgency-note">&#128197; We respond within 24 hours — usually much faster.</p>
+        <button type="submit" class="btn btn-white btn-full">Send Request</button>
+        <p class="form-note" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="wave-divider wave-from-green">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C360,70 1080,0 1440,70 L1440,70 L0,70Z" fill="#151f17"/>
+    </svg>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section section-dark" id="about">
+    <div class="container about-grid">
+      <div class="about-image reveal">
+        <img src="images/IMG_1208.jpeg" alt="Landscaped yard maintained by MD Mowing" />
+      </div>
+      <div class="about-text reveal">
+        <p class="section-eyebrow">About Us</p>
+        <h2>Your Neighbors. Your Lawn Care Crew.</h2>
+        <p>MD Mowing was founded in 2023 by Marcus Dan — a student athlete at Lake Forest High School who turned a passion for hard work and the outdoors into a real business. What started as a few neighbors' lawns quickly grew into a trusted name across the North Shore.</p>
+        <p>Marcus runs every job with the same mentality he brings to athletics: show up early, put in the work, and don't cut corners. MD Mowing proudly serves Lake Forest, Highland Park, Lake Bluff, Knollwood, North Chicago, Libertyville, and select areas of Deerfield.</p>
+        <div class="about-badges">
+          <div class="badge">Locally Owned</div>
+          <div class="badge">Year-Round Service</div>
+          <div class="badge">Community First</div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider wave-from-dark">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,70 C360,0 1080,70 1440,0 L1440,70 L0,70Z" fill="#f7f9f7"/>
+    </svg>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <h2 class="section-title reveal">What Our Customers Say</h2>
+      <p class="section-sub reveal" id="reviewsSub">Homeowners across Lake Forest, Highland Park &amp; beyond trust us with their lawns</p>
+      <div class="testimonials-grid" id="googleReviews">
+        <div class="testimonial-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"MD Mowing has been taking care of our lawn all season and it has never looked this good. Always on time, professional, and the attention to detail is unmatched."</p>
+          <div class="testimonial-author">— Sarah M., Lake Forest</div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"They did our mulching and flower beds and the transformation was incredible. The yard looks like something out of a magazine. Highly recommend!"</p>
+          <div class="testimonial-author">— James K., Highland Park</div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Reliable, affordable, and they genuinely care about the quality of their work. Our neighbors keep asking who does our lawn. MD Mowing every time."</p>
+          <div class="testimonial-author">— Linda T., Lake Bluff</div>
+        </div>
+      </div>
+      <div class="reviews-cta reveal">
+        <a href="https://share.google/CsAWD2ZESVipMBLH8" target="_blank" rel="noopener" class="btn btn-primary">&#9733; Leave Us a Google Review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title reveal">Our Work</h2>
+      <p class="section-sub reveal">A look at what we've been up to</p>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal"><img src="images/IMG_1612.jpeg" alt="Striped mowing across two front lawns" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1949.jpeg" alt="Thick lush backyard lawn freshly mowed" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1688.jpeg" alt="Brick colonial with manicured landscape" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1197.jpeg" alt="Backyard lawn with clean mowing stripes" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1205.jpeg" alt="Lush green backyard lawn" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1217.jpeg" alt="Clean edging along a garden bed" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_0976.jpeg" alt="Mulch bed with garden shrubs" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1208.jpeg" alt="Landscaped yard maintained by MD Mowing" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT -->
+  <section class="section featured-section">
+    <div class="container">
+      <p class="section-eyebrow reveal" style="text-align:center">Featured Project</p>
+      <h2 class="section-title reveal">Retaining Wall Build</h2>
+      <p class="section-sub reveal">Tearing out an old failing wall and building it back better — start to finish</p>
+      <div class="featured-grid reveal">
+        <div class="featured-main">
+          <img src="images/IMG_5442.jpeg" alt="Completed custom retaining wall — the final result" loading="lazy" />
+        </div>
+        <div class="featured-side">
+          <figure><img src="images/IMG_1090.jpeg" alt="Old failing wall before removal" loading="lazy" /><figcaption>Before</figcaption></figure>
+          <figure><img src="images/IMG_1093.jpeg" alt="Site cleared after old wall removed" loading="lazy" /><figcaption>Cleared</figcaption></figure>
+          <figure><img src="images/IMG_1096.jpeg" alt="New retaining wall being built" loading="lazy" /><figcaption>Building</figcaption></figure>
+          <figure><img src="images/IMG_5440.jpeg" alt="Finished retaining wall stonework" loading="lazy" /><figcaption>Finished</figcaption></figure>
+        </div>
+      </div>
+
+      <p class="section-eyebrow reveal" style="text-align:center; margin-top: 4rem;">Featured Project</p>
+      <h2 class="section-title reveal">Flower Bed Refresh</h2>
+      <p class="section-sub reveal">Overgrown bed cleaned out, replanted, and brought back to life</p>
+      <div class="featured-grid reveal">
+        <div class="featured-main">
+          <img src="images/IMG_1487.jpeg" alt="Finished flower bed with hydrangeas and fresh plantings" loading="lazy" />
+        </div>
+        <div class="featured-side">
+          <figure><img src="images/IMG_1180.jpeg" alt="Overgrown flower bed before work started" loading="lazy" /><figcaption>Before</figcaption></figure>
+          <figure><img src="images/IMG_1321.jpeg" alt="Bed cleared and prepped with landscape fabric" loading="lazy" /><figcaption>Prepped</figcaption></figure>
+          <figure><img src="images/IMG_1324.jpeg" alt="New plantings going in" loading="lazy" /><figcaption>Planting</figcaption></figure>
+          <figure><img src="images/IMG_1485.jpeg" alt="Completed flower bed with fresh plants" loading="lazy" /><figcaption>Finished</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FALL CLEANUP BEFORE/AFTER -->
+  <section class="section ba-section" id="fall-cleanup">
+    <div class="container">
+      <p class="section-eyebrow reveal" style="text-align:center">Fall Cleanup</p>
+      <h2 class="section-title reveal">See the Difference</h2>
+      <p class="section-sub reveal">Drag the slider to see before &amp; after our fall leaf removal</p>
+      <div class="ba-grid ba-grid-single reveal">
+        <div class="ba-slider ba-slider-wide">
+          <img class="ba-after" src="images/IMG_fall2_after.jpeg" alt="Parkway after fall leaf cleanup" loading="lazy" />
+          <div class="ba-before">
+            <img src="images/IMG_fall2_before.jpeg" alt="Parkway covered in fallen leaves before cleanup" loading="lazy" />
+          </div>
+          <div class="ba-handle">
+            <div class="ba-line"></div>
+            <div class="ba-btn" aria-hidden="true">&#8596;</div>
+          </div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT JOBS -->
+  <section class="section jobs-section">
+    <div class="container">
+      <h2 class="section-title reveal">Recent Jobs</h2>
+      <p class="section-sub reveal">A look at what we've been up to across Lake Forest, Highland Park &amp; beyond</p>
+      <div class="jobs-grid">
+        <div class="gallery-item reveal"><img src="images/IMG_1612.jpeg" alt="Striped mowing across two front lawns" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1949.jpeg" alt="Freshly mowed lush lawn" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1204.jpeg" alt="Front yard with fresh mowing stripes" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_0977.jpeg" alt="Mulch bed near walkway" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_0994.jpeg" alt="Mulch bed near stone wall" loading="lazy" /></div>
+        <div class="gallery-item reveal"><img src="images/IMG_1013.jpeg" alt="Fresh mulch near stone edging" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+  <div class="wave-divider wave-from-offwhite">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,70 L0,70Z" fill="#2c5f35"/>
+    </svg>
+  </div>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container cta-strip-inner">
+      <div class="cta-strip-text">
+        <h2>Ready for a lawn you're proud of?</h2>
+        <p>Spots fill up fast this season — lock yours in today.</p>
+      </div>
+      <div class="cta-strip-actions">
+        <a href="quote.html" class="btn btn-white">Get a Free Quote</a>
+        <a href="tel:8477724803" class="btn btn-outline-white">Call (847) 772-4803</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <p class="section-sub reveal">Everything you need to know before booking</p>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you offer one-time services or only recurring?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Both! Whether you need a one-time cleanup or want a regular weekly or biweekly schedule, we've got you covered. Recurring customers get priority scheduling.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">How far in advance should I book?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>We recommend 1–2 weeks ahead, especially during peak spring and summer season. That said, we'll always try to accommodate last-minute requests when possible.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What happens if it rains on my scheduled day?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>If weather prevents a safe visit, we'll reach out to reschedule at the earliest available time — usually the very next day.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do I need to be home during service?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Not at all. As long as we have access to the yard, we'll get the job done. Many of our customers are away during service and love coming home to a freshly cut lawn.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you offer discounts for recurring customers?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes — recurring weekly or biweekly customers receive better rates and priority booking over one-time visits. Ask us about seasonal packages when you request a quote.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">MD <span>Mowing</span></p>
+      <p>&copy; <span id="year"></span> MD Mowing. All rights reserved. | Lake Forest, IL &amp; Surrounding Areas</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/md.mowing" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://youtube.com/@mdmowng" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        <a href="https://www.tiktok.com/@md.mowing79" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile buttons -->
+  <div class="mobile-cta-group">
+    <a href="tel:8477724803" class="mobile-cta" aria-label="Call MD Mowing">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.57a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Now</span>
+    </a>
+    <a href="#contact" class="mobile-cta mobile-cta-quote" aria-label="Get a free quote">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span>Free Quote</span>
+    </a>
+  </div>
+
+  <!-- MOWER RAIL -->
+  <div class="mower-rail" id="mowerRail" aria-hidden="true">
+    <div class="mower-cut" id="mowerCut"></div>
+    <div class="mower-icon" id="mowerIcon">
+      <svg viewBox="0 0 72 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- handle -->
+        <line x1="46" y1="18" x2="64" y2="4" stroke="#a8e6b4" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- engine housing -->
+        <rect x="30" y="10" width="16" height="13" rx="3" fill="#3a7d44"/>
+        <!-- deck -->
+        <rect x="8" y="18" width="42" height="16" rx="4" fill="#2c5f35"/>
+        <!-- discharge chute -->
+        <path d="M8 24 L1 31 L6 33 L10 28Z" fill="#3a7d44"/>
+        <!-- back wheel -->
+        <circle cx="17" cy="38" r="10" fill="#151f17" stroke="#4a8f56" stroke-width="2.5"/>
+        <circle cx="17" cy="38" r="5" fill="#2c5f35"/>
+        <circle cx="17" cy="38" r="2" fill="#a8e6b4"/>
+        <!-- front wheel -->
+        <circle cx="42" cy="38" r="8" fill="#151f17" stroke="#4a8f56" stroke-width="2.5"/>
+        <circle cx="42" cy="38" r="4" fill="#2c5f35"/>
+        <circle cx="42" cy="38" r="1.5" fill="#a8e6b4"/>
+      </svg>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#3a7d44" />
-  <meta name="description" content="MD Mowing — Professional lawn care and landscaping serving Lake Forest, Highland Park, Lake Bluff, Libertyville, and surrounding communities. Mowing, edging, mulching, leaf removal, snow removal, and more." />
-  <meta name="keywords" content="lawn care, landscaping, mowing, edging, mulching, leaf removal, snow removal, Lake Forest, Highland Park, Lake Bluff, Libertyville, Knollwood, North Chicago, Deerfield, Illinois, MD Mowing" />
-  <title>MD Mowing | Lawn Care in Lake Forest, Highland Park &amp; Beyond</title>
+  <meta name="theme-color" content="#1f2d1f" />
+  <meta name="description" content="MD Mowing — Lake Forest landscape care and hardscape work. Weekly mowing, seasonal cleanups, and custom retaining walls across the North Shore since 2023." />
+  <meta name="keywords" content="lawn care, landscaping, mowing, mulching, leaf removal, snow removal, retaining walls, hardscape, Lake Forest, Highland Park, Lake Bluff, Libertyville, Knollwood, North Chicago, Deerfield, Illinois, MD Mowing, Marcus Dan" />
+  <link rel="canonical" href="https://mdmowing.net/" />
+  <title>MD Mowing — Landscape Care &amp; Hardscape · Lake Forest, IL</title>
 
-  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="MD Mowing | Lake Forest &amp; Highland Park Lawn Care" />
-  <meta property="og:description" content="Professional lawn care and landscaping in Lake Forest, Highland Park, Lake Bluff, Libertyville, and surrounding North Shore communities." />
-  <meta property="og:url" content="https://mdmowing.net" />
+  <meta property="og:title" content="MD Mowing — Landscape Care &amp; Hardscape" />
+  <meta property="og:description" content="Weekly mowing, seasonal cleanups, and custom hardscape work across Lake Forest, Highland Park, and the North Shore since 2023." />
+  <meta property="og:url" content="https://mdmowing.net/" />
   <meta property="og:site_name" content="MD Mowing" />
+  <meta property="og:image" content="https://mdmowing.net/images/IMG_1688.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MD Mowing | North Shore Lawn Care" />
-  <meta name="twitter:description" content="Professional lawn care and landscaping on the North Shore." />
+  <meta name="twitter:title" content="MD Mowing — North Shore Landscape Care" />
+  <meta name="twitter:description" content="Weekly mowing, seasonal cleanups, and custom hardscape work across the North Shore." />
+  <meta name="twitter:image" content="https://mdmowing.net/images/IMG_1688.jpeg" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%231f2d1f'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-size='32' font-style='italic' fill='%23efe8db'%3Em%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233a7d44'/%3E%3Cline x1='10' y1='37' x2='3' y2='10' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Crect x='6' y='36' width='52' height='13' rx='3' fill='white'/%3E%3Crect x='22' y='24' width='20' height='14' rx='2' fill='white'/%3E%3Ccircle cx='15' cy='49' r='10' fill='white'/%3E%3Ccircle cx='15' cy='49' r='4' fill='%233a7d44'/%3E%3Ccircle cx='49' cy='49' r='8' fill='white'/%3E%3Ccircle cx='49' cy='49' r='3' fill='%233a7d44'/%3E%3C/svg%3E" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Local business structured data for Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,604 +39,1174 @@
     "sameAs": ["https://www.instagram.com/md.mowing","https://youtube.com/@mdmowng","https://www.tiktok.com/@md.mowing79"]
   }
   </script>
+
+  <style>
+    /* ========== TOKENS ========== */
+    :root {
+      --forest:     #1f2d1f;
+      --moss:       #3a4a33;
+      --sage:       #6b7a5e;
+      --cedar:      #8f5d2e;
+      --cedar-dk:   #7a4e26;
+      --stone:      #8a847a;
+      --stone-soft: #d9d4cc;
+      --sand:       #efe8db;
+      --sand-dp:    #e4dbc9;
+      --ivory:      #faf6ee;
+      --ink:        #171a15;
+      --ff-serif:   'Fraunces', Georgia, serif;
+      --ff-sans:    'Albert Sans', system-ui, -apple-system, sans-serif;
+      --gut:        clamp(1.5rem, 5vw, 4rem);
+      --hairline:   1px solid var(--stone-soft);
+    }
+
+    /* ========== RESET ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff-sans);
+      color: var(--ink);
+      background: var(--ivory);
+      line-height: 1.6;
+      font-size: 1.0625rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+    input, textarea, select { font: inherit; color: inherit; }
+
+    /* ========== UTILITY ========== */
+    .wrap { max-width: 1400px; margin-inline: auto; padding-inline: var(--gut); }
+    .serif { font-family: var(--ff-serif); }
+    .italic { font-style: italic; }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+    }
+    .rule {
+      border: 0;
+      border-top: 1px solid var(--stone-soft);
+      margin: 0;
+    }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.05rem 2rem;
+      background: var(--cedar);
+      color: var(--ivory);
+      font-family: var(--ff-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--cedar);
+      border-radius: 2px;
+      transition: background .2s ease, border-color .2s ease;
+    }
+    .btn:hover { background: var(--cedar-dk); border-color: var(--cedar-dk); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--forest);
+      border-color: var(--forest);
+    }
+    .btn-ghost:hover { background: var(--forest); color: var(--ivory); }
+    .btn-full { width: 100%; justify-content: center; }
+    .link {
+      font-family: var(--ff-sans);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--forest);
+      border-bottom: 1px solid var(--stone-soft);
+      padding-bottom: 0.25rem;
+      transition: border-color .2s ease;
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+    .link:hover { border-color: var(--forest); }
+    .link .arrow { transition: transform .2s ease; }
+    .link:hover .arrow { transform: translateX(3px); }
+
+    /* ========== NAV ========== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 246, 238, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: var(--hairline);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 1.25rem var(--gut);
+    }
+    .brand {
+      font-family: var(--ff-serif);
+      font-weight: 500;
+      font-size: 1.35rem;
+      letter-spacing: -0.01em;
+      font-variation-settings: "opsz" 24;
+      color: var(--forest);
+    }
+    .brand em { font-style: italic; color: var(--sage); font-weight: 400; }
+    .nav-menu {
+      display: flex;
+      gap: 2.25rem;
+      align-items: baseline;
+    }
+    .nav-menu a {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--moss);
+      transition: color .2s ease;
+    }
+    .nav-menu a:hover { color: var(--forest); }
+    .nav-menu .nav-call {
+      color: var(--forest);
+      border-bottom: 1px solid var(--forest);
+      padding-bottom: 2px;
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: 0;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block; width: 24px; height: 1px;
+      background: var(--forest);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      padding: clamp(3rem, 8vw, 6.5rem) var(--gut) clamp(4rem, 8vw, 7rem);
+      max-width: 1400px;
+      margin-inline: auto;
+      align-items: start;
+    }
+    .hero-left { padding-top: clamp(1rem, 4vw, 3rem); padding-right: clamp(0rem, 3vw, 2rem); }
+    .hero h1 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.75rem, 7vw, 5.75rem);
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--forest);
+      font-variation-settings: "opsz" 144;
+      margin: 1.75rem 0 1.75rem;
+    }
+    .hero h1 em { font-style: italic; font-weight: 400; color: var(--moss); }
+    .hero .lede {
+      font-size: 1.125rem;
+      line-height: 1.55;
+      color: var(--moss);
+      max-width: 38ch;
+      margin-bottom: 2.5rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    .hero-right {
+      position: relative;
+      aspect-ratio: 3/4;
+      margin-top: clamp(0rem, 3vw, 2rem);
+    }
+    .hero-right img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border: 1px solid var(--stone-soft);
+      filter: saturate(0.92);
+    }
+    .hero-right .caption {
+      position: absolute;
+      bottom: -2rem;
+      right: 0;
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--stone);
+    }
+
+    /* ========== CREDENTIAL STRIP ========== */
+    .credit {
+      background: var(--forest);
+      color: var(--sand);
+      padding: 1.25rem var(--gut);
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 1.025rem;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .credit span { color: var(--sand-dp); }
+
+    /* ========== TWO-BUSINESS SPLIT ========== */
+    .split {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 0;
+      border-top: var(--hairline);
+      border-bottom: var(--hairline);
+    }
+    .split-left {
+      background: var(--sand);
+      padding: clamp(3rem, 6vw, 5.5rem) clamp(2rem, 5vw, 4rem);
+      border-right: var(--hairline);
+    }
+    .split-right {
+      background: var(--ivory);
+      padding: clamp(3rem, 6vw, 5.5rem) clamp(2rem, 5vw, 4rem);
+    }
+    .split h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--forest);
+      margin: 1.25rem 0 1.5rem;
+    }
+    .split h2 em { font-style: italic; color: var(--moss); }
+    .split p.intro {
+      color: var(--moss);
+      font-size: 1rem;
+      line-height: 1.55;
+      max-width: 42ch;
+      margin-bottom: 2rem;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .chip {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--moss);
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--stone-soft);
+      background: var(--ivory);
+    }
+
+    /* Inline quote form */
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .quote-form label {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .quote-form .field { display: flex; flex-direction: column; }
+    .quote-form input,
+    .quote-form textarea,
+    .quote-form select {
+      background: var(--ivory);
+      border: 1px solid var(--stone-soft);
+      border-radius: 2px;
+      padding: 0.85rem 1rem;
+      font-family: var(--ff-sans);
+      font-size: 0.95rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color .2s ease;
+      width: 100%;
+    }
+    .quote-form input:focus,
+    .quote-form textarea:focus,
+    .quote-form select:focus {
+      border-color: var(--forest);
+    }
+    .quote-form .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+    .quote-form .btn { margin-top: 0.75rem; }
+    .quote-form .note {
+      font-size: 0.78rem;
+      color: var(--stone);
+      margin-top: 0.5rem;
+      font-family: var(--ff-serif);
+      font-style: italic;
+    }
+
+    /* Portfolio grid - masonry-style asymmetric */
+    .portfolio {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.25rem;
+    }
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--stone-soft);
+    }
+    .portfolio-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .5s ease;
+      filter: saturate(0.92);
+    }
+    .portfolio-item:hover img { transform: scale(1.03); }
+    .portfolio-big   { grid-row: span 2; aspect-ratio: 4/5; }
+    .portfolio-small { aspect-ratio: 4/3; }
+    .portfolio-wide  { grid-column: 1 / -1; aspect-ratio: 16/6; }
+    .portfolio-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.85rem 0 0;
+      border-top: var(--hairline);
+      margin-top: 1rem;
+    }
+    .portfolio-caption {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--moss);
+    }
+    .portfolio-year {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    /* ========== SERVICES — editorial list ========== */
+    .services {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .services-head {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      gap: 3rem;
+      padding: 0 var(--gut);
+      margin-bottom: 3.5rem;
+      align-items: end;
+    }
+    .services-head h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
+      color: var(--forest);
+      margin-top: 1rem;
+    }
+    .services-head h2 em { font-style: italic; color: var(--moss); }
+    .services-head .desc {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--moss);
+      max-width: 50ch;
+    }
+    .services-list {
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 var(--gut);
+    }
+    .svc-row {
+      display: grid;
+      grid-template-columns: 1fr 3fr 6fr 2fr;
+      gap: 2.5rem;
+      padding: 2rem 0;
+      border-top: var(--hairline);
+      align-items: baseline;
+    }
+    .svc-row:last-child { border-bottom: var(--hairline); }
+    .svc-num {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--stone);
+    }
+    .svc-name {
+      font-family: var(--ff-serif);
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--forest);
+      letter-spacing: -0.015em;
+    }
+    .svc-desc {
+      color: var(--moss);
+      line-height: 1.55;
+      font-size: 0.975rem;
+    }
+    .svc-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      text-align: right;
+    }
+
+    /* ========== FEATURED PROJECT ========== */
+    .feature {
+      background: var(--sand);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      border-top: var(--hairline);
+      border-bottom: var(--hairline);
+    }
+    .feature-wrap {
+      max-width: 1400px; margin-inline: auto; padding: 0 var(--gut);
+    }
+    .feature-head {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 3rem;
+    }
+    .feature-head h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: var(--forest);
+      margin-top: 1rem;
+    }
+    .feature-head h2 em { font-style: italic; color: var(--moss); }
+    .feature-head .desc {
+      color: var(--moss);
+      font-size: 1.025rem;
+      line-height: 1.6;
+      max-width: 54ch;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 1.5rem;
+    }
+    .feature-hero {
+      border: 1px solid var(--stone-soft);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .feature-hero img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
+    .feature-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .feature-tile {
+      border: 1px solid var(--stone-soft);
+      overflow: hidden;
+      aspect-ratio: 1;
+      position: relative;
+    }
+    .feature-tile img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94); }
+    .feature-tile::after {
+      content: attr(data-stage);
+      position: absolute;
+      bottom: 0.5rem; left: 0.6rem;
+      background: rgba(31,45,31,0.9);
+      color: var(--sand);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.55rem;
+      font-weight: 500;
+    }
+
+    /* ========== FALL CLEANUP SLIDER ========== */
+    .cleanup {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .cleanup-wrap {
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: 0 var(--gut);
+      text-align: center;
+    }
+    .cleanup h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--forest);
+      margin: 1rem 0 1rem;
+    }
+    .cleanup h2 em { font-style: italic; color: var(--moss); }
+    .cleanup .desc {
+      color: var(--moss);
+      max-width: 50ch;
+      margin: 0 auto 2.5rem;
+      font-size: 1.025rem;
+    }
+    .ba-slider {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      cursor: ew-resize;
+      user-select: none;
+      border: 1px solid var(--stone-soft);
+      touch-action: pan-y;
+    }
+    .ba-after, .ba-before img {
+      display: block;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .ba-before {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      width: 50%;
+    }
+    .ba-before img {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+    }
+    .ba-handle {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 44px;
+      pointer-events: none;
+      z-index: 3;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ba-line {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: var(--ivory);
+      transform: translateX(-50%);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .ba-btn {
+      position: relative;
+      z-index: 4;
+      background: var(--ivory);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--forest);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+      border: 1px solid var(--stone-soft);
+    }
+    .ba-label {
+      position: absolute;
+      top: 0.9rem;
+      font-family: var(--ff-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      background: rgba(31,45,31,0.85);
+      color: var(--sand);
+      font-weight: 500;
+      z-index: 2;
+    }
+    .ba-label-before { left: 0.9rem; }
+    .ba-label-after  { right: 0.9rem; }
+
+    /* ========== ABOUT ========== */
+    .about {
+      background: var(--forest);
+      color: var(--sand);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .about-wrap {
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 var(--gut);
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+    }
+    .about-img {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border: 1px solid rgba(239, 232, 219, 0.2);
+    }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); }
+    .about-text .eyebrow { color: var(--cedar); }
+    .about-text h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--sand);
+      margin: 1rem 0 1.75rem;
+    }
+    .about-text h2 em { font-style: italic; color: #c9d5ba; }
+    .about-text p {
+      color: rgba(239, 232, 219, 0.82);
+      font-size: 1.075rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+      max-width: 54ch;
+    }
+    .about-sig {
+      margin-top: 1.5rem;
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 1.025rem;
+      color: var(--sand-dp);
+    }
+
+    /* ========== TESTIMONIALS — pulled quotes ========== */
+    .quotes {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      background: var(--ivory);
+    }
+    .quotes-wrap {
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: 0 var(--gut);
+    }
+    .quotes-head {
+      margin-bottom: 3rem;
+    }
+    .quotes-head h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--forest);
+      margin-top: 1rem;
+    }
+    .quote {
+      padding: 2.25rem 0;
+      border-top: var(--hairline);
+      display: grid;
+      grid-template-columns: 2fr 10fr;
+      gap: 2rem;
+    }
+    .quote:last-of-type { border-bottom: var(--hairline); }
+    .quote .attr {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      padding-top: 0.5rem;
+    }
+    .quote .attr em {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0;
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.85rem;
+      color: var(--sage);
+    }
+    .quote p {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--forest);
+      font-style: italic;
+    }
+
+    /* ========== FOOTER ========== */
+    .foot {
+      background: var(--sand);
+      padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+      border-top: var(--hairline);
+    }
+    .foot-wrap {
+      max-width: 1400px; margin-inline: auto; padding: 0 var(--gut);
+    }
+    .foot-top {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 3.5rem;
+    }
+    .foot-brand h3 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: var(--forest);
+      margin-bottom: 0.75rem;
+    }
+    .foot-brand h3 em { font-style: italic; color: var(--moss); }
+    .foot-brand p {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      color: var(--moss);
+      font-size: 1.05rem;
+    }
+    .foot-links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .foot-col h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .foot-col a, .foot-col p {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--moss);
+      margin-bottom: 0.5rem;
+      transition: color .2s ease;
+    }
+    .foot-col a:hover { color: var(--forest); }
+    .foot-bot {
+      border-top: var(--hairline);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--stone);
+      align-items: baseline;
+    }
+    .foot-bot em { font-family: var(--ff-serif); font-style: italic; font-size: 0.88rem; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-right { max-width: 480px; }
+      .split { grid-template-columns: 1fr; }
+      .split-left { border-right: 0; border-bottom: var(--hairline); }
+      .services-head, .feature-head { grid-template-columns: 1fr; gap: 1.5rem; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .portfolio { grid-template-columns: 1fr; }
+      .portfolio-big, .portfolio-small, .portfolio-wide { grid-row: auto; grid-column: auto; aspect-ratio: 4/3; }
+      .about-wrap { grid-template-columns: 1fr; }
+      .foot-top { grid-template-columns: 1fr; }
+      .svc-row { grid-template-columns: auto 1fr; gap: 1rem; row-gap: 0.75rem; }
+      .svc-num { grid-row: 1; grid-column: 1; }
+      .svc-name { grid-row: 1; grid-column: 2; }
+      .svc-desc { grid-row: 2; grid-column: 1 / -1; }
+      .svc-label { grid-row: 3; grid-column: 1 / -1; text-align: left; }
+      .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--ivory); flex-direction: column; padding: 1.5rem var(--gut); border-bottom: var(--hairline); gap: 1rem; }
+      .nav-menu.open { display: flex; }
+      .nav-toggle { display: flex; }
+    }
+    @media (max-width: 560px) {
+      .quote-form .row { grid-template-columns: 1fr; }
+      .foot-links { grid-template-columns: 1fr 1fr; }
+      .quote { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAV WRAPPER (single blur layer for banner + nav) -->
-  <div class="nav-wrapper" id="navWrapper">
-    <!-- TOP SEASONAL BANNER -->
-    <div class="top-banner" id="topBanner">
-      <span id="topBannerMsg"></span>
-      <button class="top-banner-close" id="topBannerClose" aria-label="Dismiss">&#10005;</button>
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand" id="top">MD <em>Mowing</em></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#services">Services</a>
+        <a href="#feature">Work</a>
+        <a href="#about">About</a>
+        <a href="#quote">Quote</a>
+        <a href="tel:8477724803" class="nav-call">(847) 772-4803</a>
+      </nav>
     </div>
-    <!-- NAV -->
-    <header class="nav-header" id="top">
-      <div class="container nav-inner">
-        <a href="#top" class="logo">MD <span>Mowing</span></a>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="nav-menu" id="navMenu">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-          <a href="tel:8477724803" class="btn btn-sm">Call Now</a>
-        </nav>
-      </div>
-    </header>
-  </div>
+  </header>
 
-
-
-
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-bg">
-      <img
-        id="heroBg"
-        src="images/IMG_1688.jpeg"
-        alt="Beautifully maintained front yard of a Lake Forest home"
-        fetchpriority="high"
-      />
-      <div class="hero-depth" id="heroDepth"></div>
-    </div>
-    <div class="container hero-content">
-      <p class="hero-eyebrow">Lake Forest &amp; Highland Park's Trusted Crew</p>
-      <h1>Your Lawn.<br />Done Right.</h1>
-      <p class="hero-sub">Professional lawn care and landscaping services — done right, every time.</p>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="eyebrow">Lake Forest · Est. 2023</p>
+      <h1>Your lawn.<br><em>Done right.</em></h1>
+      <p class="lede">Weekly mowing, seasonal cleanups, and custom hardscape work across Lake Forest, Highland Park, and the North Shore — built with care that outlasts the season.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-        <a href="#services" class="btn btn-outline">Our Services</a>
+        <a href="#quote" class="btn">Request a lawn quote <span aria-hidden="true">→</span></a>
+        <a href="#feature" class="link">View hardscape work <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70Z" fill="#f7f9f7"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="why-strip">
-    <div class="container why-grid">
-      <div class="why-item">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h4>Local &amp; Trusted</h4>
-        <p>Local to Lake Forest &amp; Highland Park</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h4>On-Time, Every Time</h4>
-        <p>Reliable scheduling you can plan around</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <h4>Quality Work</h4>
-        <p>Pride in every cut, edge, and cleanup</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-        </div>
-        <h4>Year-Round</h4>
-        <p>From spring green-up to winter snow</p>
-      </div>
+    <div class="hero-right">
+      <img src="images/IMG_1688.jpeg" alt="A manicured front yard of a Lake Forest colonial home" />
+      <div class="caption">Lake Forest, IL</div>
     </div>
   </section>
 
-  <!-- COUNTER STRIP -->
-  <div class="counter-strip">
-    <div class="counter-block">
-      <div class="counter-number" id="lawnCounter">0</div>
-      <div class="counter-label">🌿 Total Cuts</div>
-    </div>
-    <div class="counter-divider"></div>
-    <div class="counter-block">
-      <div class="counter-number">24h</div>
-      <div class="counter-label">Quote Response Time</div>
-    </div>
+  <!-- ================= CREDENTIAL STRIP ================= -->
+  <div class="credit">
+    Serving the North Shore since 2023 · <span>Lake Forest · Highland Park · Lake Bluff · Libertyville</span>
   </div>
 
-  <!-- HOW IT WORKS -->
-  <section class="section how-section">
-    <div class="container">
-      <h2 class="section-title reveal">How It Works</h2>
-      <p class="section-sub reveal">Getting started is easy — we handle everything else</p>
-      <div class="how-grid">
-        <div class="how-step reveal">
-          <div class="how-num">1</div>
-          <h3>Request a Quote</h3>
-          <p>Fill out the form or give us a call. Tell us what you need and where you're located — takes 2 minutes.</p>
-        </div>
-        <div class="how-arrow" aria-hidden="true">&#8594;</div>
-        <div class="how-step reveal">
-          <div class="how-num">2</div>
-          <h3>We Assess Your Property</h3>
-          <p>We'll come take a look at no cost, no obligation. You'll get a clear, honest quote with no surprises.</p>
-        </div>
-        <div class="how-arrow" aria-hidden="true">&#8594;</div>
-        <div class="how-step reveal">
-          <div class="how-num">3</div>
-          <h3>Sit Back &amp; Enjoy</h3>
-          <p>We show up on schedule and get the job done right. Come home to a yard you're proud of.</p>
-        </div>
+  <!-- ================= TWO-BUSINESS SPLIT ================= -->
+  <section class="split" id="quote">
+    <!-- LEFT: Recurring quote form -->
+    <div class="split-left">
+      <p class="eyebrow">Recurring Work</p>
+      <h2>Weekly mowing.<br><em>Mulch. Cleanups.</em></h2>
+      <p class="intro">The reliable season-long work that keeps your property looking sharp. Flat weekly pricing, dependable scheduling, no contracts.</p>
+      <div class="chips">
+        <span class="chip">Mowing</span>
+        <span class="chip">Mulching</span>
+        <span class="chip">Edging</span>
+        <span class="chip">Leaf Removal</span>
+        <span class="chip">Snow Removal</span>
       </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title reveal">What We Do</h2>
-      <p class="section-sub reveal">Full-service lawn care and landscaping for Lake Forest, Highland Park, and surrounding communities</p>
-      <div class="services-grid">
-
-        <div class="service-card reveal">
-          <div class="service-card-carousel" id="grassCarousel">
-            <div class="carousel-track">
-              <div class="carousel-slide"><img src="images/IMG_1612.jpeg" alt="Striped mowing across two front lawns" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1949.jpeg" alt="Thick green lawn freshly mowed with Toro mower" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1204.jpeg" alt="Front yard with fresh mowing stripes" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1197.jpeg" alt="Backyard lawn with mowing stripes" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1205.jpeg" alt="Lush green backyard lawn" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1215.jpeg" alt="Front yard lawn maintenance" loading="lazy" /></div>
-            </div>
-            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
-            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
-            <div class="carousel-dots" id="grassDots"></div>
-          </div>
-          <h3>Lawn Maintenance</h3>
-          <p>Regular mowing, trimming, and cleanup to keep your lawn healthy and looking sharp all season long.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card-carousel" id="bedCarousel">
-            <div class="carousel-track">
-              <div class="carousel-slide"><img src="images/IMG_1487.jpeg" alt="Newly planted flower bed with fresh hydrangeas" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1485.jpeg" alt="Refreshed pebble flower bed with new plantings" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1217.jpeg" alt="Clean edging along a garden bed" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1324.jpeg" alt="Flower bed prep work in progress" loading="lazy" /></div>
-            </div>
-            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
-            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
-            <div class="carousel-dots" id="bedDots"></div>
-          </div>
-          <h3>Flower Bed Forming</h3>
-          <p>Design and shaping of flower beds that add color, structure, and curb appeal to your landscape.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="32" cy="44" rx="22" ry="8" stroke="currentColor" stroke-width="3"/>
-              <path d="M32 44 Q24 28 20 18 Q28 22 32 32 Q36 22 44 18 Q40 28 32 44Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" fill="none"/>
-            </svg>
-          </div>
-          <h3>Edging</h3>
-          <p>Crisp, clean edges along driveways, sidewalks, and beds that give your property that finished, polished look.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card-carousel" id="mulchCarousel">
-            <div class="carousel-track">
-              <div class="carousel-slide"><img src="images/IMG_0976.jpeg" alt="Mulch bed with garden shrubs" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_0977.jpeg" alt="Mulch bed near walkway" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_0984.jpeg" alt="Mulch ring around tree" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_0986.jpeg" alt="Mulch along foundation" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_0994.jpeg" alt="Mulch bed near stone wall" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1001.jpeg" alt="Mulch with shrubs and plants" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1013.jpeg" alt="Fresh mulch near stone edging" loading="lazy" /></div>
-            </div>
-            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
-            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
-            <div class="carousel-dots" id="mulchDots"></div>
-          </div>
-          <h3>Mulching</h3>
-          <p>Fresh mulch installation that retains moisture, suppresses weeds, and gives your beds a clean, rich look.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card-carousel" id="wallCarousel">
-            <div class="carousel-track">
-              <div class="carousel-slide"><img src="images/IMG_1090.jpeg" alt="Old failing retaining wall before removal" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1093.jpeg" alt="Site cleared after old wall removed" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_1096.jpeg" alt="New retaining wall being built" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_5440.jpeg" alt="Completed retaining wall" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_5442.jpeg" alt="Finished retaining wall project" loading="lazy" /></div>
-            </div>
-            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
-            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
-            <div class="carousel-dots" id="wallDots"></div>
-          </div>
-          <h3>Retaining Walls &amp; Hardscaping</h3>
-          <p>Custom stone retaining walls, garden walls, and hardscape features built to last — adding structure, function, and lasting value to your property.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card-carousel" id="leafCarousel">
-            <div class="carousel-track">
-              <div class="carousel-slide"><img src="images/IMG_fall1_before.jpeg" alt="Front yard parkway covered in fallen leaves" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_fall1_after.jpeg" alt="Same parkway after a thorough fall leaf cleanup" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_fall3_before.jpeg" alt="Lawn parkway buried in fallen leaves" loading="lazy" /></div>
-              <div class="carousel-slide"><img src="images/IMG_fall3_after.jpeg" alt="Same lawn parkway cleaned and clear" loading="lazy" /></div>
-            </div>
-            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
-            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
-            <div class="carousel-dots" id="leafDots"></div>
-          </div>
-          <h3>Leaf Removal</h3>
-          <p>Thorough fall and seasonal leaf cleanup to protect your lawn and keep your yard clear and tidy.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 32 Q20 18 32 24 Q44 30 56 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <path d="M10 40 L16 28 L22 40Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
-              <line x1="8" y1="52" x2="56" y2="52" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <path d="M32 20 L32 14 M26 22 L22 18 M38 22 L42 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Snow Removal</h3>
-          <p>Reliable snow and ice removal so your driveways and walkways stay safe and clear all winter long.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="wave-divider wave-from-white">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 C360,70 1080,0 1440,70 L1440,70 L0,70Z" fill="#3a7d44"/>
-    </svg>
-  </div>
-
-  <!-- CONTACT -->
-  <section class="section section-green" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info reveal">
-        <p class="section-eyebrow light">Get In Touch</p>
-        <h2>Request a Free Quote</h2>
-        <p>Ready to get your lawn looking great? Give us a call, send an email, or fill out the form and we'll get back to you fast.</p>
-        <ul class="contact-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.57a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:8477724803">(847) 772-4803</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:marcusdan@mdmowing.net">marcusdan@mdmowing.net</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span>Lake Forest, IL &amp; Surrounding Areas</span>
-          </li>
-        </ul>
-        <div class="social-links">
-          <a href="https://www.instagram.com/md.mowing" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://youtube.com/@mdmowng" target="_blank" rel="noopener" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="none" fill="currentColor"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@md.mowing79" target="_blank" rel="noopener" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
-          </a>
-        </div>
-        <div class="area-tags">
-          <span class="area-tag">Lake Forest</span>
-          <span class="area-tag">Highland Park</span>
-          <span class="area-tag">Lake Bluff</span>
-          <span class="area-tag">Knollwood</span>
-          <span class="area-tag">North Chicago</span>
-          <span class="area-tag">Libertyville</span>
-          <span class="area-tag">Deerfield</span>
-        </div>
-      </div>
-      <form class="contact-form reveal" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
+      <form class="quote-form" id="contactForm">
+        <div class="row">
+          <div class="field">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
           </div>
-          <div class="form-group">
+          <div class="field">
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
           </div>
         </div>
-        <div class="form-group">
+        <div class="field">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required />
         </div>
-        <div class="form-group">
-          <label for="address">Property Address</label>
-          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Start typing your address…" />
+        <div class="field">
+          <label for="address">Property address</label>
+          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Street, City" />
         </div>
-        <div class="form-group">
-          <label>Services Needed</label>
-          <div class="checkbox-grid">
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Lawn Maintenance" /><span>Lawn Maintenance</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Edging" /><span>Edging</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Flower Bed Forming" /><span>Flower Bed Forming</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Mulching" /><span>Mulching</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Leaf Removal" /><span>Leaf Removal</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Snow Removal" /><span>Snow Removal</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Retaining Walls" /><span>Retaining Walls</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="services" value="Other" /><span>Other</span></label>
-          </div>
+        <div class="field">
+          <label for="message">Project notes</label>
+          <textarea id="message" name="message" rows="3" placeholder="Tell us a bit about your property or what you need…"></textarea>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us about your property or any questions you have…"></textarea>
-        </div>
-        <p class="urgency-note">&#128197; We respond within 24 hours — usually much faster.</p>
-        <button type="submit" class="btn btn-white btn-full">Send Request</button>
-        <p class="form-note" id="formStatus"></p>
+        <button type="submit" class="btn btn-full">Request a quote <span aria-hidden="true">→</span></button>
+        <p class="note" id="formStatus">We respond within 24 hours — usually much faster.</p>
       </form>
     </div>
-  </section>
-
-  <div class="wave-divider wave-from-green">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 C360,70 1080,0 1440,70 L1440,70 L0,70Z" fill="#151f17"/>
-    </svg>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="section section-dark" id="about">
-    <div class="container about-grid">
-      <div class="about-image reveal">
-        <img src="images/IMG_1208.jpeg" alt="Landscaped yard maintained by MD Mowing" />
+    <!-- RIGHT: Hardscape portfolio -->
+    <div class="split-right">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Hardscape<br><em>& landscape design.</em></h2>
+      <p class="intro">Custom retaining walls, garden walls, and bed restorations built to shape your property for decades. Each project priced individually.</p>
+      <div class="portfolio">
+        <a href="#feature" class="portfolio-item portfolio-big">
+          <img src="images/IMG_5442.jpeg" alt="Completed custom retaining wall" />
+        </a>
+        <a href="#feature" class="portfolio-item portfolio-small">
+          <img src="images/IMG_1487.jpeg" alt="Finished flower bed refresh" />
+        </a>
+        <a href="#feature" class="portfolio-item portfolio-small">
+          <img src="images/IMG_5440.jpeg" alt="Retaining wall stonework detail" />
+        </a>
       </div>
-      <div class="about-text reveal">
-        <p class="section-eyebrow">About Us</p>
-        <h2>Your Neighbors. Your Lawn Care Crew.</h2>
-        <p>MD Mowing was founded in 2023 by Marcus Dan — a student athlete at Lake Forest High School who turned a passion for hard work and the outdoors into a real business. What started as a few neighbors' lawns quickly grew into a trusted name across the North Shore.</p>
-        <p>Marcus runs every job with the same mentality he brings to athletics: show up early, put in the work, and don't cut corners. MD Mowing proudly serves Lake Forest, Highland Park, Lake Bluff, Knollwood, North Chicago, Libertyville, and select areas of Deerfield.</p>
-        <div class="about-badges">
-          <div class="badge">Locally Owned</div>
-          <div class="badge">Year-Round Service</div>
-          <div class="badge">Community First</div>
-        </div>
-        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+      <div class="portfolio-meta">
+        <div class="portfolio-caption">A selection from the 2024–26 seasons.</div>
+        <a href="#feature" class="link">See all <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <div class="wave-divider wave-from-dark">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,70 C360,0 1080,70 1440,0 L1440,70 L0,70Z" fill="#f7f9f7"/>
-    </svg>
-  </div>
-
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials-section">
-    <div class="container">
-      <h2 class="section-title reveal">What Our Customers Say</h2>
-      <p class="section-sub reveal" id="reviewsSub">Homeowners across Lake Forest, Highland Park &amp; beyond trust us with their lawns</p>
-      <div class="testimonials-grid" id="googleReviews">
-        <div class="testimonial-card reveal">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"MD Mowing has been taking care of our lawn all season and it has never looked this good. Always on time, professional, and the attention to detail is unmatched."</p>
-          <div class="testimonial-author">— Sarah M., Lake Forest</div>
-        </div>
-        <div class="testimonial-card reveal">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"They did our mulching and flower beds and the transformation was incredible. The yard looks like something out of a magazine. Highly recommend!"</p>
-          <div class="testimonial-author">— James K., Highland Park</div>
-        </div>
-        <div class="testimonial-card reveal">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Reliable, affordable, and they genuinely care about the quality of their work. Our neighbors keep asking who does our lawn. MD Mowing every time."</p>
-          <div class="testimonial-author">— Linda T., Lake Bluff</div>
-        </div>
+  <!-- ================= SERVICES — editorial list ================= -->
+  <section class="services" id="services">
+    <div class="services-head wrap">
+      <div>
+        <p class="eyebrow">What we do</p>
+        <h2>Full service,<br><em>one crew.</em></h2>
       </div>
-      <div class="reviews-cta reveal">
-        <a href="https://share.google/CsAWD2ZESVipMBLH8" target="_blank" rel="noopener" class="btn btn-primary">&#9733; Leave Us a Google Review</a>
+      <p class="desc">From weekly maintenance to full-season cleanups and custom hardscape builds — the same crew, start to finish, no subcontractors.</p>
+    </div>
+    <div class="services-list">
+      <div class="svc-row">
+        <div class="svc-num">01</div>
+        <div class="svc-name">Lawn Maintenance</div>
+        <div class="svc-desc">Regular mowing, trimming, and cleanup to keep your lawn healthy and sharp all season.</div>
+        <div class="svc-label">Weekly · Biweekly</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">02</div>
+        <div class="svc-name">Mulch &amp; Beds</div>
+        <div class="svc-desc">Fresh mulch installation that retains moisture, suppresses weeds, and gives your beds a clean, rich look.</div>
+        <div class="svc-label">Spring · Fall</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">03</div>
+        <div class="svc-name">Edging &amp; Bed Forming</div>
+        <div class="svc-desc">Crisp edges along drives, walks, and flower beds — the finishing detail that sets a property apart.</div>
+        <div class="svc-label">Seasonal</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">04</div>
+        <div class="svc-name">Leaf &amp; Seasonal Cleanup</div>
+        <div class="svc-desc">Thorough fall leaf removal and spring cleanups that protect the lawn and ready it for the next season.</div>
+        <div class="svc-label">Spring · Fall</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">05</div>
+        <div class="svc-name">Retaining Walls &amp; Hardscape</div>
+        <div class="svc-desc">Custom stone walls, garden walls, and hardscape features built to last — structure, function, and lasting value.</div>
+        <div class="svc-label">Project-based</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">06</div>
+        <div class="svc-name">Snow Removal</div>
+        <div class="svc-desc">Reliable driveway and walkway clearing through the Illinois winter — on the list before the first storm.</div>
+        <div class="svc-label">Nov – Mar</div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="section" id="gallery">
-    <div class="container">
-      <h2 class="section-title reveal">Our Work</h2>
-      <p class="section-sub reveal">A look at what we've been up to</p>
-      <div class="gallery-grid">
-        <div class="gallery-item reveal"><img src="images/IMG_1612.jpeg" alt="Striped mowing across two front lawns" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1949.jpeg" alt="Thick lush backyard lawn freshly mowed" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1688.jpeg" alt="Brick colonial with manicured landscape" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1197.jpeg" alt="Backyard lawn with clean mowing stripes" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1205.jpeg" alt="Lush green backyard lawn" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1217.jpeg" alt="Clean edging along a garden bed" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_0976.jpeg" alt="Mulch bed with garden shrubs" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1208.jpeg" alt="Landscaped yard maintained by MD Mowing" loading="lazy" /></div>
+  <!-- ================= FEATURED PROJECT ================= -->
+  <section class="feature" id="feature">
+    <div class="feature-wrap">
+      <div class="feature-head">
+        <div>
+          <p class="eyebrow">Selected Project · 2026</p>
+          <h2>A retaining wall,<br><em>rebuilt from footing to finish.</em></h2>
+        </div>
+        <p class="desc">A failing wall came down, the slope was cleared and re-graded, and a new wall went in with proper drainage and course-by-course leveling. The kind of project that quietly holds a yard together for decades.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECT -->
-  <section class="section featured-section">
-    <div class="container">
-      <p class="section-eyebrow reveal" style="text-align:center">Featured Project</p>
-      <h2 class="section-title reveal">Retaining Wall Build</h2>
-      <p class="section-sub reveal">Tearing out an old failing wall and building it back better — start to finish</p>
-      <div class="featured-grid reveal">
-        <div class="featured-main">
-          <img src="images/IMG_5442.jpeg" alt="Completed custom retaining wall — the final result" loading="lazy" />
+      <div class="feature-grid">
+        <div class="feature-hero">
+          <img src="images/IMG_5442.jpeg" alt="Completed retaining wall — final result" />
         </div>
-        <div class="featured-side">
-          <figure><img src="images/IMG_1090.jpeg" alt="Old failing wall before removal" loading="lazy" /><figcaption>Before</figcaption></figure>
-          <figure><img src="images/IMG_1093.jpeg" alt="Site cleared after old wall removed" loading="lazy" /><figcaption>Cleared</figcaption></figure>
-          <figure><img src="images/IMG_1096.jpeg" alt="New retaining wall being built" loading="lazy" /><figcaption>Building</figcaption></figure>
-          <figure><img src="images/IMG_5440.jpeg" alt="Finished retaining wall stonework" loading="lazy" /><figcaption>Finished</figcaption></figure>
-        </div>
-      </div>
-
-      <p class="section-eyebrow reveal" style="text-align:center; margin-top: 4rem;">Featured Project</p>
-      <h2 class="section-title reveal">Flower Bed Refresh</h2>
-      <p class="section-sub reveal">Overgrown bed cleaned out, replanted, and brought back to life</p>
-      <div class="featured-grid reveal">
-        <div class="featured-main">
-          <img src="images/IMG_1487.jpeg" alt="Finished flower bed with hydrangeas and fresh plantings" loading="lazy" />
-        </div>
-        <div class="featured-side">
-          <figure><img src="images/IMG_1180.jpeg" alt="Overgrown flower bed before work started" loading="lazy" /><figcaption>Before</figcaption></figure>
-          <figure><img src="images/IMG_1321.jpeg" alt="Bed cleared and prepped with landscape fabric" loading="lazy" /><figcaption>Prepped</figcaption></figure>
-          <figure><img src="images/IMG_1324.jpeg" alt="New plantings going in" loading="lazy" /><figcaption>Planting</figcaption></figure>
-          <figure><img src="images/IMG_1485.jpeg" alt="Completed flower bed with fresh plants" loading="lazy" /><figcaption>Finished</figcaption></figure>
+        <div class="feature-strip">
+          <div class="feature-tile" data-stage="Before"><img src="images/IMG_1090.jpeg" alt="Old failing wall before removal" /></div>
+          <div class="feature-tile" data-stage="Cleared"><img src="images/IMG_1093.jpeg" alt="Site cleared after old wall removed" /></div>
+          <div class="feature-tile" data-stage="Building"><img src="images/IMG_1096.jpeg" alt="New wall being built" /></div>
+          <div class="feature-tile" data-stage="Finished"><img src="images/IMG_5440.jpeg" alt="Finished retaining wall stonework" /></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FALL CLEANUP BEFORE/AFTER -->
-  <section class="section ba-section" id="fall-cleanup">
-    <div class="container">
-      <p class="section-eyebrow reveal" style="text-align:center">Fall Cleanup</p>
-      <h2 class="section-title reveal">See the Difference</h2>
-      <p class="section-sub reveal">Drag the slider to see before &amp; after our fall leaf removal</p>
-      <div class="ba-grid ba-grid-single reveal">
-        <div class="ba-slider ba-slider-wide">
-          <img class="ba-after" src="images/IMG_fall2_after.jpeg" alt="Parkway after fall leaf cleanup" loading="lazy" />
-          <div class="ba-before">
-            <img src="images/IMG_fall2_before.jpeg" alt="Parkway covered in fallen leaves before cleanup" loading="lazy" />
+  <!-- ================= FALL CLEANUP SLIDER ================= -->
+  <section class="cleanup">
+    <div class="cleanup-wrap">
+      <p class="eyebrow" style="justify-content:center;">Fall Cleanup</p>
+      <h2>See the <em>difference.</em></h2>
+      <p class="desc">Drag the handle to reveal before and after our fall leaf removal work.</p>
+      <div class="ba-slider" id="baSlider">
+        <img class="ba-after" src="images/IMG_fall2_after.jpeg" alt="Parkway after fall leaf cleanup" />
+        <div class="ba-before">
+          <img src="images/IMG_fall2_before.jpeg" alt="Parkway covered in fallen leaves" />
+        </div>
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"><div class="ba-line"></div><div class="ba-btn">⇆</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <div class="about-wrap">
+      <div class="about-img">
+        <img src="images/IMG_1208.jpeg" alt="A landscaped yard maintained by MD Mowing" />
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <h2>Founded by <em>Marcus Dan</em> in 2023.</h2>
+        <p>MD Mowing began with a few neighbors' lawns and the same mindset Marcus brings to athletics at Lake Forest High School — show up early, put in the work, and don't cut corners.</p>
+        <p>Three seasons in, the business has grown across the North Shore and expanded into custom hardscape work, but the standard hasn't moved. Every property gets the same attention, from the weekly cut to a full retaining wall build.</p>
+        <div class="about-sig">— Marcus Dan, Founder</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS — pulled quotes ================= -->
+  <section class="quotes">
+    <div class="quotes-wrap">
+      <div class="quotes-head">
+        <p class="eyebrow">What neighbors say</p>
+        <h2>From homeowners<br><em>across the North Shore.</em></h2>
+      </div>
+      <div class="quote">
+        <div class="attr">Sarah M.<em>Lake Forest</em></div>
+        <p>“Reliable, affordable, and they genuinely care about the quality of their work. Our neighbors keep asking who does our lawn.”</p>
+      </div>
+      <div class="quote">
+        <div class="attr">James K.<em>Highland Park</em></div>
+        <p>“They showed up on time every week, kept the yard looking sharp, and did a beautiful job on our mulch beds in the spring.”</p>
+      </div>
+      <div class="quote">
+        <div class="attr">Linda T.<em>Lake Bluff</em></div>
+        <p>“Marcus and his team built our retaining wall last summer and it's held up perfectly. Easy to work with and thorough from start to finish.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="foot">
+    <div class="foot-wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <h3>MD <em>Mowing</em></h3>
+          <p>Landscape care & hardscape<br>Lake Forest, IL · Since 2023</p>
+        </div>
+        <div class="foot-links">
+          <div class="foot-col">
+            <h4>Contact</h4>
+            <a href="tel:8477724803">(847) 772-4803</a>
+            <a href="mailto:marcusdan@mdmowing.net">marcusdan@mdmowing.net</a>
           </div>
-          <div class="ba-handle">
-            <div class="ba-line"></div>
-            <div class="ba-btn" aria-hidden="true">&#8596;</div>
+          <div class="foot-col">
+            <h4>Serving</h4>
+            <p>Lake Forest</p>
+            <p>Highland Park</p>
+            <p>Lake Bluff</p>
+            <p>Libertyville</p>
+            <p>Deerfield</p>
           </div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
+          <div class="foot-col">
+            <h4>Follow</h4>
+            <a href="https://www.instagram.com/md.mowing" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://youtube.com/@mdmowng" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.tiktok.com/@md.mowing79" target="_blank" rel="noopener">TikTok</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- RECENT JOBS -->
-  <section class="section jobs-section">
-    <div class="container">
-      <h2 class="section-title reveal">Recent Jobs</h2>
-      <p class="section-sub reveal">A look at what we've been up to across Lake Forest, Highland Park &amp; beyond</p>
-      <div class="jobs-grid">
-        <div class="gallery-item reveal"><img src="images/IMG_1612.jpeg" alt="Striped mowing across two front lawns" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1949.jpeg" alt="Freshly mowed lush lawn" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1204.jpeg" alt="Front yard with fresh mowing stripes" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_0977.jpeg" alt="Mulch bed near walkway" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_0994.jpeg" alt="Mulch bed near stone wall" loading="lazy" /></div>
-        <div class="gallery-item reveal"><img src="images/IMG_1013.jpeg" alt="Fresh mulch near stone edging" loading="lazy" /></div>
-      </div>
-    </div>
-  </section>
-  <div class="wave-divider wave-from-offwhite">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,70 L0,70Z" fill="#2c5f35"/>
-    </svg>
-  </div>
-
-  <!-- CTA STRIP -->
-  <section class="cta-strip">
-    <div class="container cta-strip-inner">
-      <div class="cta-strip-text">
-        <h2>Ready for a lawn you're proud of?</h2>
-        <p>Spots fill up fast this season — lock yours in today.</p>
-      </div>
-      <div class="cta-strip-actions">
-        <a href="quote.html" class="btn btn-white">Get a Free Quote</a>
-        <a href="tel:8477724803" class="btn btn-outline-white">Call (847) 772-4803</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section faq-section" id="faq">
-    <div class="container">
-      <h2 class="section-title reveal">Frequently Asked Questions</h2>
-      <p class="section-sub reveal">Everything you need to know before booking</p>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <button class="faq-q">Do you offer one-time services or only recurring?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Both! Whether you need a one-time cleanup or want a regular weekly or biweekly schedule, we've got you covered. Recurring customers get priority scheduling.</p></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q">How far in advance should I book?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>We recommend 1–2 weeks ahead, especially during peak spring and summer season. That said, we'll always try to accommodate last-minute requests when possible.</p></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q">What happens if it rains on my scheduled day?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>If weather prevents a safe visit, we'll reach out to reschedule at the earliest available time — usually the very next day.</p></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q">Do I need to be home during service?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Not at all. As long as we have access to the yard, we'll get the job done. Many of our customers are away during service and love coming home to a freshly cut lawn.</p></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q">Do you offer discounts for recurring customers?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Yes — recurring weekly or biweekly customers receive better rates and priority booking over one-time visits. Ask us about seasonal packages when you request a quote.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p class="footer-logo">MD <span>Mowing</span></p>
-      <p>&copy; <span id="year"></span> MD Mowing. All rights reserved. | Lake Forest, IL &amp; Surrounding Areas</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/md.mowing" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://youtube.com/@mdmowng" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
-        <a href="https://www.tiktok.com/@md.mowing79" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+      <div class="foot-bot">
+        <div>© <span id="year"></span> MD Mowing. All rights reserved.</div>
+        <div><em>Built in the North Shore.</em></div>
       </div>
     </div>
   </footer>
 
-  <!-- Sticky mobile buttons -->
-  <div class="mobile-cta-group">
-    <a href="tel:8477724803" class="mobile-cta" aria-label="Call MD Mowing">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.57a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span>Call Now</span>
-    </a>
-    <a href="#contact" class="mobile-cta mobile-cta-quote" aria-label="Get a free quote">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      <span>Free Quote</span>
-    </a>
-  </div>
-
-  <!-- MOWER RAIL -->
-  <div class="mower-rail" id="mowerRail" aria-hidden="true">
-    <div class="mower-cut" id="mowerCut"></div>
-    <div class="mower-icon" id="mowerIcon">
-      <svg viewBox="0 0 72 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- handle -->
-        <line x1="46" y1="18" x2="64" y2="4" stroke="#a8e6b4" stroke-width="3.5" stroke-linecap="round"/>
-        <!-- engine housing -->
-        <rect x="30" y="10" width="16" height="13" rx="3" fill="#3a7d44"/>
-        <!-- deck -->
-        <rect x="8" y="18" width="42" height="16" rx="4" fill="#2c5f35"/>
-        <!-- discharge chute -->
-        <path d="M8 24 L1 31 L6 33 L10 28Z" fill="#3a7d44"/>
-        <!-- back wheel -->
-        <circle cx="17" cy="38" r="10" fill="#151f17" stroke="#4a8f56" stroke-width="2.5"/>
-        <circle cx="17" cy="38" r="5" fill="#2c5f35"/>
-        <circle cx="17" cy="38" r="2" fill="#a8e6b4"/>
-        <!-- front wheel -->
-        <circle cx="42" cy="38" r="8" fill="#151f17" stroke="#4a8f56" stroke-width="2.5"/>
-        <circle cx="42" cy="38" r="4" fill="#2c5f35"/>
-        <circle cx="42" cy="38" r="1.5" fill="#a8e6b4"/>
-      </svg>
-    </div>
-  </div>
-
+  <!-- ================= SCRIPTS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const nt = document.getElementById('navToggle');
+    const nm = document.getElementById('navMenu');
+    nt.addEventListener('click', () => nm.classList.toggle('open'));
+    nm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nm.classList.remove('open')));
+
+    // Scroll reveal
+    const revEls = document.querySelectorAll('.reveal, .hero, .split, .services, .feature, .cleanup, .about, .quotes');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+      revEls.forEach(el => { el.classList.add('reveal'); io.observe(el); });
+    } else {
+      revEls.forEach(el => el.classList.add('in'));
+    }
+
+    // Before/after slider
+    (function () {
+      const slider = document.getElementById('baSlider');
+      if (!slider) return;
+      const before    = slider.querySelector('.ba-before');
+      const beforeImg = before.querySelector('img');
+      const handle    = slider.querySelector('.ba-handle');
+      let dragging = false;
+
+      function resize() { beforeImg.style.width = slider.offsetWidth + 'px'; }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function setPos(clientX) {
+        const rect = slider.getBoundingClientRect();
+        const pct  = Math.min(Math.max((clientX - rect.left) / rect.width, 0.05), 0.95);
+        before.style.width = (pct * 100) + '%';
+        handle.style.left  = (pct * 100) + '%';
+      }
+
+      slider.addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); e.preventDefault(); });
+      slider.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+      slider.addEventListener('touchmove',  e => { if (dragging) { e.preventDefault(); setPos(e.touches[0].clientX); } }, { passive: false });
+      window.addEventListener('mousemove',  e => { if (dragging) setPos(e.clientX); });
+      window.addEventListener('mouseup',   () => dragging = false);
+      window.addEventListener('touchend',  () => dragging = false);
+    })();
+
+    // EmailJS form
+    emailjs.init('p7J8HXntEE-QVw-_u');
+    const form   = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const params = {
+          from_name:  form.name.value,
+          from_email: form.email.value,
+          phone:      form.phone.value,
+          address:    form.address.value,
+          service:    'Lawn Care (v2 inline form)',
+          message:    form.message.value,
+          time:       new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }),
+        };
+        btn.disabled = true;
+        const original = btn.innerHTML;
+        btn.innerHTML = 'Sending…';
+        emailjs.send('service_obqb3f8', 'template_02argah', params)
+          .then(() => { window.location.href = '/thank-you.html'; })
+          .catch((err) => {
+            console.error('EmailJS error:', err);
+            status.textContent = 'Something went wrong. Please call or email us directly.';
+            status.style.color = '#b8593a';
+            btn.innerHTML = original;
+            btn.disabled = false;
+          });
+      });
+    }
+  </script>
 </body>
 </html>
