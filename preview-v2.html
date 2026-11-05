@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>MD Mowing — Design Preview v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --v2-forest:      #1f2d1f;
+      --v2-moss:        #3a4a33;
+      --v2-sage:        #6b7a5e;
+      --v2-terracotta:  #b8593a;
+      --v2-clay:        #d99b7f;
+      --v2-stone:       #8a847a;
+      --v2-stone-soft:  #d9d4cc;
+      --v2-sand:        #efe8db;
+      --v2-sand-deep:   #e4dbc9;
+      --v2-ivory:       #faf6ee;
+      --v2-ink:         #171a15;
+      --v2-serif: 'Fraunces', Georgia, serif;
+      --v2-sans:  'Albert Sans', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--v2-sans);
+      color: var(--v2-ink);
+      background: var(--v2-ivory);
+      line-height: 1.6;
+      font-size: 1.0625rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== NAV ===== */
+    .nav {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 1.75rem clamp(1.5rem, 5vw, 4rem);
+      border-bottom: 1px solid var(--v2-stone-soft);
+    }
+    .brand {
+      font-family: var(--v2-serif);
+      font-weight: 500;
+      font-size: 1.4rem;
+      letter-spacing: -0.01em;
+      font-variation-settings: "opsz" 24;
+      color: var(--v2-forest);
+    }
+    .brand em { font-style: italic; color: var(--v2-sage); font-weight: 400; }
+    .nav-meta {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--v2-stone);
+    }
+
+    /* ===== HERO 7/5 asymmetric ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      padding: clamp(3rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+      max-width: 1400px;
+      margin-inline: auto;
+      align-items: start;
+    }
+    .hero-left {
+      padding-top: clamp(1rem, 4vw, 3.5rem);
+      padding-right: clamp(0rem, 4vw, 3rem);
+    }
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--v2-terracotta);
+      font-weight: 500;
+      margin-bottom: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+    }
+    h1.display {
+      font-family: var(--v2-serif);
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--v2-forest);
+      font-variation-settings: "opsz" 144;
+      margin-bottom: 1.75rem;
+    }
+    h1.display em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--v2-moss);
+    }
+    .lede {
+      font-size: 1.125rem;
+      line-height: 1.55;
+      color: var(--v2-moss);
+      max-width: 36ch;
+      margin-bottom: 2.5rem;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    .btn-v2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.1rem 2rem;
+      background: var(--v2-terracotta);
+      color: var(--v2-ivory);
+      font-family: var(--v2-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .btn-v2:hover { background: #a24d32; }
+    .link-v2 {
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--v2-forest);
+      font-weight: 500;
+      border-bottom: 1px solid var(--v2-stone-soft);
+      padding-bottom: 0.25rem;
+      transition: border-color 0.2s ease;
+    }
+    .link-v2:hover { border-bottom-color: var(--v2-forest); }
+    .link-v2 .arrow { display: inline-block; transition: transform 0.2s ease; }
+    .link-v2:hover .arrow { transform: translateX(3px); }
+
+    .hero-right {
+      position: relative;
+      aspect-ratio: 3/4;
+      margin-top: clamp(0rem, 3vw, 2rem);
+    }
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 1px solid var(--v2-stone-soft);
+      filter: saturate(0.92);
+    }
+    .hero-right .caption {
+      position: absolute;
+      bottom: -2.25rem;
+      right: 0;
+      font-family: var(--v2-serif);
+      font-style: italic;
+      font-size: 0.875rem;
+      color: var(--v2-stone);
+    }
+
+    /* ===== SUB-STRIP ===== */
+    .strip {
+      background: var(--v2-forest);
+      color: var(--v2-sand);
+      padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+      font-family: var(--v2-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .strip span { color: var(--v2-clay); }
+
+    /* ===== SPECIMEN BLOCK ===== */
+    .specimen {
+      max-width: 1400px;
+      margin: clamp(4rem, 8vw, 7rem) auto;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+    .specimen-title {
+      font-family: var(--v2-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--v2-stone);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--v2-stone-soft);
+    }
+    .type-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--v2-stone-soft);
+      align-items: baseline;
+    }
+    .type-label {
+      font-family: var(--v2-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--v2-stone);
+    }
+    .type-label span { display: block; font-size: 0.7rem; color: var(--v2-sage); margin-top: 0.25rem; letter-spacing: 0.08em; text-transform: none; font-style: italic; font-family: var(--v2-serif); }
+    .ts-display { font-family: var(--v2-serif); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1; font-weight: 400; color: var(--v2-forest); font-variation-settings: "opsz" 144; letter-spacing: -0.02em; }
+    .ts-display em { font-style: italic; color: var(--v2-moss); }
+    .ts-h2 { font-family: var(--v2-serif); font-size: 2rem; line-height: 1.1; color: var(--v2-forest); font-weight: 500; }
+    .ts-body { font-family: var(--v2-sans); font-size: 1.0625rem; color: var(--v2-moss); max-width: 55ch; }
+    .ts-small { font-family: var(--v2-sans); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--v2-stone); }
+
+    /* ===== PALETTE ===== */
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .swatch {
+      border: 1px solid var(--v2-stone-soft);
+      background: var(--v2-ivory);
+    }
+    .swatch-chip {
+      width: 100%;
+      height: 120px;
+      border-bottom: 1px solid var(--v2-stone-soft);
+    }
+    .swatch-meta {
+      padding: 0.85rem 1rem 1rem;
+    }
+    .swatch-name {
+      font-family: var(--v2-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--v2-forest);
+      letter-spacing: 0.02em;
+    }
+    .swatch-hex {
+      font-family: var(--v2-serif);
+      font-style: italic;
+      font-size: 0.8125rem;
+      color: var(--v2-stone);
+      margin-top: 0.15rem;
+    }
+
+    /* ===== BUTTONS ROW ===== */
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.05rem 1.75rem;
+      background: transparent;
+      color: var(--v2-forest);
+      font-family: var(--v2-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--v2-forest);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .btn-ghost:hover { background: var(--v2-forest); color: var(--v2-ivory); }
+
+    /* ===== FOOTER ===== */
+    .foot {
+      max-width: 1400px;
+      margin: clamp(4rem, 6vw, 6rem) auto 3rem;
+      padding: 2rem clamp(1.5rem, 5vw, 4rem);
+      border-top: 1px solid var(--v2-stone-soft);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8125rem;
+      color: var(--v2-stone);
+    }
+    .foot em { font-family: var(--v2-serif); font-style: italic; }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-right { max-width: 420px; }
+      .type-row { grid-template-columns: 1fr; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="brand">MD <em>Mowing</em></a>
+    <div class="nav-meta">Design preview · v2</div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left">
+      <p class="eyebrow">Lake Forest · Est. 2023</p>
+      <h1 class="display">Your lawn.<br><em>Done right.</em></h1>
+      <p class="lede">Weekly mowing, seasonal cleanups, and custom hardscape work across Lake Forest, Highland Park, and the North Shore — built with care that outlasts the season.</p>
+      <div class="actions">
+        <a href="#" class="btn-v2">Request a lawn quote <span>→</span></a>
+        <a href="#" class="link-v2">View hardscape portfolio <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="images/IMG_1612.jpeg" alt="Striped mowing across two Lake Forest front lawns" />
+      <div class="caption">Lake Forest, IL</div>
+    </div>
+  </section>
+
+  <div class="strip">
+    Serving the North Shore since 2023 · <span>Lake Forest · Highland Park · Lake Bluff · Libertyville</span>
+  </div>
+
+  <section class="specimen">
+    <div class="specimen-title">Typography</div>
+
+    <div class="type-row">
+      <div class="type-label">Display<span>Fraunces opsz 144</span></div>
+      <div class="ts-display">Grounded, <em>architectural</em></div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Headline 2<span>Fraunces 500</span></div>
+      <div class="ts-h2">Selected projects from the 2026 season</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Body<span>Albert Sans 400</span></div>
+      <div class="ts-body">We handle the recurring work — weekly mowing, mulching, leaf removal — and we build the lasting stuff too. Custom retaining walls, garden walls, and hardscape features that shape your property for decades.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Label<span>Albert Sans 500</span></div>
+      <div class="ts-small">Mowing · Mulching · Leaf Removal · Hardscape</div>
+    </div>
+  </section>
+
+  <section class="specimen">
+    <div class="specimen-title">Palette</div>
+    <div class="palette">
+      <div class="swatch"><div class="swatch-chip" style="background:#1f2d1f"></div><div class="swatch-meta"><div class="swatch-name">Forest</div><div class="swatch-hex">#1f2d1f</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#3a4a33"></div><div class="swatch-meta"><div class="swatch-name">Moss</div><div class="swatch-hex">#3a4a33</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#6b7a5e"></div><div class="swatch-meta"><div class="swatch-name">Sage</div><div class="swatch-hex">#6b7a5e</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#b8593a"></div><div class="swatch-meta"><div class="swatch-name">Terracotta</div><div class="swatch-hex">#b8593a</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#d99b7f"></div><div class="swatch-meta"><div class="swatch-name">Clay</div><div class="swatch-hex">#d99b7f</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#8a847a"></div><div class="swatch-meta"><div class="swatch-name">Stone</div><div class="swatch-hex">#8a847a</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#d9d4cc"></div><div class="swatch-meta"><div class="swatch-name">Stone soft</div><div class="swatch-hex">#d9d4cc</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#efe8db"></div><div class="swatch-meta"><div class="swatch-name">Sand</div><div class="swatch-hex">#efe8db</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#e4dbc9"></div><div class="swatch-meta"><div class="swatch-name">Sand deep</div><div class="swatch-hex">#e4dbc9</div></div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#faf6ee"></div><div class="swatch-meta"><div class="swatch-name">Ivory</div><div class="swatch-hex">#faf6ee</div></div></div>
+    </div>
+  </section>
+
+  <section class="specimen">
+    <div class="specimen-title">Buttons</div>
+    <div class="btn-row">
+      <a href="#" class="btn-v2">Request a lawn quote <span>→</span></a>
+      <a href="#" class="btn-ghost">View portfolio</a>
+      <a href="#" class="link-v2">Learn more <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div>MD Mowing · Lake Forest, IL</div>
+    <div><em>Preview only — nothing on your live site has changed.</em></div>
+  </footer>
+
+</body>
+</html>
