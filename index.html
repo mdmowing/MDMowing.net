@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#1B3B2B" />
-  <meta name="description" content="MD Mowing is a locally owned landscape company serving Lake Forest, Highland Park, Lake Bluff, and the North Shore. Weekly mowing, mulch, seasonal cleanups, and custom retaining walls — founded by Marcus Dan in 2023." />
-  <meta name="keywords" content="lawn care, landscaping, mowing, mulching, leaf removal, snow removal, retaining walls, hardscape, flower bed, edging, Lake Forest IL, Highland Park IL, Lake Bluff IL, Libertyville IL, Deerfield IL, MD Mowing, Marcus Dan" />
+  <meta name="description" content="MD Mowing is a locally owned landscape company serving Lake Forest, Highland Park, Lake Bluff, and the North Shore. Founded in 2023 by Marcus Dan — a Lake Forest High School varsity linebacker and wrestler — offering mowing, mulch, seasonal cleanups, custom retaining walls, and snow removal." />
+  <meta name="keywords" content="lawn care, landscaping, mowing, mulching, leaf removal, snow removal, retaining walls, hardscape, flower bed, edging, Lake Forest IL, Highland Park IL, Lake Bluff IL, Libertyville IL, Deerfield IL, MD Mowing, Marcus Dan, Lake Forest High School, LFHS, LFHS Scouts, student-athlete, varsity linebacker, wrestler" />
   <link rel="canonical" href="https://mdmowing.net/" />
   <title>MD Mowing — Lake Forest &amp; North Shore Landscape Care</title>
 
@@ -31,32 +31,78 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "MD Mowing",
-    "founder": { "@type": "Person", "name": "Marcus Dan" },
-    "foundingDate": "2023",
-    "url": "https://mdmowing.net",
-    "telephone": "+1-847-772-4803",
-    "email": "marcusdan@mdmowing.net",
-    "priceRange": "$$",
-    "image": "https://mdmowing.net/images/IMG_1688.jpeg",
-    "description": "Locally owned landscape care and hardscape company serving Lake Forest, Highland Park, Lake Bluff, and surrounding North Shore communities in Illinois.",
-    "address": { "@type": "PostalAddress", "addressRegion": "IL", "addressLocality": "Lake Forest", "addressCountry": "US" },
-    "areaServed": ["Lake Forest, IL", "Highland Park, IL", "Lake Bluff, IL", "Knollwood, IL", "North Chicago, IL", "Libertyville, IL", "Deerfield, IL"],
-    "sameAs": ["https://www.instagram.com/md.mowing","https://youtube.com/@mdmowng","https://www.tiktok.com/@md.mowing79"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Landscape Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lawn Maintenance" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flower Bed Forming" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Edging" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mulching" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls and Hardscape" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leaf Removal" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Snow Removal" } }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://mdmowing.net/#business",
+        "name": "MD Mowing",
+        "founder": { "@id": "https://mdmowing.net/#marcus" },
+        "foundingDate": "2023",
+        "url": "https://mdmowing.net",
+        "telephone": "+1-847-772-4803",
+        "email": "marcusdan@mdmowing.net",
+        "priceRange": "$$",
+        "image": "https://mdmowing.net/images/IMG_1688.jpeg",
+        "description": "Locally owned landscape care and hardscape company serving Lake Forest, Highland Park, Lake Bluff, and surrounding North Shore communities in Illinois.",
+        "address": { "@type": "PostalAddress", "addressRegion": "IL", "addressLocality": "Lake Forest", "addressCountry": "US" },
+        "areaServed": ["Lake Forest, IL", "Highland Park, IL", "Lake Bluff, IL", "Knollwood, IL", "North Chicago, IL", "Libertyville, IL", "Deerfield, IL"],
+        "sameAs": ["https://www.instagram.com/md.mowing","https://youtube.com/@mdmowng","https://www.tiktok.com/@md.mowing79"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Landscape Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lawn Maintenance" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flower Bed Forming" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Edging" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mulching" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls and Hardscape" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leaf Removal" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Snow Removal" } }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://mdmowing.net/#marcus",
+        "name": "Marcus Dan",
+        "jobTitle": "Founder of MD Mowing",
+        "description": "Marcus Dan is a student-athlete at Lake Forest High School and the founder of MD Mowing, a landscape care and hardscape business serving the North Shore of Illinois. He plays varsity football as a linebacker and wrestles for the LFHS Scouts.",
+        "worksFor": { "@id": "https://mdmowing.net/#business" },
+        "founderOf": { "@id": "https://mdmowing.net/#business" },
+        "affiliation": {
+          "@type": "HighSchool",
+          "name": "Lake Forest High School",
+          "alternateName": "LFHS",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lake Forest",
+            "addressRegion": "IL",
+            "addressCountry": "US"
+          }
+        },
+        "memberOf": [
+          {
+            "@type": "SportsTeam",
+            "name": "Lake Forest Scouts Football",
+            "sport": "American Football",
+            "memberOf": { "@type": "HighSchool", "name": "Lake Forest High School" }
+          },
+          {
+            "@type": "SportsTeam",
+            "name": "Lake Forest Scouts Wrestling",
+            "sport": "Wrestling",
+            "memberOf": { "@type": "HighSchool", "name": "Lake Forest High School" }
+          }
+        ],
+        "knowsAbout": ["Landscaping", "Lawn Care", "Hardscape", "Retaining Walls", "Entrepreneurship", "American Football", "Wrestling"],
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Lake Forest, Illinois",
+          "address": { "@type": "PostalAddress", "addressLocality": "Lake Forest", "addressRegion": "IL" }
+        },
+        "sameAs": ["https://www.instagram.com/md.mowing"]
+      }
+    ]
   }
   </script>
 
@@ -1192,9 +1238,9 @@
       <div class="about-text">
         <span class="eyebrow">About MD Mowing</span>
         <h2 id="about-headline">Founded by <em>Marcus Dan</em> in 2023.</h2>
-        <p>MD Mowing started with a handful of neighbors' lawns while Marcus was a student at Lake Forest High School. The business is still local, still owner-operated, and still built the same way — show up when we say we will, finish what we start, and take the same care with a weekly cut that we'd take with a custom stone wall.</p>
-        <p>Today we take care of properties from Lake Forest down to Deerfield and north into Libertyville — mowing, mulch, seasonal cleanups, snow in the winter, and custom hardscape work in between. Most of our customers come through neighbors and referrals, and we work hard to keep it that way.</p>
-        <div class="about-sig">— Marcus Dan, Founder</div>
+        <p>MD Mowing was founded in 2023 by <strong>Marcus Dan</strong>, a local student-athlete at <strong>Lake Forest High School (LFHS)</strong>. Balancing life as an LFHS varsity linebacker and wrestler with a deep-rooted passion for entrepreneurship, Marcus built MD Mowing on the values of hard work, reliability, and hometown pride.</p>
+        <p>When you hire MD Mowing, you aren't just getting premium lawn care, landscaping, and winter snow removal — you're directly supporting a homegrown, student-operated North Shore business. Marcus and his team take personal pride in keeping Lake Forest, Lake Bluff, Highland Park, and the surrounding communities looking immaculate in every season.</p>
+        <div class="about-sig">— Marcus Dan · Founder, MD Mowing · LFHS Scouts</div>
       </div>
     </div>
   </section>
