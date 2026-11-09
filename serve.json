@@ -1,0 +1,9 @@
+{
+  "cleanUrls": false,
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/leaf-cleanup", "destination": "/leaf-cleanup/index.html" },
+    { "source": "/snow-removal", "destination": "/snow-removal/index.html" }
+  ]
+}
