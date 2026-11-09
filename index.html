@@ -109,7 +109,7 @@
   <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/seasonal.css" />
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ================= NAV ================= -->
@@ -124,9 +124,7 @@
         <a href="#services">Services</a>
         <a href="gallery/index.html">Gallery</a>
         <a href="#about">About</a>
-        <a href="#area">Service Area</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Quote</a>
+        <a href="#contact" class="nav-quote">Get a quote</a>
         <a href="tel:8477724803" class="nav-call">(847) 772-4803</a>
       </nav>
     </div>
@@ -177,7 +175,6 @@
   <section class="why" aria-labelledby="why-headline">
     <div class="why-inner">
       <div class="why-head">
-        <span class="eyebrow">Why MD Mowing</span>
         <h2 id="why-headline">A real local business, <em>not a franchise.</em></h2>
       </div>
       <div class="why-grid">
@@ -200,14 +197,24 @@
   <!-- ================= SERVICES ================= -->
   <section class="services" id="services" aria-labelledby="services-headline">
     <div class="services-head">
-      <span class="eyebrow">Services</span>
       <h2 id="services-headline">Full-service landscape care, <em>one crew.</em></h2>
     </div>
     <div class="services-list">
       <div class="svc">
+        <div class="svc-name"><a href="leaf-cleanup/index.html">Leaf <em>removal</em></a></div>
+        <div class="svc-desc">Fall cleanup for lawns, beds and parkways, with off-site leaf hauling. Request a one-time cleanup or ask about a return visit while leaves are falling. <a href="leaf-cleanup/index.html">Leaf cleanup details →</a></div>
+      </div>
+      <div class="svc">
+        <div class="svc-name"><a href="snow-removal/index.html">Snow <em>removal</em></a></div>
+        <div class="svc-desc">Residential driveway and walkway snow removal. Contact us before the first snowfall to discuss your property, scope and route availability. <a href="snow-removal/index.html">Snow removal details →</a></div>
+      </div>
+      <div class="svc">
         <div class="svc-name">Lawn <em>maintenance</em></div>
         <div class="svc-desc">Weekly or biweekly mowing from April through October, with string-trimming, blow-off, and bed-edge touch-ups included on every visit. Flat seasonal pricing, same crew every week.</div>
       </div>
+      <details class="services-more">
+        <summary>Beds, mulch, edging &amp; retaining walls</summary>
+        <div class="services-extra">
       <div class="svc">
         <div class="svc-name">Flower bed <em>forming</em></div>
         <div class="svc-desc">Shaping and restoring beds along walks, driveways, and foundations. We re-cut the edge, clear overgrowth, and prep the ground so the next layer of mulch or plantings sits right.</div>
@@ -224,127 +231,42 @@
         <div class="svc-name">Retaining walls <em>&amp; hardscape</em></div>
         <div class="svc-desc">Custom stone walls, garden walls, and bed restorations. Each project is priced individually after a site visit, with drainage and course-by-course leveling built in.</div>
       </div>
-      <div class="svc">
-        <div class="svc-name"><a href="leaf-cleanup/index.html">Leaf <em>removal</em></a></div>
-        <div class="svc-desc">Fall cleanup for lawns, beds and parkways, with off-site leaf hauling. Request a one-time cleanup or ask about a return visit while leaves are falling. <a href="leaf-cleanup/index.html">Leaf cleanup details →</a></div>
-      </div>
-      <div class="svc">
-        <div class="svc-name"><a href="snow-removal/index.html">Snow <em>removal</em></a></div>
-        <div class="svc-desc">Residential driveway and walkway snow removal. Contact us before the first snowfall to discuss your property, scope and route availability. <a href="snow-removal/index.html">Snow removal details →</a></div>
-      </div>
+        </div>
+      </details>
     </div>
   </section>
 
   <!-- ================= FEATURED WORK — RETAINING WALL ================= -->
   <section class="project" id="work" aria-labelledby="project-headline">
     <div class="project-head">
-      <span class="eyebrow">Selected work — hardscape</span>
-      <h2 id="project-headline">A retaining wall, <em>rebuilt from footing to finish.</em></h2>
-      <p class="season-note"><a href="gallery/index.html">View the full project gallery →</a></p>
-      <p class="desc">A failing wall came down, the slope was cleared and re-graded, and a new wall went in with proper drainage and course-by-course leveling — the kind of work that quietly holds a yard together for decades.</p>
+      <h2 id="project-headline">Real projects. <em>Local care.</em></h2>
+      <p class="desc">See the finished work here, then explore the Gallery for project details and clearly labeled before-and-after photos.</p>
     </div>
-    <div class="project-hero">
+    <div class="work-preview">
+      <a class="work-preview-link" href="gallery/index.html#project-walls">
+      <figure>
+      <div class="work-preview-image">
       <picture>
-        <source type="image/avif" srcset="images/optimized/retaining-wall-completed-600.avif 600w, images/optimized/retaining-wall-completed-1000.avif 1000w, images/optimized/retaining-wall-completed-1600.avif 1600w" sizes="100vw">
-        <img src="images/optimized/retaining-wall-completed-1600.webp" srcset="images/optimized/retaining-wall-completed-600.webp 600w, images/optimized/retaining-wall-completed-1000.webp 1000w, images/optimized/retaining-wall-completed-1600.webp 1600w" sizes="100vw" alt="Completed custom retaining wall built by MD Mowing" loading="lazy" width="1600" height="1200" decoding="async" />
+        <source type="image/avif" srcset="images/optimized/retaining-wall-completed-600.avif 600w, images/optimized/retaining-wall-completed-1000.avif 1000w, images/optimized/retaining-wall-completed-1600.avif 1600w" sizes="(max-width:760px) 90vw, 44vw">
+        <img src="images/optimized/retaining-wall-completed-1000.webp" srcset="images/optimized/retaining-wall-completed-600.webp 600w, images/optimized/retaining-wall-completed-1000.webp 1000w, images/optimized/retaining-wall-completed-1600.webp 1600w" sizes="(max-width:760px) 90vw, 44vw" alt="Completed custom retaining wall built by MD Mowing" loading="lazy" width="1600" height="1200" decoding="async" />
       </picture>
     </div>
-    <div class="project-caption">
-      <span class="label">The finished wall</span>
-      <span>Lake Forest · 2026</span>
-    </div>
-    <div class="project-stages">
-      <div class="stage">
-        <div class="stage-img"><picture>
-        <source type="image/avif" srcset="images/optimized/retaining-wall-before-600.avif 600w, images/optimized/retaining-wall-before-1000.avif 1000w, images/optimized/retaining-wall-before-1600.avif 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw">
-        <img src="images/optimized/retaining-wall-before-1600.webp" srcset="images/optimized/retaining-wall-before-600.webp 600w, images/optimized/retaining-wall-before-1000.webp 1000w, images/optimized/retaining-wall-before-1600.webp 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw" alt="The old failing retaining wall before removal" loading="lazy" width="1600" height="1200" decoding="async" />
-      </picture></div>
-        <span class="stage-label">Before</span>
-      </div>
-      <div class="stage">
-        <div class="stage-img"><picture>
-        <source type="image/avif" srcset="images/optimized/retaining-wall-site-preparation-600.avif 600w, images/optimized/retaining-wall-site-preparation-1000.avif 1000w, images/optimized/retaining-wall-site-preparation-1600.avif 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw">
-        <img src="images/optimized/retaining-wall-site-preparation-1600.webp" srcset="images/optimized/retaining-wall-site-preparation-600.webp 600w, images/optimized/retaining-wall-site-preparation-1000.webp 1000w, images/optimized/retaining-wall-site-preparation-1600.webp 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw" alt="Partially removed retaining wall and exposed slope" loading="lazy" width="1600" height="1200" decoding="async" />
-      </picture></div>
-        <span class="stage-label">Wall removal</span>
-      </div>
-      <div class="stage">
-        <div class="stage-img"><picture>
-        <source type="image/avif" srcset="images/optimized/retaining-wall-in-progress-600.avif 600w, images/optimized/retaining-wall-in-progress-1000.avif 1000w, images/optimized/retaining-wall-in-progress-1600.avif 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw">
-        <img src="images/optimized/retaining-wall-in-progress-1600.webp" srcset="images/optimized/retaining-wall-in-progress-600.webp 600w, images/optimized/retaining-wall-in-progress-1000.webp 1000w, images/optimized/retaining-wall-in-progress-1600.webp 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw" alt="Excavated slope during retaining-wall site preparation" loading="lazy" width="1600" height="1200" decoding="async" />
-      </picture></div>
-        <span class="stage-label">Site preparation</span>
-      </div>
-      <div class="stage">
-        <div class="stage-img"><picture>
-        <source type="image/avif" srcset="images/optimized/retaining-wall-stonework-detail-600.avif 600w, images/optimized/retaining-wall-stonework-detail-1000.avif 1000w, images/optimized/retaining-wall-stonework-detail-1600.avif 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw">
-        <img src="images/optimized/retaining-wall-stonework-detail-1600.webp" srcset="images/optimized/retaining-wall-stonework-detail-600.webp 600w, images/optimized/retaining-wall-stonework-detail-1000.webp 1000w, images/optimized/retaining-wall-stonework-detail-1600.webp 1600w" sizes="(max-width:560px) 90vw, (max-width:960px) 45vw, 23vw" alt="Finished stonework detail on the new wall" loading="lazy" width="1600" height="1200" decoding="async" />
-      </picture></div>
-        <span class="stage-label">Finished</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FULL-BLEED PHOTO ================= -->
-  <div class="bleed" role="img" aria-label="Fresh vertical mowing stripes across two Lake Forest front lawns">
+      <figcaption><h3>Retaining-wall rebuild</h3><p>View the project photos</p></figcaption>
+      </figure>
+      </a>
+      <a class="work-preview-link" href="gallery/index.html#project-lawns">
+      <figure>
+      <div class="work-preview-image">
     <picture>
-        <source type="image/avif" srcset="images/optimized/north-shore-lawn-care-600.avif 600w, images/optimized/north-shore-lawn-care-1000.avif 1000w, images/optimized/north-shore-lawn-care-1600.avif 1600w" sizes="100vw">
-        <img src="images/optimized/north-shore-lawn-care-1600.webp" srcset="images/optimized/north-shore-lawn-care-600.webp 600w, images/optimized/north-shore-lawn-care-1000.webp 1000w, images/optimized/north-shore-lawn-care-1600.webp 1600w" sizes="100vw" alt="" loading="lazy" width="1600" height="1200" decoding="async" />
+        <source type="image/avif" srcset="images/optimized/north-shore-lawn-care-600.avif 600w, images/optimized/north-shore-lawn-care-1000.avif 1000w, images/optimized/north-shore-lawn-care-1600.avif 1600w" sizes="(max-width:760px) 90vw, 44vw">
+        <img src="images/optimized/north-shore-lawn-care-1000.webp" srcset="images/optimized/north-shore-lawn-care-600.webp 600w, images/optimized/north-shore-lawn-care-1000.webp 1000w, images/optimized/north-shore-lawn-care-1600.webp 1600w" sizes="(max-width:760px) 90vw, 44vw" alt="Maintained residential lawn with mowing lines" loading="lazy" width="1600" height="1200" decoding="async" />
       </picture>
-  </div>
-
-  <!-- ================= FLOWER BED FEATURE ================= -->
-  <section class="flower" aria-labelledby="flower-headline">
-    <div class="flower-inner">
-      <div class="flower-text">
-        <span class="eyebrow">Selected work — flower beds</span>
-        <h2 id="flower-headline">A garden bed, <em>with a clean finish.</em></h2>
-        <p>A refresh for the planting bed alongside the brick patio, with landscape fabric, gravel and planting around the existing shrub.</p>
-        <p>The bed before work and the finished gravel surface, shown from different views of the patio.</p>
       </div>
-      <div class="flower-grid">
-        <div>
-          <div class="ba"><picture>
-        <source type="image/avif" srcset="images/optimized/garden-bed-before-600.avif 600w, images/optimized/garden-bed-before-1000.avif 1000w, images/optimized/garden-bed-before-1200.avif 1200w" sizes="(max-width:960px) 45vw, 23vw">
-        <img src="images/optimized/garden-bed-before-1200.webp" srcset="images/optimized/garden-bed-before-600.webp 600w, images/optimized/garden-bed-before-1000.webp 1000w, images/optimized/garden-bed-before-1200.webp 1200w" sizes="(max-width:960px) 45vw, 23vw" alt="Garden bed before work, with torn landscape fabric and scattered gravel beside the patio" loading="lazy" width="1200" height="1600" decoding="async" />
-      </picture></div>
-          <div class="ba-label">Before</div>
-        </div>
-        <div>
-          <div class="ba"><picture>
-        <source type="image/avif" srcset="images/optimized/garden-bed-completed-600.avif 600w, images/optimized/garden-bed-completed-1000.avif 1000w, images/optimized/garden-bed-completed-1200.avif 1200w" sizes="(max-width:960px) 45vw, 23vw">
-        <img src="images/optimized/garden-bed-completed-1200.webp" srcset="images/optimized/garden-bed-completed-600.webp 600w, images/optimized/garden-bed-completed-1000.webp 1000w, images/optimized/garden-bed-completed-1200.webp 1200w" sizes="(max-width:960px) 45vw, 23vw" alt="Finished gravel bed with a hosta alongside the brick patio" loading="lazy" width="1200" height="1600" decoding="async" />
-      </picture></div>
-          <div class="ba-label">Finished bed</div>
-        </div>
-      </div>
+      <figcaption><h3>Residential lawn care</h3><p>Explore our lawn-care work</p></figcaption>
+      </figure>
+      </a>
     </div>
-  </section>
-
-  <!-- ================= FALL CLEANUP SLIDER ================= -->
-  <section class="cleanup" aria-labelledby="cleanup-headline">
-    <div class="cleanup-inner">
-      <div class="cleanup-head">
-        <span class="eyebrow">Fall cleanup</span>
-        <h2 id="cleanup-headline">See the <em>difference.</em></h2>
-        <p class="desc" id="slider-help">Compare the same parkway before and after leaf cleanup. Drag the divider, or focus it and use the arrow keys.</p>
-      </div>
-      <div class="ba-slider" id="baSlider" role="slider" tabindex="0" aria-label="Leaf cleanup comparison" aria-describedby="slider-help" aria-valuemin="5" aria-valuemax="95" aria-valuenow="50" aria-valuetext="50% before photo visible" aria-orientation="horizontal">
-        <picture>
-        <source type="image/avif" srcset="images/optimized/leaf-cleanup-after-600.avif 600w, images/optimized/leaf-cleanup-after-1000.avif 1000w, images/optimized/leaf-cleanup-after-1600.avif 1600w" sizes="(max-width:1100px) 90vw, 1000px">
-        <img src="images/optimized/leaf-cleanup-after-1600.webp" srcset="images/optimized/leaf-cleanup-after-600.webp 600w, images/optimized/leaf-cleanup-after-1000.webp 1000w, images/optimized/leaf-cleanup-after-1600.webp 1600w" sizes="(max-width:1100px) 90vw, 1000px" class="ba-after"  alt="Parkway and lawn after a thorough fall leaf cleanup" loading="lazy" width="1600" height="900" decoding="async" />
-      </picture>
-        <div class="ba-before">
-          <picture>
-        <source type="image/avif" srcset="images/optimized/leaf-cleanup-before-600.avif 600w, images/optimized/leaf-cleanup-before-1000.avif 1000w, images/optimized/leaf-cleanup-before-1600.avif 1600w" sizes="(max-width:1100px) 90vw, 1000px">
-        <img src="images/optimized/leaf-cleanup-before-1600.webp" srcset="images/optimized/leaf-cleanup-before-600.webp 600w, images/optimized/leaf-cleanup-before-1000.webp 1000w, images/optimized/leaf-cleanup-before-1600.webp 1600w" sizes="(max-width:1100px) 90vw, 1000px" alt="Same parkway buried under fallen leaves before cleanup" loading="lazy" width="1600" height="900" decoding="async" />
-      </picture>
-        </div>
-        <span class="ba-label ba-label-before">Before</span>
-        <span class="ba-label ba-label-after">After</span>
-        <div class="ba-handle"><div class="ba-line"></div><div class="ba-btn" aria-hidden="true">⇆</div></div>
-      </div>
-    </div>
+    <div class="work-action"><a class="btn" href="gallery/index.html">Explore the Gallery</a></div>
   </section>
 
   <!-- ================= ABOUT ================= -->
@@ -357,11 +279,14 @@
       </picture>
       </div>
       <div class="about-text">
-        <span class="eyebrow">About MD Mowing</span>
         <h2 id="about-headline">Founded by <em>Marcus Dan</em> in 2023.</h2>
+        <p>A homegrown North Shore business providing lawn care, landscaping and winter snow removal.</p>
+        <details class="about-story">
+        <summary>Meet Marcus</summary>
         <p>MD Mowing was founded in 2023 by <strong>Marcus Dan</strong>, a local student-athlete at <strong>Lake Forest High School (LFHS)</strong>. Balancing life as an LFHS varsity linebacker and wrestler with a deep-rooted passion for entrepreneurship, Marcus built MD Mowing on the values of hard work, reliability, and hometown pride.</p>
         <p>When you hire MD Mowing, you aren't just getting premium lawn care, landscaping, and winter snow removal — you're directly supporting a homegrown, student-operated North Shore business. Marcus and his team take personal pride in keeping Lake Forest, Lake Bluff, Highland Park, and the surrounding communities looking immaculate in every season.</p>
         <div class="about-sig">— Marcus Dan · Founder, MD Mowing · LFHS Scouts</div>
+        </details>
       </div>
     </div>
   </section>
@@ -370,7 +295,6 @@
   <section class="area" id="area" aria-labelledby="area-headline">
     <div class="area-inner">
       <div class="area-text">
-        <span class="eyebrow">Service area</span>
         <h2 id="area-headline">Where <em>we work.</em></h2>
         <p>Based in Lake Forest, serving these North Shore and Lake County communities. Availability depends on the service, property and route. Include your town or ZIP when requesting a quote so we can confirm the fit.</p>
         <div style="margin-top:2rem">
@@ -400,34 +324,33 @@
   <section class="faq" id="faq" aria-labelledby="faq-headline">
     <div class="faq-inner">
       <div class="faq-head">
-        <span class="eyebrow">Frequently asked</span>
         <h2 id="faq-headline">Answers before <em>you ask.</em></h2>
       </div>
       <div class="faq-list">
-        <div class="faq-item">
-          <h3>Where do you work?</h3>
+        <details class="faq-item">
+          <summary>Where do you work?</summary>
           <p>Lake Forest, Highland Park, Lake Bluff, Knollwood, North Chicago, Libertyville, Deerfield, Gurnee, Highwood, Waukegan, Mundelein, Green Oaks, Lincolnshire and Vernon Hills. Service and route availability are confirmed for each property before booking.</p>
-        </div>
-        <div class="faq-item">
-          <h3>How often do you mow?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>How often do you mow?</summary>
           <p>Weekly from April through October is standard. Biweekly is available for lighter properties. We'll recommend what fits your yard on the first visit.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Do you offer one-time cleanups?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer one-time cleanups?</summary>
           <p>Yes. Spring and fall cleanups, mid-season refreshes, and post-storm pickups can all be booked without signing up for recurring service.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Do you take on hardscape projects?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>Do you take on hardscape projects?</summary>
           <p>Yes. Retaining walls, garden walls, and bed restorations are priced individually after a brief site visit so we can give you a firm number before any work starts.</p>
-        </div>
-        <div class="faq-item">
-          <h3>How do I get a quote?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>How do I get a quote?</summary>
           <p>Fill out the form below, email us, or call directly. Recurring work is quoted within 24 hours. Hardscape projects need a short site visit first.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Do recurring customers get better pricing?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>Do recurring customers get better pricing?</summary>
           <p>Yes. Weekly and biweekly clients get a flat seasonal rate and priority on the schedule over one-off visits.</p>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -436,7 +359,6 @@
   <section class="contact" id="contact" aria-labelledby="contact-headline">
     <div class="contact-inner">
       <div class="contact-text">
-        <span class="eyebrow">Get in touch</span>
         <h2 id="contact-headline">Request a <em>free quote.</em></h2>
         <p>Choose your service and tell us where your property is. We'll check the scope and route availability before confirming a quote or visit. Prefer to talk? Give us a call.</p>
         <div class="meta">
@@ -477,21 +399,24 @@
             <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required maxlength="120" />
           </div>
           <div class="field">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required />
           </div>
         </div>
+        <details class="quote-optional">
+          <summary>Add phone or street address (optional)</summary>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+          </div>
+          <div class="field">
+            <label for="address">Property address (optional)</label>
+            <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Street, city" />
+          </div>
+        </details>
         <div class="field">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required />
-        </div>
-        <div class="field">
-          <label for="address">Property address</label>
-          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Street, city" />
-        </div>
-        <div class="field">
-          <label for="message">Project notes</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us about your property or what you need…"></textarea>
+          <label for="message">Project notes (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Tell us about your property or what you need…"></textarea>
         </div>
         <button type="submit" class="btn btn-full">Request a quote</button>
         <p class="note" id="formStatus" role="status" aria-live="polite">Required fields are marked *. We'll confirm availability before booking.</p>
@@ -520,6 +445,10 @@
           </div>
           <div class="foot-col">
             <h4>Service area</h4>
+            <a href="#area">View our service area</a>
+            <a href="#faq">Frequently asked questions</a>
+            <details class="footer-locations">
+            <summary>All 14 communities</summary>
             <p>Lake Forest</p>
             <p>Highland Park</p>
             <p>Lake Bluff</p>
@@ -529,6 +458,7 @@
             <p>Gurnee · Highwood · Waukegan</p>
             <p>Mundelein · Green Oaks</p>
             <p>Lincolnshire · Vernon Hills</p>
+            </details>
             <a href="leaf-cleanup/index.html">Leaf cleanup</a>
             <a href="snow-removal/index.html">Snow removal</a>
           </div>
