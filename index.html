@@ -144,12 +144,22 @@
       </div>
       <p class="season-note"><a href="leaf-cleanup/index.html">Explore leaf cleanup</a> · <a href="#services">All landscape services</a></p>
     </div>
-    <div class="hero-image">
+    <div class="hero-image ba-slider" id="heroSlider" role="slider" tabindex="0" aria-label="Hero leaf cleanup before and after comparison" aria-describedby="hero-slider-help" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50% before photo visible" aria-orientation="horizontal">
       <picture>
         <source type="image/avif" srcset="images/optimized/leaf-cleanup-hero-600.avif 600w, images/optimized/leaf-cleanup-hero-1000.avif 1000w, images/optimized/leaf-cleanup-hero-1600.avif 1600w" sizes="100vw">
-        <img src="images/optimized/leaf-cleanup-hero-1600.webp" srcset="images/optimized/leaf-cleanup-hero-600.webp 600w, images/optimized/leaf-cleanup-hero-1000.webp 1000w, images/optimized/leaf-cleanup-hero-1600.webp 1600w" sizes="100vw" alt="Parkway and lawn after an MD Mowing fall leaf cleanup" fetchpriority="high" width="1600" height="640" decoding="async" />
+        <img class="ba-after" src="images/optimized/leaf-cleanup-hero-1600.webp" srcset="images/optimized/leaf-cleanup-hero-600.webp 600w, images/optimized/leaf-cleanup-hero-1000.webp 1000w, images/optimized/leaf-cleanup-hero-1600.webp 1600w" sizes="100vw" alt="Parkway and lawn after an MD Mowing fall leaf cleanup" fetchpriority="high" width="1600" height="640" decoding="async" />
       </picture>
+      <div class="ba-before">
+        <picture>
+          <source type="image/avif" srcset="images/optimized/leaf-cleanup-hero-before-600.avif 600w, images/optimized/leaf-cleanup-hero-before-1000.avif 1000w, images/optimized/leaf-cleanup-hero-before-1600.avif 1600w" sizes="100vw">
+          <img src="images/optimized/leaf-cleanup-hero-before-1600.webp" srcset="images/optimized/leaf-cleanup-hero-before-600.webp 600w, images/optimized/leaf-cleanup-hero-before-1000.webp 1000w, images/optimized/leaf-cleanup-hero-before-1600.webp 1600w" sizes="100vw" alt="The same parkway covered in fallen leaves before MD Mowing's cleanup" loading="eager" width="1600" height="640" decoding="async" />
+        </picture>
+      </div>
+      <span class="ba-label ba-label-before">Before</span>
+      <span class="ba-label ba-label-after">After</span>
+      <div class="ba-handle"><div class="ba-line"></div><div class="ba-btn" aria-hidden="true">⇆</div></div>
     </div>
+    <p class="hero-comparison-help" id="hero-slider-help">Drag to compare before and after. Keyboard: arrow keys, Home or End.</p>
   </section>
 
   <!-- ================= SERVICE AREA BAR ================= -->
@@ -539,13 +549,13 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Before/after slider
-    (function () {
-      const slider = document.getElementById('baSlider');
-      if (!slider) return;
+    // Each comparison has independent state and image sizing.
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
       const before    = slider.querySelector('.ba-before');
       const beforeImg = before.querySelector('img');
       const handle    = slider.querySelector('.ba-handle');
+      const min = Number(slider.getAttribute('aria-valuemin'));
+      const max = Number(slider.getAttribute('aria-valuemax'));
       let dragging = false;
       let value = 50;
 
@@ -554,7 +564,7 @@
       window.addEventListener('resize', resize);
 
       function update(next) {
-        value = Math.min(95, Math.max(5, Math.round(next)));
+        value = Math.min(max, Math.max(min, Math.round(next)));
         before.style.width = value + '%';
         handle.style.left = value + '%';
         slider.setAttribute('aria-valuenow', String(value));
@@ -567,7 +577,7 @@
       slider.addEventListener('keydown', e => {
         const steps = { ArrowLeft: -5, ArrowDown: -5, ArrowRight: 5, ArrowUp: 5 };
         if (e.key in steps) { e.preventDefault(); update(value + steps[e.key]); }
-        if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); update(e.key === 'Home' ? 5 : 95); }
+        if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); update(e.key === 'Home' ? min : max); }
       });
 
       slider.addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); e.preventDefault(); });
@@ -576,7 +586,8 @@
       window.addEventListener('mousemove',  e => { if (dragging) setPos(e.clientX); });
       window.addEventListener('mouseup',   () => dragging = false);
       window.addEventListener('touchend',  () => dragging = false);
-    })();
+      window.addEventListener('touchcancel', () => dragging = false);
+    });
 
   </script>
   <script src="js/navigation.js" defer></script>

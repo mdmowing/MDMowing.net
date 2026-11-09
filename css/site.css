@@ -196,10 +196,17 @@ input, textarea, select { font: inherit; color: inherit; }
   margin-top: clamp(3rem, 6vw, 5rem);
 }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-image.ba-slider { aspect-ratio: 5/2; border: 0; }
+.hero-comparison-help {
+  padding: 1rem var(--gut);
+  text-align: center;
+  color: var(--moss);
+  font-size: 0.875rem;
+}
 /* Picture wrappers must not alter gallery or comparison positioning. */
 picture { display: contents; }
 @media (max-width: 560px) {
-  .hero-image { aspect-ratio: 16/10; }
+  .hero-image, .hero-image.ba-slider { aspect-ratio: 16/10; }
   .hero-image img { object-position: 42% center; }
 }
 
