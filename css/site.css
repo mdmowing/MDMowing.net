@@ -127,8 +127,22 @@ input, textarea, select { font: inherit; color: inherit; }
 .brand em { font-style: italic; color: var(--sage); font-weight: 400; }
 .nav-menu {
   display: flex;
-  gap: 2.25rem;
+  gap: clamp(.85rem, 1.6vw, 2rem);
   align-items: center;
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+.nav-button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:.65rem 1.05rem; background:var(--forest); color:var(--bg); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap; border:1px solid var(--forest); border-radius:2px; }
+.nav-button:hover { background:var(--moss); }
+.nav-button:focus-visible { outline-offset:4px; }
+@media(min-width:961px) and (max-width:1200px) {
+  .nav-menu { gap:.85rem; margin-right:1rem; }
+  .nav-menu a { font-size:.68rem; letter-spacing:.09em; }
+}
+@media(max-width:960px) {
+  .nav-button { margin-left:auto; margin-right:1rem; order:2; padding:.5rem .75rem; }
+  .nav-toggle { order:3; }
+  .nav-menu { margin:0; }
 }
 .nav-menu a {
   font-size: 0.75rem;
