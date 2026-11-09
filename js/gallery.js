@@ -3,6 +3,7 @@
   'use strict';
   const grid=document.querySelector('.gallery-grid');
   const cards=Array.from(grid.querySelectorAll('.gallery-card'));
+  const groups=Array.from(grid.querySelectorAll('.gallery-group'));
   const filters=document.querySelector('.gallery-filters');
   const count=document.getElementById('galleryCount');
   const dialog=document.getElementById('photoViewer');
@@ -18,6 +19,7 @@
       const category=button.dataset.filter;
       filters.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
       cards.forEach(card=>{card.hidden=category!=='all'&&card.dataset.category!==category;});
+      groups.forEach(group=>{group.hidden=category!=='all'&&group.dataset.category!==category;});
       visible=cards.filter(card=>!card.hidden);
       grid.dataset.filter=category;
       count.textContent=visible.length+' photos';
@@ -28,8 +30,8 @@
     const card=visible[index],link=card.querySelector('.gallery-open');
     image.src=link.href;
     image.alt=card.querySelector('img').alt;
-    title.textContent=card.querySelector('h2').textContent;
-    caption.textContent=card.querySelector('.gallery-caption').textContent;
+    title.textContent=card.querySelector('h3').textContent;
+    caption.textContent=card.querySelector('.eyebrow').textContent+'. '+card.querySelector('.gallery-caption').textContent;
     position.textContent=(index+1)+' / '+visible.length;
   }
   cards.forEach(card=>{

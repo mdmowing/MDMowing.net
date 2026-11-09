@@ -9,9 +9,14 @@
 .gallery-filters button:hover { background:var(--bg-deep); }
 .gallery-filters button[aria-pressed="true"] { background:var(--forest); color:var(--bg); border-color:var(--forest); }
 .gallery-count { font-size:.8rem; color:var(--moss); white-space:nowrap; }
-.gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2.5rem 1.5rem; padding-bottom:5rem; }
-.gallery-grid[data-filter]:not([data-filter="all"]) { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.gallery-card[hidden] { display:none; }
+.gallery-grid { padding-bottom:2rem; }
+.gallery-group { margin-bottom:3.5rem; }
+.gallery-group-head { margin-bottom:1.5rem; padding-top:1.5rem; border-top:1px solid var(--hairline); }
+.gallery-group-head h2 { font-family:var(--ff-serif); color:var(--forest); font-size:clamp(2rem,3.5vw,3rem); font-weight:400; line-height:1.15; margin-bottom:.65rem; }
+.gallery-group-head p { max-width:46rem; color:var(--moss); font-size:.95rem; }
+.gallery-project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2.5rem 1.5rem; }
+.gallery-group[data-category="beds"] .gallery-project-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.gallery-card[hidden],.gallery-group[hidden] { display:none; }
 .gallery-card.featured { grid-column:span 2; }
 .gallery-open { display:block; }
 .gallery-image { position:relative; display:block; background:var(--bg-deep); overflow:hidden; }
@@ -20,7 +25,8 @@
 .gallery-open:focus-visible { outline-offset:6px; }
 .gallery-enlarge { position:absolute; bottom:.8rem; right:.8rem; padding:.4rem .65rem; color:var(--forest); background:var(--bg); font-size:.75rem; }
 .gallery-card figcaption { padding-top:1rem; }
-.gallery-card h2 { font-family:var(--ff-serif); color:var(--forest); font-size:1.4rem; font-weight:400; line-height:1.25; margin:.35rem 0; }
+.gallery-card h3 { font-family:var(--ff-serif); color:var(--forest); font-size:1.4rem; font-weight:400; line-height:1.25; margin:.35rem 0; }
+.gallery-card[data-category="beds"] .gallery-image img { height:auto; aspect-ratio:3/4; object-fit:contain; }
 .gallery-card p { color:var(--moss); font-size:.875rem; line-height:1.65; }
 .gallery-card .eyebrow { font-size:.7rem; }
 .gallery-invite { display:flex; justify-content:space-between; align-items:center; gap:2rem; padding:3rem 0 4.5rem; border-top:1px solid var(--hairline); }
@@ -39,13 +45,14 @@
 @media(max-width:760px) {
   .gallery-intro { grid-template-columns:1fr; gap:1.5rem; }
   .gallery-toolbar { align-items:flex-start; flex-direction:column; gap:.85rem; }
-  .gallery-grid,.gallery-grid[data-filter]:not([data-filter="all"]) { grid-template-columns:repeat(2,minmax(0,1fr)); gap:2rem 1rem; }
+  .gallery-project-grid { gap:2rem 1rem; }
+  .gallery-group[data-category="beds"] .gallery-project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .gallery-image img { height:230px; }
   .gallery-card.featured .gallery-image img { height:300px; }
   .gallery-invite { flex-direction:column; align-items:flex-start; }
 }
 @media(max-width:480px) {
-  .gallery-grid,.gallery-grid[data-filter]:not([data-filter="all"]) { grid-template-columns:1fr; }
+  .gallery-project-grid,.gallery-group[data-category="beds"] .gallery-project-grid { grid-template-columns:1fr; }
   .gallery-card.featured { grid-column:auto; }
   .gallery-image img,.gallery-card.featured .gallery-image img { height:auto; aspect-ratio:4/3; }
   .gallery-dialog { padding:.75rem; }
