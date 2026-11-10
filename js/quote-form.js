@@ -28,7 +28,7 @@
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (sending) return;
-    ['name', 'email', 'town'].forEach(name => {
+    ['name', 'email', 'town', 'address'].forEach(name => {
       const input = field(name);
       input.value = input.value.trim();
       input.setCustomValidity(input.value ? '' : 'Please complete this field.');
