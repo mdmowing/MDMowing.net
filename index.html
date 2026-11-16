@@ -53,7 +53,7 @@
           "name": "Landscape Services",
           "itemListElement": [
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lawn Maintenance" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flower Bed Forming" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bed Shaping" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Edging" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mulching" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls and Hardscape" } },
@@ -143,6 +143,7 @@
     <div class="hero-text">
       <span class="eyebrow">MD Mowing · Lake Forest, Illinois</span>
       <h1 id="hero-headline">Landscape care across <em>the North Shore.</em></h1>
+      <p class="hero-slogan">Your Yard, Done Right.</p>
       <p class="hero-lede">Weekly mowing, mulch, seasonal cleanups, and custom retaining walls — locally owned and owner-led since 2023.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn">Request a free quote</a>
@@ -160,6 +161,51 @@
     <span class="sep" aria-hidden="true"></span>
     <span>Lake Bluff</span>
   </div>
+
+  <!-- ================= REVIEWS ================= -->
+  <section class="reviews" aria-labelledby="reviews-headline">
+    <div class="reviews-head">
+      <span class="eyebrow">What neighbors say</span>
+      <h2 id="reviews-headline">5.0 on Google. <em>13 reviews.</em></h2>
+    </div>
+    <ul class="reviews-grid" role="list">
+      <li class="review-card">
+        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="sr-only">5 out of 5 stars</span>
+        </div>
+        <blockquote class="review-quote">Marcus and his crew have been nothing short of amazing! Their hard work and attention to detail is noticed right away. Even though I keep making more requests for their team, they always show up motivated with a detailed plan and execute it perfectly each time. Would highly recommend!</blockquote>
+        <p class="review-attr"><span class="review-name">Elizabeth M.</span><span class="review-source">Google review</span></p>
+      </li>
+      <li class="review-card">
+        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="sr-only">5 out of 5 stars</span>
+        </div>
+        <blockquote class="review-quote">They were professional, on time, and paid attention to the details that really make a difference... You can tell they take pride in their work.</blockquote>
+        <p class="review-attr"><span class="review-name">Aron</span><span class="review-source">Google review</span></p>
+      </li>
+      <li class="review-card">
+        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="sr-only">5 out of 5 stars</span>
+        </div>
+        <blockquote class="review-quote">He did an extraordinary job with the front yard. One of the best jobs I have ever seen.</blockquote>
+        <p class="review-attr"><span class="review-name">Zachary O.</span><span class="review-source">Google review</span></p>
+      </li>
+      <li class="review-card">
+        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="sr-only">5 out of 5 stars</span>
+        </div>
+        <blockquote class="review-quote">This was a great quality lawn service. Finished very quickly and looked amazing.</blockquote>
+        <p class="review-attr"><span class="review-name">Grady G.</span><span class="review-source">Google review</span></p>
+      </li>
+    </ul>
+    <p class="reviews-cta">
+      <a href="https://maps.google.com/?cid=5782489195908961918" target="_blank" rel="noopener">Read all reviews on Google <span aria-hidden="true">→</span></a>
+    </p>
+  </section>
 
   <!-- ================= SNOW CTA ================= -->
   <section class="snow-cta" aria-labelledby="snow-headline">
@@ -222,7 +268,7 @@
         <summary>Beds, mulch, edging &amp; retaining walls</summary>
         <div class="services-extra">
       <div class="svc">
-        <div class="svc-name">Flower bed <em>forming</em></div>
+        <div class="svc-name">Bed <em>shaping</em></div>
         <div class="svc-desc">Shaping and restoring beds along walks, driveways, and foundations. We re-cut the edge, clear overgrowth, and prep the ground so the next layer of mulch or plantings sits right.</div>
       </div>
       <div class="svc">
@@ -410,13 +456,10 @@
           <label for="address">Property address *</label>
           <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Street address" required maxlength="250" />
         </div>
-        <details class="quote-optional">
-          <summary>Add a phone number (optional)</summary>
-          <div class="field">
-            <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
-          </div>
-        </details>
+        <div class="field">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" required />
+        </div>
         <div class="field">
           <label for="message">Project notes (optional)</label>
           <textarea id="message" name="message" rows="3" placeholder="Tell us about your property or what you need…"></textarea>
@@ -436,6 +479,7 @@
       <div class="foot-top">
         <div class="foot-brand">
           <img class="foot-logo" src="images/logo-stacked.png" alt="MD Mowing" width="300" height="251" />
+          <p class="foot-slogan">Your Yard, Done Right.</p>
           <p>Landscape care and hardscape work across the North Shore, since 2023.</p>
         </div>
         <div class="foot-links">
