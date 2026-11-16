@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://md-mowingnet.netlify.app/*"
+  from = "https://md-mowing.netlify.app/*"
   to = "https://mdmowing.net/:splat"
   status = 301
   force = true
