@@ -292,6 +292,63 @@ picture { display: contents; }
   font-weight: 400;
 }
 
+/* ========== SNOW CTA — asymmetric image + text ========== */
+.snow-cta {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  align-items: stretch;
+  background: var(--bg-deep);
+  border-bottom: 1px solid var(--hairline);
+}
+.snow-cta .snow-image {
+  overflow: hidden;
+  min-height: 420px;
+}
+.snow-cta .snow-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.snow-cta .snow-text {
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.75rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 540px;
+}
+.snow-cta .snow-text .eyebrow {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.snow-cta .snow-text h2 {
+  font-family: var(--ff-serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--forest);
+  margin-bottom: 1.25rem;
+}
+.snow-cta .snow-text h2 em { font-style: italic; color: var(--moss); }
+.snow-cta .snow-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--moss);
+  margin-bottom: 2rem;
+  max-width: 44ch;
+}
+.snow-cta .snow-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+@media (max-width: 860px) {
+  .snow-cta { grid-template-columns: 1fr; }
+  .snow-cta .snow-image { aspect-ratio: 16/10; min-height: 0; }
+}
+
 /* ========== WHY US — three columns, no icons, no cards ========== */
 .why {
   padding: var(--section-v) 0;
