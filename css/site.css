@@ -118,13 +118,18 @@ input, textarea, select { font: inherit; color: inherit; }
   margin-inline: auto;
 }
 .brand {
-  font-family: var(--ff-serif);
-  font-weight: 500;
-  font-size: 1.4rem;
-  letter-spacing: -0.01em;
-  color: var(--forest);
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
 }
-.brand em { font-style: italic; color: var(--sage); font-weight: 400; }
+.brand img {
+  display: block;
+  height: 52px;
+  width: auto;
+}
+@media (max-width: 560px) {
+  .brand img { height: 44px; }
+}
 .nav-menu {
   display: flex;
   gap: clamp(.85rem, 1.6vw, 2rem);
@@ -855,16 +860,13 @@ picture { display: contents; }
   gap: clamp(2rem, 5vw, 4rem);
   margin-bottom: 4rem;
 }
-.foot-brand h3 {
-  font-family: var(--ff-serif);
-  font-weight: 500;
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: var(--bg);
-  margin-bottom: 1rem;
+.foot-brand .foot-logo {
+  display: block;
+  width: clamp(220px, 32vw, 340px);
+  height: auto;
+  margin-bottom: 1.25rem;
+  filter: invert(1) brightness(1.12);
 }
-.foot-brand h3 em { font-style: italic; color: #B5C2A6; font-weight: 400; }
 .foot-brand p {
   font-family: var(--ff-serif);
   font-style: italic;

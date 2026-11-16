@@ -33,12 +33,11 @@
       border-bottom: 1px solid var(--hairline);
     }
     .brand {
-      font-family: var(--ff-serif);
-      font-weight: 500;
-      font-size: 1.4rem;
-      color: var(--forest);
+      display: inline-flex;
+      align-items: center;
+      line-height: 0;
     }
-    .brand em { font-style: italic; color: var(--sage); font-weight: 400; }
+    .brand img { display: block; height: 48px; width: auto; }
     main {
       flex: 1;
       display: flex;
@@ -131,7 +130,9 @@
 </head>
 <body>
   <header class="nav">
-    <a href="index.html" class="brand">MD <em>Mowing</em></a>
+    <a href="index.html" class="brand" aria-label="MD Mowing — home">
+      <img src="images/logo.png" alt="MD Mowing" width="90" height="48" />
+    </a>
   </header>
   <main>
     <div class="ty">
