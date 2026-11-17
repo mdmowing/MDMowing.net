@@ -385,11 +385,15 @@ picture { display: contents; }
   color: var(--stone);
 }
 .reviews-cta {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem 2rem;
   margin: 3rem auto 0;
   padding: 0 var(--gut);
 }
-.reviews-cta a {
+.reviews-cta a:not(.btn) {
   font-family: var(--ff-sans);
   font-size: 0.82rem;
   letter-spacing: 0.14em;
@@ -403,7 +407,7 @@ picture { display: contents; }
   gap: 0.5rem;
   align-items: baseline;
 }
-.reviews-cta a:hover { border-bottom-color: var(--forest); }
+.reviews-cta a:not(.btn):hover { border-bottom-color: var(--forest); }
 @media (max-width: 1080px) {
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -980,6 +984,7 @@ picture { display: contents; }
   align-items: start;
 }
 .contact-text .eyebrow { display: block; margin-bottom: 1.5rem; }
+.contact-text h1,
 .contact-text h2 {
   font-family: var(--ff-serif);
   font-weight: 400;
@@ -989,6 +994,7 @@ picture { display: contents; }
   color: var(--forest);
   margin-bottom: 1.75rem;
 }
+.contact-text h1 em,
 .contact-text h2 em { font-style: italic; color: var(--moss); }
 .contact-text p {
   color: var(--moss);
@@ -1190,4 +1196,48 @@ picture { display: contents; }
   .foot-links { grid-template-columns: 1fr 1fr; gap: 2.5rem 1.5rem; }
   .service-bar { padding: 1.25rem var(--gut); font-size: 0.75rem; letter-spacing: 0.2em; }
   .service-bar .lead { display: block; width: 100%; margin-bottom: 0.5rem; text-align: center; }
+}
+
+/* ========== HOMEPAGE QUOTE BLOCK (form lives on quote.html) ========== */
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--bg-deep);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+}
+.contact-cta p { margin: 0; color: var(--moss); font-size: 1.025rem; line-height: 1.7; }
+.contact-cta .contact-cta-alt { font-size: 0.95rem; }
+.contact-cta .contact-cta-alt a { color: var(--forest); font-weight: 500; text-decoration: underline; text-underline-offset: .2em; }
+
+/* ========== STICKY MOBILE QUOTE BAR ========== */
+.quote-bar { display: none; }
+@media (max-width: 960px) {
+  .quote-bar {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: .6rem;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    padding: .6rem var(--gut) calc(.6rem + env(safe-area-inset-bottom));
+    background: var(--bg);
+    border-top: 1px solid var(--hairline);
+  }
+  .quote-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    border-radius: 2px;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  .quote-bar-call { color: var(--forest); border: 1px solid var(--forest); }
+  .quote-bar-quote { color: var(--bg); background: var(--cedar); border: 1px solid var(--cedar); }
+  body:has(.quote-bar) { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
 }
