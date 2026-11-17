@@ -22,8 +22,6 @@
   <meta name="twitter:description" content="Fall leaf cleanup and residential snow removal on the North Shore. Request a free quote." />
   <meta name="twitter:image" content="https://mdmowing.net/images/optimized/leaf-cleanup-social.jpg" />
 
-  <link rel="icon" type="image/png" href="/images/logo-mark.png" />
-  <link rel="apple-touch-icon" href="/images/logo-mark.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,6 +111,11 @@
     // Older links to /#contact (bookmarks, profiles) go straight to the quote page.
     if (location.hash === '#contact') location.replace('quote.html' + location.search);
   </script>
+  <!-- Favicons: root /favicon.ico (crawlers request it by default) + sized PNGs -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZC54VLE56"></script>
   <script>
