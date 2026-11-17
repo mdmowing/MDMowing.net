@@ -113,6 +113,15 @@
     // Older links to /#contact (bookmarks, profiles) go straight to the quote page.
     if (location.hash === '#contact') location.replace('quote.html' + location.search);
   </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZC54VLE56"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8ZC54VLE56');
+  </script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
