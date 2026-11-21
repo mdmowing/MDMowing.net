@@ -1241,3 +1241,42 @@ picture { display: contents; }
   .quote-bar-quote { color: var(--bg); background: var(--cedar); border: 1px solid var(--cedar); }
   body:has(.quote-bar) { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
 }
+
+/* ========== SERVICE FULLY BOOKED (crossed out, kept for next season) ========== */
+.svc-booked .svc-name s {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--stone);
+  color: #6f6a60;
+}
+.svc-booked .svc-name s em { color: inherit; }
+.svc-booked .booked-tag {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: .6rem;
+  padding: .3rem .65rem;
+  border: 1px solid var(--forest);
+  border-radius: 2px;
+  font-family: var(--ff-sans);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--forest);
+  background: var(--bg);
+}
+.booked-notice,
+.service-intro p.booked-notice {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--forest);
+  border-left-width: 5px;
+  border-radius: 2px;
+  background: var(--bg-deep);
+  color: var(--forest);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.booked-notice strong,
+.service-intro p.booked-notice strong { display: block; font-size: 1.05rem; margin-bottom: .15rem; }
