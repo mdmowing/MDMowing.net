@@ -1280,3 +1280,21 @@ picture { display: contents; }
 }
 .booked-notice strong,
 .service-intro p.booked-notice strong { display: block; font-size: 1.05rem; margin-bottom: .15rem; }
+
+/* "Now booking" tag for the service we're actively promoting */
+.svc-open .open-tag {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: .6rem;
+  padding: .3rem .65rem;
+  border: 1px solid var(--forest);
+  border-radius: 2px;
+  font-family: var(--ff-sans);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #fff;
+  background: var(--forest);
+}
