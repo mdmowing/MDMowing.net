@@ -1298,3 +1298,7 @@ picture { display: contents; }
   color: #fff;
   background: var(--forest);
 }
+
+/* Photo inside a service-page section */
+.service-photo { margin: 0; }
+.service-photo img { display: block; width: 100%; height: auto; border: 1px solid var(--hairline); }

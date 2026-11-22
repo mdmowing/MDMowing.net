@@ -27,6 +27,8 @@
 .gallery-card figcaption { padding-top:1rem; }
 .gallery-card h3 { font-family:var(--ff-serif); color:var(--forest); font-size:1.4rem; font-weight:400; line-height:1.25; margin:.35rem 0; }
 .gallery-card[data-category="beds"] .gallery-image img { height:auto; aspect-ratio:3/4; object-fit:contain; }
+.gallery-group[data-category="leaves"] .gallery-project-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.gallery-group[data-category="leaves"] .gallery-image img { height:auto; aspect-ratio:4/3; }
 .gallery-card p { color:var(--moss); font-size:.875rem; line-height:1.65; }
 .gallery-card .eyebrow { font-size:.7rem; }
 .gallery-invite { display:flex; justify-content:space-between; align-items:center; gap:2rem; padding:3rem 0 4.5rem; border-top:1px solid var(--hairline); }
@@ -46,13 +48,13 @@
   .gallery-intro { grid-template-columns:1fr; gap:1.5rem; }
   .gallery-toolbar { align-items:flex-start; flex-direction:column; gap:.85rem; }
   .gallery-project-grid { gap:2rem 1rem; }
-  .gallery-group[data-category="beds"] .gallery-project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .gallery-group[data-category="beds"] .gallery-project-grid,.gallery-group[data-category="leaves"] .gallery-project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .gallery-image img { height:230px; }
   .gallery-card.featured .gallery-image img { height:300px; }
   .gallery-invite { flex-direction:column; align-items:flex-start; }
 }
 @media(max-width:480px) {
-  .gallery-project-grid,.gallery-group[data-category="beds"] .gallery-project-grid { grid-template-columns:1fr; }
+  .gallery-project-grid,.gallery-group[data-category="beds"] .gallery-project-grid,.gallery-group[data-category="leaves"] .gallery-project-grid { grid-template-columns:1fr; }
   .gallery-card.featured { grid-column:auto; }
   .gallery-image img,.gallery-card.featured .gallery-image img { height:auto; aspect-ratio:4/3; }
   .gallery-dialog { padding:.75rem; }
