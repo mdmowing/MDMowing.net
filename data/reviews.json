@@ -1,0 +1,34 @@
+{
+  "_readme": "Rules for the homepage Google reviews. scripts/update_reviews.py regenerates the cards from this file. exclude = never show (friends/family); pin = always shown first; max_cards = how many cards the page shows. Quotes are Google's exact wording.",
+  "exclude": [
+    "Grady G.",
+    "Zachary O.",
+    "Aron"
+  ],
+  "pin": [
+    "Elizabeth M."
+  ],
+  "max_cards": 4,
+  "reviews": [
+    {
+      "name": "Elizabeth M.",
+      "quote": "Marcus and his crew have been nothing short of amazing! Their hard work and attention to detail is noticed right away. Even though I keep making more requests for their team, they always show up motivated with a detailed plan and execute it perfectly each time. Would highly recommend!",
+      "created": null
+    },
+    {
+      "name": "Iulian T.",
+      "quote": "If you’d liked to see what hard work and commitment looks like, hire MD Mowing services. Marcus and the crew were wonderful to work with and very thorough. Highly recommended!",
+      "created": "2026-11-22T03:22:34Z"
+    },
+    {
+      "name": "Ryan C.",
+      "quote": "Marcus and his crew are excellent! They cleaned up my yard for the fall, including leaf cleanup better than the pros! Every aspect was great - including scheduling and communication. Highly recommend to anybody in the area.",
+      "created": "2026-11-21T19:53:41Z"
+    },
+    {
+      "name": "Eli K.",
+      "quote": "MD Mowing did our fall cleanup in Lake Forest and did a great job from start to finish. They cleared all the leaves, cleaned out the beds, and hauled everything away — the yard looked spotless when they were done. Easy to communicate with, showed up when they said they would, and fair pricing. Would absolutely use them again and recommend them to neighbors.",
+      "created": "2026-11-24T17:32:34Z"
+    }
+  ]
+}
