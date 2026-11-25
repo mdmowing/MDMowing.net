@@ -83,35 +83,11 @@
         "@id": "https://mdmowing.net/#marcus",
         "name": "Marcus Dan",
         "jobTitle": "Founder of MD Mowing",
-        "description": "Marcus Dan is a student-athlete at Lake Forest High School and the founder of MD Mowing, a landscape care and hardscape business serving the North Shore of Illinois. He plays varsity football as a linebacker and wrestles for the LFHS Scouts.",
+        "description": "Marcus Dan is the founder of MD Mowing, a landscape care and hardscape business serving the North Shore of Illinois.",
+        "url": "https://mdmowing.net/about/",
         "worksFor": { "@id": "https://mdmowing.net/#business" },
         "founderOf": { "@id": "https://mdmowing.net/#business" },
-        "affiliation": {
-          "@type": "HighSchool",
-          "name": "Lake Forest High School",
-          "alternateName": "LFHS",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Lake Forest",
-            "addressRegion": "IL",
-            "addressCountry": "US"
-          }
-        },
-        "memberOf": [
-          {
-            "@type": "SportsTeam",
-            "name": "Lake Forest Scouts Football",
-            "sport": "American Football",
-            "memberOf": { "@type": "HighSchool", "name": "Lake Forest High School" }
-          },
-          {
-            "@type": "SportsTeam",
-            "name": "Lake Forest Scouts Wrestling",
-            "sport": "Wrestling",
-            "memberOf": { "@type": "HighSchool", "name": "Lake Forest High School" }
-          }
-        ],
-        "knowsAbout": ["Landscaping", "Lawn Care", "Hardscape", "Retaining Walls", "Entrepreneurship", "American Football", "Wrestling"],
+        "knowsAbout": ["Landscaping", "Lawn Care", "Hardscape", "Retaining Walls"],
         "homeLocation": {
           "@type": "Place",
           "name": "Lake Forest, Illinois",
@@ -160,7 +136,7 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="#services">Services</a>
         <a href="gallery/index.html">Gallery</a>
-        <a href="#about">About</a>
+        <a href="about/index.html">About</a>
         <a href="quote.html" class="nav-quote">Get a quote</a>
         <a href="tel:8477724803" class="nav-call">(847) 772-4803</a>
       </nav>
@@ -171,14 +147,14 @@
   <!-- ================= HERO ================= -->
   <section class="hero" aria-labelledby="hero-headline">
     <div class="hero-bg">
-      <img src="images/IMG_1688.jpeg" alt="A manicured Lake Forest front yard with fresh vertical mowing stripes, maintained by MD Mowing" width="1600" height="900" fetchpriority="high" />
+      <img src="images/IMG_1688.jpeg" alt="Front yard on a Lake Forest property with fresh mowing stripes" width="1600" height="900" fetchpriority="high" />
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-text">
       <span class="eyebrow">MD Mowing · Lake Forest, Illinois</span>
       <h1 id="hero-headline">Landscape care across <em>the North Shore.</em></h1>
       <p class="hero-slogan">Your Yard, Done Right.</p>
-      <p class="hero-lede">Weekly mowing, mulch, snow removal, and custom retaining walls — locally owned and owner-led since 2023.</p>
+      <p class="hero-lede">Weekly mowing, mulch, snow removal and retaining walls. I started MD Mowing in 2023, and it's the same crew every visit.</p>
       <div class="hero-actions">
         <a href="quote.html" class="btn">Request a free quote</a>
         <a href="snow-removal/index.html" class="link">Get ready for snow <span class="arrow" aria-hidden="true">→</span></a>
@@ -251,8 +227,8 @@
     </div>
     <div class="snow-text">
       <span class="eyebrow">Winter 2026 · Now booking</span>
-      <h2 id="snow-headline">The first storm is <em>coming.</em></h2>
-      <p>Residential driveway and walkway snow removal through the Illinois winter. Get on the route before the first flake falls.</p>
+      <h2 id="snow-headline">Get on the list <em>before the first storm.</em></h2>
+      <p>We clear driveways and walkways at homes in Lake Forest and nearby towns. Contact us before the first snowfall and we'll check availability for your property.</p>
       <div class="snow-actions">
         <a href="snow-removal/index.html" class="btn">Get ready for snow</a>
         <a href="quote.html?service=Snow%20Removal" class="link">Request a quote <span class="arrow" aria-hidden="true">→</span></a>
@@ -264,20 +240,20 @@
   <section class="why" aria-labelledby="why-headline">
     <div class="why-inner">
       <div class="why-head">
-        <h2 id="why-headline">A real local business, <em>not a franchise.</em></h2>
+        <h2 id="why-headline">How <em>we work.</em></h2>
       </div>
       <div class="why-grid">
         <div class="why-col">
-          <h3>Locally owned, owner-led</h3>
-          <p>Marcus Dan started the business in 2023 and still runs every job. The same crew shows up for every weekly cut — no rotating subcontractors, no one you haven't met.</p>
+          <h3>Same crew every visit</h3>
+          <p>I started MD Mowing in 2023. You'll see the same crew every visit, and we don't use subcontractors.</p>
         </div>
         <div class="why-col">
           <h3>Flat seasonal pricing</h3>
-          <p>Recurring customers pay the same weekly rate from the first spring cut through the last fall cleanup. No surprises, no mid-season increases, no add-ons tacked onto the invoice.</p>
+          <p>You pay the same weekly rate all season. There are no mid-season increases and no add-ons. Weekly and biweekly customers also get better rates and priority booking than one-time visits.</p>
         </div>
         <div class="why-col">
-          <h3>Fast, honest quotes</h3>
-          <p>Recurring work is quoted within 24 hours. For hardscape, we come out and measure before quoting — you get a firm number for the whole project up front.</p>
+          <h3>A price before we start</h3>
+          <p>We quote recurring work within 24 hours. For retaining walls, we visit and measure first, then give you one price for the whole job.</p>
         </div>
       </div>
     </div>
@@ -286,12 +262,12 @@
   <!-- ================= SERVICES ================= -->
   <section class="services" id="services" aria-labelledby="services-headline">
     <div class="services-head">
-      <h2 id="services-headline">Full-service landscape care, <em>one crew.</em></h2>
+      <h2 id="services-headline">Lawns, beds, walls <em>and snow.</em></h2>
     </div>
     <div class="services-list">
       <div class="svc svc-open">
         <div class="svc-name"><a href="snow-removal/index.html">Snow <em>removal</em> <span class="open-tag">Now booking</span></a></div>
-        <div class="svc-desc">Residential driveway and walkway snow removal. Contact us before the first snowfall to discuss your property, scope and route availability. <a href="snow-removal/index.html">Snow removal details →</a></div>
+        <div class="svc-desc">We clear driveways and walkways. Contact us before the first snowfall and we'll go over your property, what you want cleared, and whether it fits our route. <a href="snow-removal/index.html">Snow removal details →</a></div>
       </div>
       <div class="svc svc-booked">
         <div class="svc-name"><a href="leaf-cleanup/index.html"><s>Leaf <em>removal</em></s> <span class="booked-tag">Fully booked for 2026</span></a></div>
@@ -299,26 +275,26 @@
       </div>
       <div class="svc">
         <div class="svc-name">Lawn <em>maintenance</em></div>
-        <div class="svc-desc">Weekly or biweekly mowing from April through October, with string-trimming, blow-off, and bed-edge touch-ups included on every visit. Flat seasonal pricing, same crew every week.</div>
+        <div class="svc-desc">Weekly or biweekly mowing, April through October. Every visit includes trimming, blow-off and a touch-up along the bed edges. The rate stays the same all season, with no add-ons.</div>
       </div>
       <details class="services-more">
         <summary>Beds, mulch, edging &amp; retaining walls</summary>
         <div class="services-extra">
       <div class="svc">
         <div class="svc-name">Bed <em>shaping</em></div>
-        <div class="svc-desc">Shaping and restoring beds along walks, driveways, and foundations. We re-cut the edge, clear overgrowth, and prep the ground so the next layer of mulch or plantings sits right.</div>
+        <div class="svc-desc">We reshape beds along walks, driveways and foundations. We re-cut the edge, clear out overgrowth, and get the ground ready for mulch or new plants.</div>
       </div>
       <div class="svc">
         <div class="svc-name">Edging</div>
-        <div class="svc-desc">Clean, consistent lines along driveways, walkways, and garden beds. It's the small detail that separates a maintained lawn from a cared-for one.</div>
+        <div class="svc-desc">We cut a clean edge along driveways, walkways and garden beds.</div>
       </div>
       <div class="svc">
         <div class="svc-name">Mulching</div>
-        <div class="svc-desc">Fresh mulch installation — brown or black — delivered, raked, and finished to depth. Holds soil moisture, slows weeds, and gives the beds a grounded look for the whole season.</div>
+        <div class="svc-desc">We deliver mulch in any color you want, spread it, and rake it out to an even depth. It holds moisture and slows weeds.</div>
       </div>
       <div class="svc">
         <div class="svc-name">Retaining walls <em>&amp; hardscape</em></div>
-        <div class="svc-desc">Custom stone walls, garden walls, and bed restorations. Each project is priced individually after a site visit, with drainage and course-by-course leveling built in.</div>
+        <div class="svc-desc">We build retaining walls and garden walls in manufactured block or natural stone. We lay drainage pipe at the base of every wall, backfill behind it with gravel, and level every block or stone as we build. We also restore beds. Each job is priced after a site visit.</div>
       </div>
         </div>
       </details>
@@ -328,8 +304,8 @@
   <!-- ================= FEATURED WORK — RETAINING WALL ================= -->
   <section class="project" id="work" aria-labelledby="project-headline">
     <div class="project-head">
-      <h2 id="project-headline">Real projects. <em>Local care.</em></h2>
-      <p class="desc">See the finished work here, then explore the Gallery for project details and clearly labeled before-and-after photos.</p>
+      <h2 id="project-headline">Our <em>work.</em></h2>
+      <p class="desc">Here's a retaining wall we rebuilt and some of our lawn care. The Gallery has more, with before and after photos labeled.</p>
     </div>
     <div class="work-preview">
       <a class="work-preview-link" href="gallery/index.html#project-walls">
@@ -337,7 +313,7 @@
       <div class="work-preview-image">
       <picture>
         <source type="image/avif" srcset="images/optimized/retaining-wall-completed-600.avif 600w, images/optimized/retaining-wall-completed-1000.avif 1000w, images/optimized/retaining-wall-completed-1600.avif 1600w" sizes="(max-width:760px) 90vw, 44vw">
-        <img src="images/optimized/retaining-wall-completed-1000.webp" srcset="images/optimized/retaining-wall-completed-600.webp 600w, images/optimized/retaining-wall-completed-1000.webp 1000w, images/optimized/retaining-wall-completed-1600.webp 1600w" sizes="(max-width:760px) 90vw, 44vw" alt="Completed custom retaining wall built by MD Mowing" loading="lazy" width="1600" height="1200" decoding="async" />
+        <img src="images/optimized/retaining-wall-completed-1000.webp" srcset="images/optimized/retaining-wall-completed-600.webp 600w, images/optimized/retaining-wall-completed-1000.webp 1000w, images/optimized/retaining-wall-completed-1600.webp 1600w" sizes="(max-width:760px) 90vw, 44vw" alt="Retaining wall after MD Mowing rebuilt it" loading="lazy" width="1600" height="1200" decoding="async" />
       </picture>
     </div>
       <figcaption><h3>Retaining-wall rebuild</h3><p>View the project photos</p></figcaption>
@@ -361,21 +337,13 @@
   <!-- ================= ABOUT ================= -->
   <section class="about" id="about" aria-labelledby="about-headline">
     <div class="about-inner">
-      <div class="about-photo">
-        <picture>
-        <source type="image/avif" srcset="images/optimized/shaded-backyard-lawn-600.avif 600w, images/optimized/shaded-backyard-lawn-1000.avif 1000w, images/optimized/shaded-backyard-lawn-1200.avif 1200w" sizes="(max-width:960px) 90vw, 44vw">
-        <img src="images/optimized/shaded-backyard-lawn-1000.webp" srcset="images/optimized/shaded-backyard-lawn-600.webp 600w, images/optimized/shaded-backyard-lawn-1000.webp 1000w, images/optimized/shaded-backyard-lawn-1200.webp 1200w" sizes="(max-width:960px) 90vw, 44vw" alt="Green backyard lawn beneath mature trees, with a mower at the edge of the photograph" loading="lazy" width="1200" height="1600" decoding="async" />
-      </picture>
+      <div class="about-photo" style="aspect-ratio:3/4">
+        <img src="images/optimized/marcus-football-1000.webp" srcset="images/optimized/marcus-football-600.webp 600w, images/optimized/marcus-football-1000.webp 1000w, images/optimized/marcus-football-1170.webp 1170w" sizes="(max-width:960px) 90vw, 44vw" alt="Marcus Dan in his Lake Forest football uniform, crouched in a stance on the field" loading="lazy" width="1170" height="1621" decoding="async" style="object-position:50% 0%" />
       </div>
       <div class="about-text">
         <h2 id="about-headline">Founded by <em>Marcus Dan</em> in 2023.</h2>
-        <p>A homegrown North Shore business providing lawn care, landscaping and winter snow removal.</p>
-        <details class="about-story">
-        <summary>Meet Marcus</summary>
-        <p>MD Mowing was founded in 2023 by <strong>Marcus Dan</strong>, a local student-athlete at <strong>Lake Forest High School (LFHS)</strong>. Balancing life as an LFHS varsity linebacker and wrestler with a deep-rooted passion for entrepreneurship, Marcus built MD Mowing on the values of hard work, reliability, and hometown pride.</p>
-        <p>When you hire MD Mowing, you aren't just getting premium lawn care, landscaping, and winter snow removal — you're directly supporting a homegrown, student-operated North Shore business. Marcus and his team take personal pride in keeping Lake Forest, Lake Bluff, Highland Park, and the surrounding communities looking immaculate in every season.</p>
-        <div class="about-sig">— Marcus Dan · Founder, MD Mowing · LFHS Scouts</div>
-        </details>
+        <p>MD Mowing is a student-run North Shore business. My crew and I take care of yards in Lake Forest, Lake Bluff, Highland Park and the towns around them.</p>
+        <p><a class="link" href="about/index.html">More about me and the business <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
     </div>
   </section>
@@ -385,7 +353,7 @@
     <div class="area-inner">
       <div class="area-text">
         <h2 id="area-headline">Where <em>we work.</em></h2>
-        <p>Based in Lake Forest, serving these North Shore and Lake County communities. Availability depends on the service, property and route. Include your town or ZIP when requesting a quote so we can confirm the fit.</p>
+        <p>We're based in Lake Forest and work in these North Shore and Lake County towns. Availability depends on the service, the property and the route, so put your town or ZIP in your quote request.</p>
         <div style="margin-top:2rem">
           <a href="tel:8477724803" class="link">Call (847) 772-4803 <span class="arrow" aria-hidden="true">→</span></a>
         </div>
@@ -415,27 +383,27 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary>Where do you work?</summary>
-          <p>Lake Forest, Highland Park, Lake Bluff, Knollwood, North Chicago, Libertyville, Deerfield, Highwood, Waukegan, Green Oaks and Lincolnshire. Service and route availability are confirmed for each property before booking.</p>
+          <p>Lake Forest, Highland Park, Lake Bluff, Knollwood, North Chicago, Libertyville, Deerfield, Highwood, Waukegan, Green Oaks and Lincolnshire. We confirm availability for each property before we book it.</p>
         </details>
         <details class="faq-item">
           <summary>How often do you mow?</summary>
-          <p>Weekly from April through October is standard. Biweekly is available for lighter properties. We'll recommend what fits your yard on the first visit.</p>
+          <p>Weekly or biweekly, April through October. Tell us which you want when you request a quote and we'll confirm what fits your yard.</p>
         </details>
         <details class="faq-item">
           <summary>Do you offer one-time cleanups?</summary>
-          <p>Yes. Spring cleanups, mid-season refreshes, and post-storm pickups can be booked without signing up for recurring service. Fall leaf cleanup is fully booked this season; ask about next fall.</p>
+          <p>Yes. Spring cleanups, mid-season refreshes and post-storm pickups don't need a recurring plan. Fall leaf cleanup is fully booked this season. Ask about next fall.</p>
         </details>
         <details class="faq-item">
           <summary>Do you take on hardscape projects?</summary>
-          <p>Yes. Retaining walls, garden walls, and bed restorations are priced individually after a brief site visit so we can give you a firm number before any work starts.</p>
+          <p>Yes. We build retaining walls and garden walls, and we restore beds. We visit the property first, then give you one price for the whole job before any work starts.</p>
         </details>
         <details class="faq-item">
           <summary>How do I get a quote?</summary>
-          <p><a href="quote.html">Request a quote online</a>, email us, or call directly. Recurring work is quoted within 24 hours. Hardscape projects need a short site visit first.</p>
+          <p><a href="quote.html">Use the quote form</a>, email us, or call (847) 772-4803. We quote recurring work within 24 hours. Hardscape needs a site visit first.</p>
         </details>
         <details class="faq-item">
           <summary>Do recurring customers get better pricing?</summary>
-          <p>Yes. Weekly and biweekly clients get a flat seasonal rate and priority on the schedule over one-off visits.</p>
+          <p>Yes. Weekly and biweekly customers get better rates and priority booking than one-time visits. The rate also stays the same all season, with no mid-season increases and no add-ons.</p>
         </details>
       </div>
     </div>
@@ -446,7 +414,7 @@
     <div class="contact-inner">
       <div class="contact-text">
         <h2 id="contact-headline">Request a <em>free quote.</em></h2>
-        <p>Choose your service and tell us where your property is. We'll check the scope and route availability before confirming a quote or visit. Prefer to talk? Give us a call.</p>
+        <p>Tell us what you need and where your property is. We'll check the scope and availability before we confirm a quote or visit. If you'd rather talk, call us.</p>
         <div class="meta">
           <div class="meta-row">
             <span class="meta-label">Phone</span>
@@ -463,7 +431,7 @@
         </div>
       </div>
       <div class="contact-cta">
-        <p>Request a quote online, or call and talk it through with us. We'll confirm availability before booking.</p>
+        <p>Request a quote online, or call and talk it through. We confirm availability before we book anything.</p>
         <a class="btn btn-full" href="quote.html">Request a quote <span aria-hidden="true">→</span></a>
         <p class="contact-cta-alt">Prefer to talk? <a href="tel:8477724803">Call (847) 772-4803</a> or <a href="mailto:marcusdan@mdmowing.net">email us</a>.</p>
       </div>
@@ -487,6 +455,7 @@
             <a href="mailto:marcusdan@mdmowing.net">marcusdan@mdmowing.net</a>
             <a href="quote.html">Request a quote</a>
             <a href="gallery/index.html">Project gallery</a>
+            <a href="about/index.html">About Marcus</a>
             <a href="https://search.google.com/local/writereview?placeid=ChIJyXBzI4z6AwoRfhawZ0mHP1A" target="_blank" rel="noopener">Leave a Google review</a>
           </div>
           <div class="foot-col">

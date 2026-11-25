@@ -1306,3 +1306,13 @@ picture { display: contents; }
 /* Town names that link to their landing pages */
 .area-town a { color: inherit; text-decoration: underline; text-decoration-color: var(--hairline); text-decoration-thickness: 1px; text-underline-offset: .25em; }
 .area-town a:hover, .area-town a:focus-visible { text-decoration-color: var(--forest); }
+
+/* New service pages: numbered steps, photo grid, and highlighted draft placeholders */
+.service-section ol { padding-left: 1.4rem; }
+.service-section ol li + li { margin-top: .75rem; }
+.service-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+.service-photos figure { margin: 0; }
+.service-photos img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--hairline); background: var(--bg-deep); }
+.service-photos figcaption { margin-top: .6rem; font-size: .875rem; line-height: 1.55; color: var(--moss); }
+@media (max-width: 560px) { .service-photos { grid-template-columns: 1fr; } }
+mark.marcus-todo { background: #ffe9a8; color: #5a4300; padding: .05em .35em; border-radius: 2px; font-weight: 600; }
