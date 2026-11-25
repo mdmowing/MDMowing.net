@@ -1302,3 +1302,7 @@ picture { display: contents; }
 /* Photo inside a service-page section */
 .service-photo { margin: 0; }
 .service-photo img { display: block; width: 100%; height: auto; border: 1px solid var(--hairline); }
+
+/* Town names that link to their landing pages */
+.area-town a { color: inherit; text-decoration: underline; text-decoration-color: var(--hairline); text-decoration-thickness: 1px; text-underline-offset: .25em; }
+.area-town a:hover, .area-town a:focus-visible { text-decoration-color: var(--forest); }

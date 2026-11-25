@@ -102,6 +102,12 @@ def main():
                           rf'\g<1>{rating} on Google. <em>{int(total)} {noun}.</em>\g<2>', page)
         if n != 1:
             sys.exit("reviews heading not found")
+        # Keep the structured-data rating identical to what visitors see.
+        page, n = re.subn(
+            r'("@type": "AggregateRating", "ratingValue": )[\d.]+(, "bestRating": 5, "worstRating": 1, "reviewCount": )\d+',
+            rf'\g<1>{rating}\g<2>{int(total)}', page)
+        if n != 1:
+            sys.exit("aggregateRating in the JSON-LD not found")
 
     print(f"added to store: {added or 'none'}")
     print("shown on page:  " + ", ".join(r["name"] for r in shown))
